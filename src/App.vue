@@ -3,14 +3,14 @@ import Willkommen from './components/Willkommen.vue';
 import AboutMe from './components/AboutMe.vue'
 import Kontakt from './components/Kontakt.vue';
 import Leistungen from './components/Leistungen.vue';
+import Referenzen from './components/Referenzen.vue';
 
 </script>
 
 <template>
   <header>
-    <div class="logo-container">
-            <img src="./assets/Logo White.png" alt="Logo" class="logo-small">
-        
+    <div class="navbar">
+        <img src="./assets/Logo White.png" alt="Logo" class="logo-small">
         <nav class="nav-links">
             <a href="#home">Home</a>
             <a href="#leistungen">Leistungen</a>
@@ -22,11 +22,10 @@ import Leistungen from './components/Leistungen.vue';
 
   <main>
     <Willkommen />
+    <Referenzen />
     <Leistungen />
     <AboutMe />
-    <div id="kontakt">
-        <Kontakt />
-    </div>
+    <Kontakt />
    
     
   </main>
@@ -34,15 +33,7 @@ import Leistungen from './components/Leistungen.vue';
 
 <style scoped>
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    color: white;
-}
-
-.logo-container {
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -52,18 +43,6 @@ header {
     width: 30px;
     height: 30px;
     margin-right: 20px;
-}
-
-.logo-large {
-    width: 60px;
-    height: 40px;
-    transform: scaleX(1.5); /* Slightly horizontally bigger */
-    margin-top: 5px;
-}
-
-#kontakt {
-  display: flex;
-  justify-content: center; /* Horizontally centers the container */
 }
 
 .nav-links a {
