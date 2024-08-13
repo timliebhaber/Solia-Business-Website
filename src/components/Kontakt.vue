@@ -2,7 +2,9 @@
 </script>
 
 <template>
-    <div class="container">
+  <h3>Kontakt</h3>
+  <div id = kontakt>
+  <div class="container">
   <form action="action_page.php">
 
     <label for="name"></label>
@@ -17,6 +19,7 @@
     <input type="submit" value="Submit">
 
   </form>
+  </div>
   </div>
 </template>
 
@@ -56,9 +59,11 @@ input[type=submit]:hover {
   background-color: #f2f2f210;
   margin-top: 50px;
   padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 40%;
+}
+
+#kontakt {
+  display: flex;
+  justify-content: center; /* Horizontally centers the container */
 }
 </style>
