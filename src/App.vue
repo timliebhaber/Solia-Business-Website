@@ -22,7 +22,7 @@ import Leistungen from './components/Leistungen.vue';
 
   <main>
     <Willkommen />
-    <Leistungen/>
+    <Leistungen />
     <AboutMe />
     <div id="kontakt">
         <Kontakt />
