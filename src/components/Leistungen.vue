@@ -1,16 +1,15 @@
 <script setup lang="ts">
-defineProps<{
-  msg: string
-}>()
+
 </script>
 
 <template>
   <div class="greetings">
-    <h1 class="green">{{ msg }}</h1>
-    <h3>
-      Ihr Dienstleister für individuelle Software
-      <a href="https://www.linkedin.com/in/tim-liebhaber/" target="_blank" rel="noopener">LinkedIn</a>
-    </h3>
+    <ul>
+      <li>KI Beratung</li>
+      <li>IT-Security</li>
+      <li>Webdesign</li>
+      <li>Anwendungsentwicklung</li>
+    </ul>
   </div>
 </template>
 
