@@ -4,7 +4,7 @@
 
 <template>
   <div id="referenzen">
-    <img src="https://via.placeholder.com/150" alt="Image 1">
+    <img src="../assets/Logo-Badro-white.svg" alt="Image 1" height = 50px>
     <img src="https://via.placeholder.com/150" alt="Image 2">
     <img src="https://via.placeholder.com/150" alt="Image 3">
     <img src="https://via.placeholder.com/150" alt="Image 4">
