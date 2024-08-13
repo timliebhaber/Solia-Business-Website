@@ -9,7 +9,7 @@
     </div>
     <div class="text">
         <h1>Ihr Dienstleister für individuelle Software</h1>
-        <a href="https://www.linkedin.com/in/tim-liebhaber/"><img src="../assets/LinkedIn.png" alt="" class="icon" height="36px"></a>
+        <img src="../assets/LinkedIn.png" alt="" class="icon" height="36px" onclick= "window.location.href= 'https://www.linkedin.com/in/tim-liebhaber/';">
     </div>
 </section>
 </template>
@@ -38,7 +38,7 @@ body, html {
 
 
 .logo img {
-    max-height: 300px; /* Adjust the logo size */
+    max-height: 200px; /* Adjust the logo size */
     height: auto;
     width: auto;
 }
@@ -48,15 +48,12 @@ body, html {
     text-align: left;
 }
 
-.text h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: #ffffff;
-}
 
 .text p {
     font-size: 18px;
     color: #666;
 }
+
+
 
 </style>
