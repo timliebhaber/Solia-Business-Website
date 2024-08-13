@@ -15,6 +15,20 @@ a,
   padding: 3px;
 }
 
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+h3 {
+  display:flex;
+  justify-content: flex-start;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
 @media (hover: hover) {
   a:hover {
     padding: 10px 20px;
