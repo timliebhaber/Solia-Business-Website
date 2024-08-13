@@ -1,87 +1,62 @@
+<script setup lang="ts">
+
+</script>
+
 <template>
-  <div class="item">
-    <i>
-      <slot name="icon"></slot>
-    </i>
-    <div class="details">
-      <h3>
-        <slot name="heading"></slot>
-      </h3>
-      <slot></slot>
+ <section class="full-screen-section">
+    <div class="logo">
+        <img src="../assets/Solia Solutions Color.png" alt="My Logo" class="logo">
     </div>
-  </div>
+    <div class="text">
+        <h1>Ihr Dienstleister für individuelle Software</h1>
+        <a href="https://www.linkedin.com/in/tim-liebhaber/"><img src="../assets/LinkedIn.png" alt="" class="icon" height="36px"></a>
+    </div>
+</section>
 </template>
 
+
 <style scoped>
-.item {
-  margin-top: 2rem;
-  display: flex;
-  position: relative;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.details {
-  flex: 1;
-  margin-left: 1rem;
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
 }
 
-i {
-  display: flex;
-  place-items: center;
-  place-content: center;
-  width: 32px;
-  height: 32px;
-
-  color: var(--color-text);
+.full-screen-section {
+    display: flex;
+    align-items: center; /* Vertically center items */
+    justify-content: space-between; /* Space between the left and right sides */
+    height: 100vh; /* Full viewport height */
+    padding: 10%;
+    background-color: #f4f4f400; /* Light background color */
 }
 
-h3 {
-  font-size: 1.2rem;
-  font-weight: 500;
-  margin-bottom: 0.4rem;
-  color: var(--color-heading);
+
+.logo img {
+    max-height: 300px; /* Adjust the logo size */
+    height: auto;
+    width: auto;
 }
 
-@media (min-width: 1024px) {
-  .item {
-    margin-top: 0;
-    padding: 0.4rem 0 1rem calc(var(--section-gap) / 2);
-  }
-
-  i {
-    top: calc(50% - 25px);
-    left: -26px;
-    position: absolute;
-    border: 1px solid var(--color-border);
-    background: var(--color-background);
-    border-radius: 8px;
-    width: 50px;
-    height: 50px;
-  }
-
-  .item:before {
-    content: ' ';
-    border-left: 1px solid var(--color-border);
-    position: absolute;
-    left: 0;
-    bottom: calc(50% + 25px);
-    height: calc(50% - 25px);
-  }
-
-  .item:after {
-    content: ' ';
-    border-left: 1px solid var(--color-border);
-    position: absolute;
-    left: 0;
-    top: calc(50% + 25px);
-    height: calc(50% - 25px);
-  }
-
-  .item:first-of-type:before {
-    display: none;
-  }
-
-  .item:last-of-type:after {
-    display: none;
-  }
+.text {
+    max-width: 600px; /* Optional: Limit the width of the text block */
+    text-align: left;
 }
+
+.text h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.text p {
+    font-size: 18px;
+    color: #666;
+}
+
 </style>
