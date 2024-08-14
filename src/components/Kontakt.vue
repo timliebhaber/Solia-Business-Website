@@ -2,8 +2,9 @@
 </script>
 
 <template>
+  <div id="kontakt">
   <h3>Kontakt</h3>
-  <div id = kontakt>
+  <div id = kontaktfeld>
   <div class="container">
   <form action="action_page.php">
 
@@ -21,9 +22,14 @@
   </form>
   </div>
   </div>
+  </div>
 </template>
 
 <style scoped>
+
+#kontakt {
+  padding: 2rem;
+}
 
 /* Style inputs with type="text", select elements and textareas */
 input, select, textarea {
@@ -62,7 +68,7 @@ input[type=submit]:hover {
   width: 40%;
 }
 
-#kontakt {
+#kontaktfeld {
   display: flex;
   justify-content: center; /* Horizontally centers the container */
 }

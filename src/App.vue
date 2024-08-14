@@ -37,6 +37,7 @@ import Referenzen from './components/Referenzen.vue';
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 2rem;
 }
 
 .logo-small {
