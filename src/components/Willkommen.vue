@@ -9,6 +9,7 @@
     </div>
     <div class="text">
         <h1>Ihr Dienstleister für individuelle Software</h1>
+        GitHub Logo
         <img src="../assets/LinkedIn.png" alt="" class="icon" height="36px" onclick= "window.location.href= 'https://www.linkedin.com/in/tim-liebhaber/';">
     </div>
 </section>
