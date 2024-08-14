@@ -34,6 +34,7 @@ body, html {
     justify-content: space-between; /* Space between the left and right sides */
     height: 100vh; /* Full viewport height */
     padding: 10%;
+    gap: 200px;
     background-color: #f4f4f400; /* Light background color */
 }
 
