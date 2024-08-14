@@ -16,5 +16,9 @@
 
 <style scoped>
 
+#leistungen {
+  width: 100%;
+  padding: 2rem;
+}
 
 </style>

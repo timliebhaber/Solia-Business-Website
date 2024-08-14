@@ -50,11 +50,19 @@ body, html {
 }
 
 
-.text p {
+.text a {
     font-size: 18px;
-    color: #666;
+    color: #636363;
+    transition: color 0.3s ease-in-out;
 }
 
+.text a:hover {
+    color: #afafaf;
+}
+
+.fa-github {
+    margin-right: 15px;
+}
 
 
 </style>
