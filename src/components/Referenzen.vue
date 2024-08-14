@@ -4,18 +4,26 @@
 
 <template>
   <div id="referenzen">
-    <img src="../assets/Logo-Badro-white.svg" alt="Image 1" height = 50px>
-    <img src="https://via.placeholder.com/150" alt="Image 2">
-    <img src="https://via.placeholder.com/150" alt="Image 3">
-    <img src="https://via.placeholder.com/150" alt="Image 4">
+    <a href="https://khettabi.com"><img src="../assets/Logo-Badro-white.svg" alt="Khettabi" height = 50px></a>
+    <img src="../assets/DHRW_ENG_WHITE.png" alt="DHRW Engineering" height = 60px>
+    <img src="../assets/Logo_Akad_Normal.png" alt="DHRW Akademie" height = 60px>
+    <img src="../assets/Logo Sirali.png" alt="Sirali" height = 60px>
+
   </div>
 </template>
 
 <style scoped>
 #referenzen {
-    display: flex;
+  width:100%;
+  background-color: white;  
+  display: flex;
     justify-content: space-around;
     align-items: center;
-    margin: 20px;
+    padding: 10px;
+}
+
+img {
+  /* From https://css.glass */
+  filter: brightness(0) ;
 }
 </style>

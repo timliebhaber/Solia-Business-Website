@@ -9,7 +9,8 @@
     </div>
     <div class="text">
         <h1>Ihr Dienstleister für individuelle Software</h1>
-        <img src="../assets/LinkedIn.png" alt="" class="icon" height="36px" onclick= "window.location.href= 'https://www.linkedin.com/in/tim-liebhaber/';">
+        <a href="https://github.com/timliebhaber"><i class="fa fa-github" style="font-size:36px"></i></a>
+        <a href="https://www.linkedin.com/in/tim-liebhaber/"><i class="fa fa-linkedin" style="font-size:36px"></i></a>
     </div>
 </section>
 </template>
