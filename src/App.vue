@@ -51,7 +51,12 @@ import Referenzen from './components/Referenzen.vue';
     text-decoration: none;
     margin: 0 15px;
     font-size: 18px;
-    transition: color 0.3s ease;
+    transition: background-color 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+.nav-links a:hover {
+    background-color: #0EA0D7;
 }
 
 </style>
