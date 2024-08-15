@@ -9,8 +9,8 @@
     </div>
     <div class="text">
         <h1>Ihr Dienstleister für individuelle Software</h1>
-        <a href="https://github.com/timliebhaber"><i class="fa fa-github" style="font-size:36px"></i></a>
-        <a href="https://www.linkedin.com/in/tim-liebhaber/"><i class="fa fa-linkedin" style="font-size:36px"></i></a>
+        <a href="https://github.com/timliebhaber" target="_blank"><i class="fa fa-github" style="font-size:36px"></i></a>
+        <a href="https://www.linkedin.com/in/tim-liebhaber/" target="_blank"><i class="fa fa-linkedin" style="font-size:36px"></i></a>
     </div>
 </section>
 </template>
@@ -33,7 +33,7 @@ body, html {
     align-items: center; /* Vertically center items */
     justify-content: space-between; /* Space between the left and right sides */
     height: 100vh; /* Full viewport height */
-    padding: 10%;
+    padding: 9%;
     gap: 200px;
     background-color: #f4f4f400; /* Light background color */
 }
