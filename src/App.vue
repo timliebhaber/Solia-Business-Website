@@ -5,7 +5,7 @@ import Kontakt from './components/Kontakt.vue';
 import Leistungen from './components/Leistungen.vue';
 import Referenzen from './components/Referenzen.vue';
 import card from './components/card.vue';
-import Headerneu from './components/Headerneu.vue';
+import Hero from './components/Hero.vue';
 
 </script>
 
@@ -23,7 +23,7 @@ import Headerneu from './components/Headerneu.vue';
   </header>
 
   <main>
-    <Headerneu />
+    <Hero />
     <Referenzen />
     <Leistungen />
     <AboutMe />
