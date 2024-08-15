@@ -61,9 +61,6 @@ body, html {
     color: #afafaf;
 }
 
-.fa-github {
-    margin-right: 15px;
-}
 
 
 </style>
