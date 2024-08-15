@@ -4,6 +4,8 @@ import AboutMe from './components/AboutMe.vue'
 import Kontakt from './components/Kontakt.vue';
 import Leistungen from './components/Leistungen.vue';
 import Referenzen from './components/Referenzen.vue';
+import card from './components/card.vue';
+import Hero from './components/Hero.vue';
 
 </script>
 
@@ -21,23 +23,26 @@ import Referenzen from './components/Referenzen.vue';
   </header>
 
   <main>
-    <Willkommen />
+    <Hero />
     <Referenzen />
     <Leistungen />
     <AboutMe />
     <Kontakt />
-   
     
   </main>
 </template>
 
-<style scoped>
+
+
+<style scoped lang="scss">
 
 .navbar {
+    background-color: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 2rem;
+    height: 8vh;
 }
 
 .logo-small {
@@ -57,7 +62,26 @@ import Referenzen from './components/Referenzen.vue';
 }
 
 .nav-links a:hover {
-    background-color: #0EA0D7;
+    background-color: #ffffff23;
+    -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  box-shadow: 0 4px 90px rgba(0,0,0,0.1);
+  overflow: hidden;
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255, 255, 255, 0.473) 34%, rgba(255,255,255,1) 89%, rgba(255,255,255,0) 100%);
+    opacity: 0.3;
+    filter: blur(.5px);
+    mix-blend-mode: hard-light;
+  }
 }
 
 </style>
