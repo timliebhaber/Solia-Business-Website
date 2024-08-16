@@ -25,7 +25,7 @@ import Hero from './components/Hero.vue';
   <main>
     <Hero />
     <Referenzen />
-    <Leistungen />
+    <card />
     <AboutMe />
     <Kontakt />
     

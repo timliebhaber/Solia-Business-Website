@@ -1,264 +1,169 @@
 <script setup lang="ts">
-import { defineComponent } from 'vue';
-
-const cardComponent = defineComponent({
-  name: 'card',
-  template: `
-    <div class="card-wrap"
-      @mousemove="handleMouseMove"
-      @mouseenter="handleMouseEnter"
-      @mouseleave="handleMouseLeave"
-      ref="card">
-      <div class="card"
-        :style="cardStyle">
-        <div class="card-bg" :style="[cardBgTransform, cardBgImage]"></div>
-        <div class="card-info">
-          <slot name="header"></slot>
-          <slot name="content"></slot>
-        </div>
-      </div>
-    </div>`,
-  mounted() {
-    const cardElement = this.$refs.card as HTMLElement;
-    this.width = cardElement.offsetWidth;
-    this.height = cardElement.offsetHeight;
-  },
-  props: {
-    dataImage: {
-      type: String,
-      required: true
-    }
-  },
-  data() {
-    return {
-      width: 0,
-      height: 0,
-      mouseX: 0,
-      mouseY: 0,
-      mouseLeaveDelay: null as number | null
-    };
-  },
-  computed: {
-    mousePX(): number {
-      return this.mouseX / this.width;
-    },
-    mousePY(): number {
-      return this.mouseY / this.height;
-    },
-    cardStyle(): Record<string, string> {
-      const rX = this.mousePX * 30;
-      const rY = this.mousePY * -30;
-      return {
-        transform: `rotateY(${rX}deg) rotateX(${rY}deg)`
-      };
-    },
-    cardBgTransform(): Record<string, string> {
-      const tX = this.mousePX * -40;
-      const tY = this.mousePY * -40;
-      return {
-        transform: `translateX(${tX}px) translateY(${tY}px)`
-      }
-    },
-    cardBgImage(): Record<string, string> {
-      return {
-        backgroundImage: `url(${this.dataImage})`
-      };
-    }
-  },
-  methods: {
-    handleMouseMove(e: MouseEvent): void {
-      const cardElement = this.$refs.card as HTMLElement;
-      this.mouseX = e.pageX - cardElement.offsetLeft - this.width / 2;
-      this.mouseY = e.pageY - cardElement.offsetTop - this.height / 2;
-    },
-    handleMouseEnter(): void {
-      if (this.mouseLeaveDelay) {
-        clearTimeout(this.mouseLeaveDelay);
-        this.mouseLeaveDelay = null;
-      }
-    },
-    handleMouseLeave(): void {
-      this.mouseLeaveDelay = window.setTimeout(() => {
-        this.mouseX = 0;
-        this.mouseY = 0;
-      }, 1000);
-    }
-  }
-});
-
 </script>
 
 <template>
-  <h1 class="title">Hover over the cards</h1>
+      <h3>Leistungen</h3>
+  <div id="leistungsCards">
 
-<div id="app" class="container">
-  <card data-image="https://images.unsplash.com/photo-1479660656269-197ebb83b540?dpr=2&auto=compress,format&fit=crop&w=1199&h=798&q=80&cs=tinysrgb&crop=">
-    <h1 slot="header">Canyons</h1>
-    <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-  </card>
-  <card data-image="https://images.unsplash.com/photo-1479659929431-4342107adfc1?dpr=2&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=">
-    <h1 slot="header">Beaches</h1>
-    <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-  </card>
-  <card data-image="https://images.unsplash.com/photo-1479644025832-60dabb8be2a1?dpr=2&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=">
-    <h1 slot="header">Trees</h1>
-    <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-  </card>
-  <card data-image="https://images.unsplash.com/photo-1479621051492-5a6f9bd9e51a?dpr=2&auto=compress,format&fit=crop&w=1199&h=811&q=80&cs=tinysrgb&crop=">
-    <h1 slot="header">Lakes</h1>
-    <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-  </card>
-</div>
+  <div class="container">
+        <div class="card">
+            <div class="face face1">
+                <div class="content">
+                    <img src="../assets/Logo Border.png">
+                    <h3>Künstliche Intelligenz</h3>
+                </div>
+            </div>
+            <div class="face face2">
+                <div class="content">
+                    <p>Künstliche Intelligenz wird immer wichtiger, um wettbewerbsfähig zu bleiben. Hier erhalten Sie Unternehmensanalysen, Beratungen sowie die 
+                      Entwicklung maßgeschneiderter KI-Lösungen, die perfekt auf Ihre Bedürfnisse zugeschnitten sind.</p>
+                        <a href="#">Mehr erfahren</a>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="face face1">
+                <div class="content">
+                    <img src="../assets/Logo Border.png">
+                    <h3>IT-Sicherheit</h3>
+                </div>
+            </div>
+            <div class="face face2">
+                <div class="content">
+                    <p>IT-Sicherheit wird immer entscheidender, um Ihr Unternehmen zu schützen. Daher biete ich umfassende 
+                      Systemchecks, Penetration Testing und individuelle Sicherheitslösungen an, die speziell mit Ihren Anforderungen abgestimmt sind.</p>
+                        <a href="#">Mehr erfahren</a>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="face face1">
+                <div class="content">
+                    <img src="../assets/Logo Border.png">
+                    <h3>Web-Entwicklung</h3>
+                </div>
+            </div>
+            <div class="face face2">
+                <div class="content">
+                    <p>
+                      Eine starke Web-Präsenz ist heute unverzichtbar. Ich entwickle ansprechende Websites für Ihren 
+                      öffentlichen Internetauftritt, sowie effiziente Front- und Backendlösungen für den internen Firmengebrauch.</p>
+                        <a href="#">Mehr erfahren</a>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
 </template>
 
-<style scoped lang="scss">
+<style scoped>
 
-$hoverEasing: cubic-bezier(0.23, 1, 0.32, 1);
-$returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
-
-body {
-  margin: 40px 0;
-  font-family: "Raleway";
-  font-size: 14px;
-  font-weight: 500;
-  background-color: #BCAAA4;
-  -webkit-font-smoothing: antialiased;
+h3 {
+    margin: 2rem;
 }
 
-.title {
-  font-family: "Raleway";
-  font-size: 24px;
-  font-weight: 700;
-  color: #5D4037;
-  text-align: center;
+#leistungsCards{
+    margin-top: 50px;
+    padding: 0;
+    min-height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: consolas;
 }
 
-p {
-  line-height: 1.5em;
-}
-
-h1+p, p+p {
-  margin-top: 10px;
-}
-
-.container {
-  padding: 40px 80px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.card-wrap {
-  margin: 10px;
-  transform: perspective(800px);
-  transform-style: preserve-3d;
-  cursor: pointer;
-  
-  &:hover {
-    .card-info {
-      transform: translateY(0);
-    }
-    .card-info p {
-      opacity: 1;
-    }
-    .card-info, .card-info p {
-      transition: 0.6s $hoverEasing;
-    }
-    .card-info:after {
-      transition: 5s $hoverEasing;
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .card-bg {
-      transition: 
-        0.6s $hoverEasing,
-        opacity 5s $hoverEasing;
-      opacity: 0.8;
-    }
-    .card {
-      transition:
-        0.6s $hoverEasing,
-        box-shadow 2s $hoverEasing;
-      box-shadow:
-        rgba(white, 0.2) 0 0 40px 5px,
-        rgba(white, 1) 0 0 0 1px,
-        rgba(black, 0.66) 0 30px 60px 0,
-        inset #333 0 0 0 5px,
-        inset white 0 0 0 6px;
-    }
-  }
-}
-
-.card {
-  position: relative;
-  flex: 0 0 240px;
-  width: 240px;
-  height: 320px;
-  background-color: #333;
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow:
-    rgba(black, 0.66) 0 30px 60px 0,
-    inset #333 0 0 0 5px,
-    inset rgba(white, 0.5) 0 0 0 6px;
-  transition: 1s $returnEasing;
-}
-
-.card-bg {
-  opacity: 0.5;
-  position: absolute;
-  top: -20px; left: -20px;
-  width: 100%;
-  height: 100%;
-  padding: 20px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  transition:
-    1s $returnEasing,
-    opacity 5s 1s $returnEasing;
-  pointer-events: none;
-}
-
-.card-info {
-  padding: 20px;
-  position: absolute;
-  bottom: 0;
-  color: #fff;
-  transform: translateY(40%);
-  transition: 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
-  
-  p {
-    opacity: 0;
-    text-shadow: rgba(black, 1) 0 2px 3px;
-    transition: 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
-  }
-  
-  * {
-    position: relative;
-    z-index: 1;
-  }
-  
-  &:after {
-    content: '';
-    position: absolute;
-    top: 0; left: 0;
-    z-index: 0;
+.container{
     width: 100%;
-    height: 100%;
-    background-image: linear-gradient(to bottom, transparent 0%, rgba(#000, 0.6) 100%);
-    background-blend-mode: overlay;
-    opacity: 0;
-    transform: translateY(100%);
-    transition: 5s 1s $returnEasing;
-  }
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.card-info h1 {
-  font-family: "Playfair Display";
-  font-size: 36px;
-  font-weight: 700;
-  text-shadow: rgba(black, 0.5) 0 10px 10px;
+.container .card{
+    position: relative;
+    cursor: pointer;
 }
 
+.container .card .face{
+    width: 300px;
+    height: 200px;
+    margin-right: 10px;
+    margin-left: 10px;
+    transition: 0.5s;
+}
+
+.container .card .face.face1{
+    position: relative;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+}
+
+.container .card:hover .face.face1{
+    background: var(--color-ci1);
+    transform: translateY(0);
+}
+
+.container .card .face.face1 .content{
+    opacity: 1;
+    transition: 0.5s;
+}
+
+
+
+.container .card .face.face1 .content img{
+    max-width: 100px;
+}
+
+.container .card .face.face1 .content h3{
+    margin: 10px 0 0;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.container .card .face.face2{
+    position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    transform: translateY(-100px);
+}
+
+.container .card:hover .face.face2{
+    transform: translateY(0);
+}
+
+.container .card .face.face2 .content p{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #333;  
+  margin: 0;
+    padding: 0;
+}
+
+.container .card .face.face2 .content a{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;  
+  margin: 15px 0 0;
+    display:  inline-block;
+    text-decoration: none;
+    font-weight: 400;
+    color: #333;
+    padding: 5px;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+.container .card .face.face2 .content a:hover{
+    background: #333;
+    color: #fff;
+}
 </style>
