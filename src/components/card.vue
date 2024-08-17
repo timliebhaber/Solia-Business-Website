@@ -17,7 +17,7 @@
                 <div class="content">
                     <p>Künstliche Intelligenz wird immer wichtiger, um wettbewerbsfähig zu bleiben. Hier erhalten Sie Unternehmensanalysen, Beratungen sowie die 
                       Entwicklung maßgeschneiderter KI-Lösungen, die perfekt auf Ihre Bedürfnisse zugeschnitten sind.</p>
-                        <a href="#">Mehr erfahren</a>
+                        <a href="#kontakt">Zum Kontakt</a>
                 </div>
             </div>
         </div>
@@ -32,7 +32,7 @@
                 <div class="content">
                     <p>IT-Sicherheit wird immer entscheidender, um Ihr Unternehmen zu schützen. Daher biete ich umfassende 
                       Systemchecks, Penetration Testing und individuelle Sicherheitslösungen an, die speziell mit Ihren Anforderungen abgestimmt sind.</p>
-                        <a href="#">Mehr erfahren</a>
+                        <a href="#kontakt">Zum Kontakt</a>
                 </div>
             </div>
         </div>
@@ -48,7 +48,7 @@
                     <p>
                       Eine starke Web-Präsenz ist heute unverzichtbar. Ich entwickle ansprechende Websites für Ihren 
                       öffentlichen Internetauftritt, sowie effiziente Front- und Backendlösungen für den internen Firmengebrauch.</p>
-                        <a href="#">Mehr erfahren</a>
+                        <a href="#kontakt">Zum Kontakt</a>
                 </div>
             </div>
         </div>
@@ -87,10 +87,10 @@ h3 {
 
 .container .card .face{
     width: 300px;
-    height: 200px;
+    height: 300px;
     margin-right: 10px;
     margin-left: 10px;
-    transition: 0.5s;
+    transition: 0.7s;
 }
 
 .container .card .face.face1{
@@ -110,7 +110,11 @@ h3 {
 
 .container .card .face.face1 .content{
     opacity: 1;
-    transition: 0.5s;
+    transition: 1s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -136,7 +140,7 @@ h3 {
     padding: 20px;
     box-sizing: border-box;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
-    transform: translateY(-100px);
+    transform: translateY(-200px);
 }
 
 .container .card:hover .face.face2{
