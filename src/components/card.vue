@@ -3,7 +3,7 @@
 
 <template>
       <h3>Leistungen</h3>
-  <div id="leistungsCards">
+  <div id="Leistungen">
 
   <div class="container">
         <div class="card">
@@ -62,7 +62,7 @@ h3 {
     margin: 2rem;
 }
 
-#leistungsCards{
+#Leistungen{
     margin-top: 50px;
     padding: 0;
     min-height: 10vh;
