@@ -13,6 +13,8 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "universal-tilt.js": "^2.0.6",
+    "vanilla-tilt": "^1.8.1",
     "vue": "^3.4.29"
   },
   "devDependencies": {
