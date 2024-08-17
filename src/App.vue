@@ -1,13 +1,12 @@
 <script setup lang="ts">
-import Willkommen from './components/Willkommen.vue';
 import AboutMe from './components/AboutMe.vue'
 import Kontakt from './components/Kontakt.vue';
-import Leistungen from './components/Leistungen.vue';
 import Referenzen from './components/Referenzen.vue';
 import card from './components/card.vue';
+import LeistungsCards from './components/LeistungsCards.vue';
 import Hero from './components/Hero.vue';
-
 </script>
+
 
 <template>
   <header>
@@ -25,13 +24,13 @@ import Hero from './components/Hero.vue';
   <main>
     <Hero />
     <Referenzen />
-    <Leistungen />
+    <LeistungsCards/>
+    <card />
     <AboutMe />
     <Kontakt />
     
   </main>
 </template>
-
 
 
 <style scoped lang="scss">

@@ -1,25 +1,28 @@
-<script setup lang="js">
+<script setup lang="ts">
 document.addEventListener('DOMContentLoaded', () => {
-    const interBubble = document.querySelector('.interactive');
+    const interBubble = document.querySelector('.interactive') as HTMLElement | null;
     let curX = 0;
     let curY = 0;
     let tgX = 0;
     let tgY = 0;
 
-    const move = () => {
+    const move = (): void => {
         curX += (tgX - curX) / 20;
         curY += (tgY - curY) / 20;
-        interBubble.style.transform = `translate(${Math.round(curX)}px, ${Math.round(curY)}px)`;
+        if (interBubble) {
+            interBubble.style.transform = `translate(${Math.round(curX)}px, ${Math.round(curY)}px)`;
+        }
         requestAnimationFrame(move);
     };
 
-    window.addEventListener('mousemove', (event) => {
+    window.addEventListener('mousemove', (event: MouseEvent): void => {
         tgX = event.clientX;
         tgY = event.clientY;
     });
 
     move();
 });
+
 </script>
 
 <template>
