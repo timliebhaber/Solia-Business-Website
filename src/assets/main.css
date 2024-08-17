@@ -19,6 +19,17 @@ h1 {
 
 }
 
+h2 {
+  display:flex;
+  justify-content: flex-start;
+  font-size: 24px;
+  margin-bottom: 20px;
+  margin-top: 30px;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
 h3 {
   display:flex;
   justify-content: flex-start;
