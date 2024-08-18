@@ -1,3 +1,5 @@
+<script setup lang="js"></script>
+
 <script>
 import VanillaTilt from 'vanilla-tilt';
 export default {
@@ -36,7 +38,7 @@ export default {
     </a>
 
     <a href="https://solia-solutions.de/IT-Sicherheit" style="text-decoration: none; color: inherit;">
-    <div class="tiltMe" ref="tiltRef" data-tilt data-tilt-glare="true"
+    <div class="tiltMe" data-tilt data-tilt-glare="true"
         data-tilt-max-glare="0.5"
         data-tilt-speed="200"
         data-tilt-perspective="500"
@@ -81,7 +83,6 @@ h2 {
     height: auto;
 }
 
-
 .tiltMe {
 	width : 350px;
 	height: 400px;
@@ -102,6 +103,7 @@ h2 {
 
 .tiltMe p {
     color: rgb(201, 201, 201);
+    font-size: 1 rem ;
 }
 
 </style>
