@@ -149,6 +149,7 @@ h3 {
 
 .container .card .face.face2 .content p{
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1.1em;
   color: #333;  
   margin: 0;
     padding: 0;
