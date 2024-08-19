@@ -7,11 +7,20 @@ export default {
     name: 'Tilt',
     data: function(){
         return {
+            items: [
+        { id: 1, text: 'Element 1' }]
         }
     },
-    mounted(){
-        VanillaTilt.init(this.$refs.tiltRef,this.options)
-    },
+    mounted() {
+  // Überprüfen, ob $refs.tiltRef ein Array ist und ob es Elemente enthält
+  if (Array.isArray(this.$refs.tiltRef) && this.$refs.tiltRef.length > 0) {
+    this.$refs.tiltRef.forEach((element) => {
+      VanillaTilt.init(element, this.options);
+    });
+  } else {
+    console.error('Keine Elemente gefunden, auf die VanillaTilt angewendet werden kann.');
+  }
+},
     props: {
         options: Object,
         parallax: Boolean
@@ -28,8 +37,9 @@ export default {
 <div id="tiltcardcontainer">
     
     <a href="https://solia-solutions.de/KI" style="text-decoration: none; color: inherit;">
-    <div class="tiltMe" ref="tiltRef" data-tilt data-tilt-glare="true"
+    <div v-for="(item) in items" :key="item.id" ref="tiltRef" class="tiltMe" data-tilt data-tilt-glare="true"
         data-tilt-max-glare="0.5"
+        data-tilt-scale ="1.1"
         data-tilt-speed="200"
         data-tilt-perspective="500"
         data-tilt-max="5">
@@ -48,8 +58,9 @@ export default {
     </a>
 
     <a href="https://solia-solutions.de/IT-Sicherheit" style="text-decoration: none; color: inherit;">
-    <div class="tiltMe" data-tilt data-tilt-glare="true"
+    <div v-for="(item) in items" :key="item.id" ref="tiltRef" class="tiltMe" data-tilt data-tilt-glare="true"
         data-tilt-max-glare="0.5"
+        data-tilt-scale ="1.1"
         data-tilt-speed="200"
         data-tilt-perspective="500"
         data-tilt-max="5">
@@ -67,8 +78,9 @@ export default {
     </a>
 
     <a href="https://solia-solutions.de/Web-Entwicklung" style="text-decoration: none; color: inherit;">
-    <div class="tiltMe" ref="tiltRef" data-tilt data-tilt-glare="true"
+    <div v-for="(item) in items" :key="item.id" ref="tiltRef" class="tiltMe" data-tilt data-tilt-glare="true"
         data-tilt-max-glare="0.5"
+        data-tilt-scale ="1.1"
         data-tilt-speed="200"
         data-tilt-perspective="500"
         data-tilt-max="5">
