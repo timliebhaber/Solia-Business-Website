@@ -1,10 +1,9 @@
 <script setup lang="ts">
 import AboutMe from './components/AboutMe.vue'
-import Kontakt from './components/Kontakt.vue';
-import Referenzen from './components/Referenzen.vue';
-import card from './components/card.vue';
+import Kontakt from './components/KontaktSection.vue';
+import Referenzen from './components/ReferenzenSection.vue';
 import LeistungsCards from './components/LeistungsCards.vue';
-import Hero from './components/Hero.vue';
+import Hero from './components/HeroSection.vue';
 </script>
 
 
@@ -25,7 +24,6 @@ import Hero from './components/Hero.vue';
     <Hero />
     <Referenzen />
     <LeistungsCards/>
-    <card />
     <AboutMe />
     <Kontakt />
     

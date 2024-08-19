@@ -3,6 +3,7 @@
 <script>
 import VanillaTilt from 'vanilla-tilt';
 export default {
+    // eslint-disable-next-line vue/multi-word-component-names
     name: 'Tilt',
     data: function(){
         return {
@@ -20,8 +21,10 @@ export default {
 
 
 <template>
-<h2>Leistungen</h2>
 
+<div id="leistungen">
+<h2>Leistungen</h2>
+</div>
 <div id="tiltcardcontainer">
     
     <a href="https://solia-solutions.de/KI" style="text-decoration: none; color: inherit;">
@@ -30,10 +33,17 @@ export default {
         data-tilt-speed="200"
         data-tilt-perspective="500"
         data-tilt-max="5">
-        <img src="../assets/kunstliche-intelligenz.png" height="60px"></img>
+        <img src="../assets/kunstliche-intelligenz.png" height="60px" />
         <h3>Künstliche Intelligenz</h3>
-        <p>Künstliche Intelligenz wird immer wichtiger, um wettbewerbsfähig zu bleiben. Hier erhalten Sie Unternehmensanalysen, Beratungen sowie 
-            die Entwicklung maßgeschneiderter KI-Lösungen, die perfekt auf Ihre Bedürfnisse zugeschnitten sind.</p>
+        <p>Künstliche Intelligenz wird immer wichtiger, um wettbewerbsfähig zu bleiben. 
+            <br> 
+            <ul class="custom-list">
+                <li><font-awesome-icon icon="play" :style="{ fontSize: '14px' }" /> ‎ Unternehmensanalysen</li> 
+                <li><font-awesome-icon icon="play" :style="{ fontSize: '14px' }" /> ‎ Individuelle Beratungen</li>             
+                <li><font-awesome-icon icon="play" :style="{ fontSize: '14px' }" /> ‎ Maßgeschneiderte KI-Lösungen</li> 
+            </ul>
+            </p>
+            
     </div>
     </a>
 
@@ -43,10 +53,16 @@ export default {
         data-tilt-speed="200"
         data-tilt-perspective="500"
         data-tilt-max="5">
-        <img src="../assets/sicherheit.png" height="60px"></img>
+        <img src="../assets/sicherheit.png" height="60px" />
         <h3>IT-Sicherheit</h3>
-        <p>IT-Sicherheit wird immer entscheidender, um Ihr Unternehmen zu schützen. Daher biete ich umfassende 
-            Systemchecks, Penetration Testing und individuelle Sicherheitslösungen an, die speziell mit Ihren Anforderungen abgestimmt sind.</p>
+        <p>IT-Sicherheit wird immer entscheidender, um Ihr Unternehmen vollständig zu schützen.
+            <br> 
+            <ul class="custom-list">
+                <li><font-awesome-icon icon="play" :style="{ fontSize: '14px' }" /> ‎ Umfassende Systemchecks</li> 
+                <li><font-awesome-icon icon="play" :style="{ fontSize: '14px' }" /> ‎ Penetration Testing</li>             
+                <li><font-awesome-icon icon="play" :style="{ fontSize: '14px' }" /> ‎ Individuelle Sicherheitslösungen</li>
+            </ul> 
+        </p>
     </div>
     </a>
 
@@ -56,21 +72,40 @@ export default {
         data-tilt-speed="200"
         data-tilt-perspective="500"
         data-tilt-max="5">
-        <img src="../assets/web-design.png" height="60px"></img>
+        <img src="../assets/web-design.png" height="60px" />
         <h3>Web-Entwicklung</h3>
-        <p>Eine starke Web-Präsenz ist heute unverzichtbar. Ich entwickle ansprechende Websites für Ihren öffentlichen 
-            Internetauftritt, sowie effiziente Front- und Backendlösungen für den internen Firmengebrauch.</p>
+        <p>Der Internetauftritt ist oft der erste Eindruck, den Kunden von Ihrem Unternehmen bekommen.
+            <br>
+            <ul class="custom-list">
+                <li><font-awesome-icon icon="play" :style="{ fontSize: '14px' }" /> ‎ Ansprechende Websites</li> 
+                <li><font-awesome-icon icon="play" :style="{ fontSize: '14px' }" /> ‎ Interne Firmenwebsite</li>             
+                <li><font-awesome-icon icon="play" :style="{ fontSize: '14px' }" /> ‎ Front- und Backendlösungen</li>
+            </ul> 
+        </p>
     </div>
     </a>
 
 </div>
 
-
-
 </template>
 
 
 <style scoped>
+
+ul.custom-list {
+            list-style-type: none; /* Disable default bullets */
+            padding: 0; /* Remove default padding */
+            margin: 0; /* Remove default margin */
+        }
+
+        ul.custom-list li {
+            margin: 10px 0;
+            padding-left: 0; /* Remove any padding */
+            position: relative;
+            display: flex;
+            align-items: center; /* Align items vertically */
+         
+        }
 
 h2 {
     margin: 2rem;
@@ -103,7 +138,7 @@ h2 {
 
 .tiltMe p {
     color: rgb(201, 201, 201);
-    font-size: 1 rem ;
+    font-size: 1rem ;
 }
 
 </style>
