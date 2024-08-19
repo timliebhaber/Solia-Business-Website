@@ -8,7 +8,7 @@ export default {
     data: function(){
         return {
             items: [
-        { id: 1, text: 'Element 1' }]
+        {id: 1}]
         }
     },
     mounted() {
@@ -33,7 +33,6 @@ export default {
 
 <div id="leistungen">
 <h2>Leistungen</h2>
-</div>
 <div id="tiltcardcontainer">
     
     <a href="https://solia-solutions.de/KI" style="text-decoration: none; color: inherit;">
@@ -98,11 +97,22 @@ export default {
     </a>
 
 </div>
+</div>
 
 </template>
 
 
 <style scoped>
+
+#leistungen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    background-color: #242424;
+    padding: 50px;
+}
 
 ul.custom-list {
             list-style-type: none; /* Disable default bullets */
@@ -116,7 +126,6 @@ ul.custom-list {
             position: relative;
             display: flex;
             align-items: center; /* Align items vertically */
-         
         }
 
 h2 {
@@ -128,12 +137,17 @@ h2 {
     justify-content: center;
     align-items: center;
     height: auto;
+    gap: 50px;
+    background-color: #242424;
+    padding: 30px 100px 30px 100px;
+    border: 1px solid #242424;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.6); /* Basic inner shadow */
 }
 
 .tiltMe {
 	width : 350px;
 	height: 400px;
-    margin: 20px;
     padding: 30px;
     background: rgba(255,255,255,.25);
     border-radius: 10px;
@@ -141,7 +155,10 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+}
+
+.tiltMe:hover{
+    border: 2px solid white;
 }
 
 .tiltMe img {
