@@ -3,7 +3,7 @@
 
 <template>
     <div id="über">
-    <h3>Über mich</h3>
+    <h2>Über mich</h2>
     <div class="card">
     <div class="cardImage">
       <img src="../assets/Logo Border.png" alt="Profilbild" style="width: 180px; height: 180px;"> 
@@ -12,8 +12,8 @@
     <div class="cardText">
     <h3>Tim Liebhaber</h3>
     <p>
-    Ich bin studierter Informatiker mit Schwerpunkt in künstlicher Intelligenz. Ich bin interessiert an Neuroinformatik, KI und Blockchain-Technologie, Web Entwicklung und Software Engineering.
-    <br/><br/>Mehr über mich findest du auf meinem <a href="https://www.linkedin.com/in/tim-liebhaber/" target="_blank" rel="noopener">LinkedIn</a>. <br/>Ausklappen für Lebenslauf.
+    Ich bin studierter Informatiker mit Schwerpunkt in künstlicher Intelligenz. <br/>Ich bin interessiert an Neuroinformatik, KI und Blockchain-Technologie, Web Entwicklung und Software Engineering.
+    <br/><br/>Mehr über mich findest du auf meinem <a href="https://www.linkedin.com/in/tim-liebhaber/" target="_blank" rel="noopener">LinkedIn</a>.
     </p> 
     </div>
     </div>
@@ -26,7 +26,7 @@
 
 #über {
   padding: 2rem;
-  --card-height: 40vh;
+  --card-height: 35vh;
   --card-width: 50vw;
   display: flex;
   align-items: center;
@@ -40,7 +40,7 @@
   height: var(--card-height);
   border-radius: 110px;
   padding: 1rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -70,6 +70,7 @@
   justify-content: center;
   align-items: first baseline;
   text-align: left;
+  padding-right: 1rem;
 }
 
 .card h3 {

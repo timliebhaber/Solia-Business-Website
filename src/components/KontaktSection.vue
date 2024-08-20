@@ -3,7 +3,7 @@
 
 <template>
   <div id="kontakt">
-  <h3>Kontakt</h3>
+  <h2>Kontakt</h2>
 </div>
   <div id = kontaktfeld>
   <div class="container">
@@ -28,7 +28,7 @@
 <style scoped>
 
 #kontakt {
-  padding: 2rem;
+  padding: 1rem;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -72,9 +72,9 @@ input[type=submit]:hover {
 .container {
   border-radius: 5px;
   background-color: #f2f2f210;
-  margin-top: 50px;
   padding: 20px;
   width: 40%;
+  margin-bottom: 2rem;
 }
 
 #kontaktfeld {
