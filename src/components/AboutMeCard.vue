@@ -6,7 +6,7 @@
     <h3>Über mich</h3>
     <div class="card">
     <div class="cardImage">
-      <img src="../assets/Logo Border.png" alt="Profilbild" style="width: 200px; height: 200px;"> 
+      <img src="../assets/Logo Border.png" alt="Profilbild" style="width: 180px; height: 180px;"> 
     </div>
     <div class="separator"></div>
     <div class="cardText">
@@ -52,12 +52,15 @@
   justify-content: center;
   align-items: center;
   margin: 2rem;
+  background: radial-gradient(circle, #ffffff 50%, #616161 100%);
+  border-radius: 100px;
+  
 }
 
 .separator {
   width: 5px; /* Thickness of the line */
   height: 80%; /* Height of the line */
-  background-color: rgba(185, 185, 185, 0.726); /* Color of the line */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 25%, rgba(0, 0, 0, 0.75) 75%, rgba(0, 0, 0, 0) 100%);
   margin-right: 2rem;
 }
 
@@ -76,12 +79,15 @@
 
 .cardImage img {
   height: 10px;
+  border-radius: 100px;
+  padding: 1rem;
+  opacity: 0.9;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.6);
 }
 
 .card p {
   font-size: 1.2rem;
   color: rgba(0, 0, 0, 0.829)
 }
-
 
 </style>
