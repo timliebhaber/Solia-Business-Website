@@ -3,7 +3,8 @@
 
 <template>
   <div id="kontakt">
-  <h3>Kontakt</h3>
+  <h2>Kontakt</h2>
+</div>
   <div id = kontaktfeld>
   <div class="container">
   <form action="action_page.php">
@@ -22,30 +23,38 @@
   </form>
   </div>
   </div>
-  </div>
 </template>
 
 <style scoped>
 
 #kontakt {
-  padding: 2rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--color-background-dark);
 }
 
-/* Style inputs with type="text", select elements and textareas */
 input, select, textarea {
   width: 100%; /* Full width */
+  color: white;
   padding: 12px; /* Some padding */ 
   border: 1px solid #ccc; /* Gray border */
   border-radius: 4px; /* Rounded borders */
   box-sizing: border-box; /* Make sure that padding and width stays in place */
   margin-top: 6px; /* Add a top margin */
   margin-bottom: 16px; /* Bottom margin */
-  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+  background-color: #555555;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.774);
 }
 
 /* Style the submit button with a specific background color etc */
 input[type=submit] {
-  width: 30%; /* Full width */
+  width: 30%; 
   background-color: #0B9DD2;
   color: rgb(255, 255, 255);
   padding: 12px 20px;
@@ -63,13 +72,15 @@ input[type=submit]:hover {
 .container {
   border-radius: 5px;
   background-color: #f2f2f210;
-  margin-top: 50px;
   padding: 20px;
   width: 40%;
+  margin-bottom: 2rem;
 }
 
 #kontaktfeld {
   display: flex;
   justify-content: center; /* Horizontally centers the container */
+  background-color: var(--color-background-dark);
+  width: 100%;
 }
 </style>

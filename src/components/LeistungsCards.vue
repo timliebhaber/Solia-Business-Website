@@ -8,7 +8,7 @@ export default {
     data: function(){
         return {
             items: [
-        { id: 1, text: 'Element 1' }]
+        {id: 1}]
         }
     },
     mounted() {
@@ -33,14 +33,13 @@ export default {
 
 <div id="leistungen">
 <h2>Leistungen</h2>
-</div>
 <div id="tiltcardcontainer">
     
     <a href="https://solia-solutions.de/KI" style="text-decoration: none; color: inherit;">
     <div v-for="(item) in items" :key="item.id" ref="tiltRef" class="tiltMe" data-tilt data-tilt-glare="true"
-        data-tilt-max-glare="0.5"
+        data-tilt-max-glare="0.2"
         data-tilt-scale ="1.1"
-        data-tilt-speed="200"
+        data-tilt-speed="1000"
         data-tilt-perspective="500"
         data-tilt-max="5">
         <img src="../assets/kunstliche-intelligenz.png" height="60px" />
@@ -59,9 +58,9 @@ export default {
 
     <a href="https://solia-solutions.de/IT-Sicherheit" style="text-decoration: none; color: inherit;">
     <div v-for="(item) in items" :key="item.id" ref="tiltRef" class="tiltMe" data-tilt data-tilt-glare="true"
-        data-tilt-max-glare="0.5"
+        data-tilt-max-glare="0.2"
         data-tilt-scale ="1.1"
-        data-tilt-speed="200"
+        data-tilt-speed="1000"
         data-tilt-perspective="500"
         data-tilt-max="5">
         <img src="../assets/sicherheit.png" height="60px" />
@@ -79,9 +78,9 @@ export default {
 
     <a href="https://solia-solutions.de/Web-Entwicklung" style="text-decoration: none; color: inherit;">
     <div v-for="(item) in items" :key="item.id" ref="tiltRef" class="tiltMe" data-tilt data-tilt-glare="true"
-        data-tilt-max-glare="0.5"
+        data-tilt-max-glare="0.2"
         data-tilt-scale ="1.1"
-        data-tilt-speed="200"
+        data-tilt-speed="1000"
         data-tilt-perspective="500"
         data-tilt-max="5">
         <img src="../assets/web-design.png" height="60px" />
@@ -98,11 +97,22 @@ export default {
     </a>
 
 </div>
+</div>
 
 </template>
 
 
 <style scoped>
+
+#leistungen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    background-color: var(--color-background-dark);
+    padding: 50px;
+}
 
 ul.custom-list {
             list-style-type: none; /* Disable default bullets */
@@ -116,7 +126,6 @@ ul.custom-list {
             position: relative;
             display: flex;
             align-items: center; /* Align items vertically */
-         
         }
 
 h2 {
@@ -128,20 +137,28 @@ h2 {
     justify-content: center;
     align-items: center;
     height: auto;
+    gap: 50px;
+    background-color: #242424;
+    padding: 30px 100px 30px 100px;
+    border: 1px solid #1b1b1b;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.7); /* Basic inner shadow */
 }
 
 .tiltMe {
 	width : 350px;
 	height: 400px;
-    margin: 20px;
     padding: 30px;
-    background: rgba(255,255,255,.25);
+    background: rgba(0, 0, 0, 0.35);
     border-radius: 10px;
     border: 1px solid rgba(255,255,255,.15);
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+}
+
+.tiltMe:hover{
+    border: 2px solid rgba(104, 104, 104, 0.356);
 }
 
 .tiltMe img {
