@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import AboutMe from './components/AboutMe.vue'
+import AboutMeCard from './components/AboutMeCard.vue'
 import Kontakt from './components/KontaktSection.vue';
 import Referenzen from './components/ReferenzenSection.vue';
 import LeistungsCards from './components/LeistungsCards.vue';
@@ -24,7 +24,7 @@ import Hero from './components/HeroSection.vue';
     <Hero />
     <Referenzen />
     <LeistungsCards/>
-    <AboutMe />
+    <AboutMeCard />
     <Kontakt />
     
   </main>
