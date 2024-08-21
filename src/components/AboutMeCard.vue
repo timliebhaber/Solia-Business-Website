@@ -32,6 +32,7 @@
   align-items: center;
   flex-direction: column;
   background-color: var(--color-background-dark);
+  padding-bottom: 4rem;
 }
 
 .card {
@@ -75,6 +76,7 @@
 
 .card h3 {
   font-size: 2rem;
+  font-weight: bold;
   color: rgba(0, 0, 0, 0.829);
 }
 
