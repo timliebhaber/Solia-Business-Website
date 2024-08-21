@@ -4,7 +4,7 @@
 <template>
   <div id="kontakt">
   <h2>Kontakt</h2>
-</div>
+  </div>
   <div id = kontaktfeld>
   <div class="container">
   <form action="action_page.php">
@@ -18,7 +18,7 @@
     <label for="subject"></label>
     <textarea id="subject" name="subject" placeholder="" style="height:200px"></textarea>
 
-    <input type="submit" value="Submit">
+    <input type="submit" value="Senden">
 
   </form>
   </div>
@@ -32,12 +32,18 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: var(--color-background-dark);
+  background-color: white;
+}
+
+h2 {
+  color: black;
 }
 
 input, select, textarea {
   width: 100%; /* Full width */
-  color: white;
+  color: rgb(255, 255, 255);
+  font-family: 'Haas', sans-serif;
+  font-size: 1rem;
   padding: 12px; /* Some padding */ 
   border: 1px solid #ccc; /* Gray border */
   border-radius: 4px; /* Rounded borders */
@@ -45,11 +51,12 @@ input, select, textarea {
   margin-top: 6px; /* Add a top margin */
   margin-bottom: 16px; /* Bottom margin */
   resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
-  background-color: #555555;
+  background-color: #2b2b2b;
 }
 
 input::placeholder {
-  color: rgba(255, 255, 255, 0.774);
+  color: rgba(255, 255, 255, 0.863);
+  font-family: 'Haas', sans-serif;
 }
 
 /* Style the submit button with a specific background color etc */
@@ -57,6 +64,7 @@ input[type=submit] {
   width: 30%; 
   background-color: #0B9DD2;
   color: rgb(255, 255, 255);
+  font-weight: bold;
   padding: 12px 20px;
   border: none;
   border-radius: 4px;
@@ -65,7 +73,8 @@ input[type=submit] {
 
 /* When moving the mouse over the submit button, add a darker green color */
 input[type=submit]:hover {
-  background-color: #0066ff;
+  background-color: #1472ff;
+  box-shadow: 0 0 10px rgba(5,0,0,0.5);
 }
 
 /* Add a background color and some padding around the form */
@@ -80,7 +89,7 @@ input[type=submit]:hover {
 #kontaktfeld {
   display: flex;
   justify-content: center; /* Horizontally centers the container */
-  background-color: var(--color-background-dark);
+  background-color: white;
   width: 100%;
 }
 </style>

@@ -11,11 +11,11 @@ scroll-behavior: smooth;
 }
 
 h1 {
-  font-size: 36px;
+  font-size: 2rem;
   margin-bottom: 20px;
   color: #ffffff;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
+  font-family: 'Haas', sans-serif;
+  font-weight: bold;
 
 }
 
@@ -26,8 +26,8 @@ h2 {
   margin-bottom: 20px;
   margin-top: 30px;
   color: #ffffff;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
+  font-family: 'Haas', sans-serif;
+  font-weight: bold;
 }
 
 h3 {

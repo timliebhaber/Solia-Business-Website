@@ -26,7 +26,6 @@ import Hero from './components/HeroSection.vue';
     <LeistungsCards/>
     <AboutMeCard />
     <Kontakt />
-    
   </main>
 </template>
 
@@ -53,6 +52,8 @@ import Hero from './components/HeroSection.vue';
     padding: 10px 20px;
     text-decoration: none;
     margin: 0 15px;
+    font-family: 'Haas', sans-serif;
+    font-weight: bold;
     font-size: 18px;
     transition: background-color 0.3s ease-in-out;
     border-radius: 5px;
