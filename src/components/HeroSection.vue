@@ -117,25 +117,6 @@ document.addEventListener('DOMContentLoaded', () => {
   border:none;
 }
 
- html, body {
-  font-family: 'Dongle', sans-serif;
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-}
-
-body {
-  background: #FFF;
-  font-family: 'Montserrat', sans-serif;
-  overflow: hidden;
-}
-
-h1, h2, h3 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-}
-
 .logo {
   position: absolute;
   z-index: 10;
@@ -219,6 +200,7 @@ h1 {
 }
 
 p {
+  font-size: 1.2rem;
   line-height: 1.6;
 }
 
@@ -267,7 +249,7 @@ p {
   position: relative;
   z-index: -200;
   overflow: hidden;
-  background: linear-gradient(40deg, var(--color-grad1), var(--color-grad2));
+  background: linear-gradient(135deg, black,var(--color-grad2));
   top: 0;
   left: 0;
 
@@ -385,7 +367,7 @@ p {
 }
 
 .content i {
-    font-size: 18px;
+    font-size: 1.375rem;
     margin-top: 15px;
     color: #afafaf;
     transition: color 0.3s ease-in-out;
