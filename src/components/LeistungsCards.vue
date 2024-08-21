@@ -37,7 +37,7 @@ export default {
     
     <a href="https://solia-solutions.de/KI" style="text-decoration: none; color: inherit;">
     <div v-for="(item) in items" :key="item.id" ref="tiltRef" class="tiltMe" data-tilt data-tilt-glare="true"
-        data-tilt-max-glare="0.2"
+        data-tilt-max-glare="0.3"
         data-tilt-scale ="1.1"
         data-tilt-speed="1000"
         data-tilt-perspective="500"
@@ -58,14 +58,14 @@ export default {
 
     <a href="https://solia-solutions.de/IT-Sicherheit" style="text-decoration: none; color: inherit;">
     <div v-for="(item) in items" :key="item.id" ref="tiltRef" class="tiltMe" data-tilt data-tilt-glare="true"
-        data-tilt-max-glare="0.2"
+        data-tilt-max-glare="0.3"
         data-tilt-scale ="1.1"
         data-tilt-speed="1000"
         data-tilt-perspective="500"
         data-tilt-max="5">
         <img src="../assets/sicherheit.png" height="60px" />
         <h3>IT-Sicherheit</h3>
-        <p>IT-Sicherheit wird immer entscheidender, um Ihr Unternehmen vollständig zu schützen.
+        <p>Eine starke IT-Sicherheit ist wichtig, um Ihr Unternehmen umfangreich zu schützen.
             <br> 
             <ul class="custom-list">
                 <li><font-awesome-icon icon="play" :style="{ fontSize: '14px' }" /> ‎ Umfassende Systemchecks</li> 
@@ -78,7 +78,7 @@ export default {
 
     <a href="https://solia-solutions.de/Web-Entwicklung" style="text-decoration: none; color: inherit;">
     <div v-for="(item) in items" :key="item.id" ref="tiltRef" class="tiltMe" data-tilt data-tilt-glare="true"
-        data-tilt-max-glare="0.2"
+        data-tilt-max-glare="0.3"
         data-tilt-scale ="1.1"
         data-tilt-speed="1000"
         data-tilt-perspective="500"
@@ -110,7 +110,7 @@ export default {
     justify-content: center;
     align-items: center;
     height: auto;
-    background-color: var(--color-background-dark);
+    background-color: white;
     padding: 50px;
 }
 
@@ -130,6 +130,13 @@ ul.custom-list {
 
 h2 {
     margin: 2rem;
+    color: black;
+}
+
+h3 {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 #tiltcardcontainer {
@@ -138,9 +145,9 @@ h2 {
     align-items: center;
     height: auto;
     gap: 50px;
-    background-color: #242424;
+    background-color: #e0e0e0;
     padding: 30px 100px 30px 100px;
-    border: 1px solid #1b1b1b;
+    border: 1px solid #919191;
     border-radius: 10px;
     box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.7); /* Basic inner shadow */
 }
@@ -149,7 +156,7 @@ h2 {
 	width : 350px;
 	height: 400px;
     padding: 30px;
-    background: rgba(0, 0, 0, 0.35);
+    background: rgba(0, 0, 0, .9);
     border-radius: 10px;
     border: 1px solid rgba(255,255,255,.15);
     display: flex;
@@ -167,7 +174,8 @@ h2 {
 
 .tiltMe p {
     color: rgb(201, 201, 201);
-    font-size: 1rem ;
+    font-size: 1.05rem;
+    font-weight: medium;
 }
 
 </style>
