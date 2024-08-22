@@ -32,9 +32,10 @@ export default {
 <template>
 
 <div id="leistungen">
+    <!-- Über und unter Leistungen noch mehr Text -->
 <h2>Leistungen</h2>
 <div id="tiltcardcontainer">
-    
+    <!-- Tiltkarten bei kleinerem Bildschirm in Reihen, nur mit Logo, Titel und Leistungen aber gleichem style -->
     <a href="https://solia-solutions.de/KI" style="text-decoration: none; color: inherit;">
     <div v-for="(item) in items" :key="item.id" ref="tiltRef" class="tiltMe" data-tilt data-tilt-glare="true"
         data-tilt-max-glare="0.3"
@@ -111,7 +112,8 @@ export default {
     align-items: center;
     height: auto;
     background-color: white;
-    padding: 50px;
+    padding: 5rem 15rem;
+    display: block;
 }
 
 ul.custom-list {
@@ -129,7 +131,7 @@ ul.custom-list {
         }
 
 h2 {
-    margin: 2rem;
+    margin: 2rem 0;
     color: black;
 }
 

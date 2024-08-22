@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 
 <template>
+  <!-- Include Logo on the left -->
   <div class="card">
   
     <svg 
@@ -152,7 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
   z-index: 10;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(0%, -50%);
   user-select: none;
   max-width: 600px;
   padding: 48px;

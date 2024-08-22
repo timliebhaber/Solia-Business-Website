@@ -4,8 +4,16 @@
 <template>
   <div id="kontakt">
   <h2>Kontakt</h2>
+  <div id="adressandform">
+  <div class="adress">
+<p>Tim Liebhaber</br>
+    Rest Adresse</br>
+  etc.</br>
+  Hier nochmal LinkedIn und Github Logos</p>
+
   </div>
   <div id = kontaktfeld>
+    <!-- TODO: Form an den rechten Rand der Box bekommen -->
   <div class="container">
   <form action="action_page.php">
 
@@ -23,16 +31,29 @@
   </form>
   </div>
   </div>
+</div>
+  </div>
 </template>
 
 <style scoped>
 
-#kontakt {
-  padding: 1rem;
+#adressandform {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  flex-direction: column;
   background-color: white;
+}
+
+.adress p {
+  color: black;
+  font-size: 1.5rem;
+}
+
+#kontakt {
+  align-items: center;
+  background-color: white;
+  padding: 5rem 15rem;
+  display: block;
 }
 
 h2 {

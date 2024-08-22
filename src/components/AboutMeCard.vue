@@ -14,10 +14,11 @@
     <p>
     Ich bin studierter Informatiker mit Schwerpunkt in künstlicher Intelligenz. <br/>Ich bin interessiert an Neuroinformatik, KI und Blockchain-Technologie, Web Entwicklung und Software Engineering.
     <br/><br/>Mehr über mich findest du auf meinem <a href="https://www.linkedin.com/in/tim-liebhaber/" target="_blank" rel="noopener">LinkedIn</a>.
-    </p> 
+      <!-- Relevanten Lebenslauf dazuschreiben inkl aller relevanter Module -->
+  </p> 
     </div>
     </div>
-
+<!-- Rechts von der Karte sollen beim scrollen die Programmiersprachen, die ich kann durchschießen -->
     </div>
 
 </template>
@@ -25,14 +26,18 @@
 <style scoped>
 
 #über {
-  padding: 2rem;
+  padding: 5rem 15rem;
   --card-height: 35vh;
   --card-width: 50vw;
   display: flex;
   align-items: center;
   flex-direction: column;
   background-color: var(--color-background-dark);
-  padding-bottom: 4rem;
+  display: block;
+}
+
+h2 {
+  margin: 2rem 0;
 }
 
 .card {
