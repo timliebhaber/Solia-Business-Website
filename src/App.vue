@@ -9,6 +9,8 @@ import Hero from './components/HeroSection.vue';
 
 <template>
   <header>
+    <!-- TODO: include navbar into hero section  -->
+     <!-- TODO: Navbar for sizes that overlap code -> Slide-out Menu (Hamburger) -->
     <div class="navbar">
         <img src="./assets/Logo White.png" alt="Logo" class="logo-small">
         <nav class="nav-links">
@@ -37,7 +39,8 @@ import Hero from './components/HeroSection.vue';
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem;
+    padding: 0 15rem;
+    padding-top: 4.5rem;
     height: 8vh;
 }
 
@@ -51,7 +54,6 @@ import Hero from './components/HeroSection.vue';
     color: white;
     padding: 10px 20px;
     text-decoration: none;
-    margin: 0 15px;
     font-family: 'Haas', sans-serif;
     font-weight: bold;
     font-size: 18px;

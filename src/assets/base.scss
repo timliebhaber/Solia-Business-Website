@@ -9,7 +9,7 @@
   --vt-c-black-mute: #282828;
   --vt-c-indigo: #2c3e50;
 
-  --vt-c-background-dark: #242424;
+  --vt-c-background-dark: #161616;
 
   --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
   --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
@@ -65,21 +65,21 @@
 
 @font-face {
   font-family: 'Haas';
-  src: url('/public/fonts/NeueHaasDisplayMedium.ttf') format('truetype');
+  src: url('/fonts/NeueHaasDisplayMedium.ttf') format('truetype');
   font-weight: medium;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Haas';
-  src: url('/public/fonts/NeueHaasDisplayBold.ttf') format('truetype');
+  src: url('/fonts/NeueHaasDisplayBold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Haas';
-  src: url('/public/fonts/NeueHaasDisplayRoman.ttf') format('truetype');
+  src: url('/fonts/NeueHaasDisplayRoman.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
