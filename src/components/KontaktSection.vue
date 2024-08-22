@@ -51,7 +51,7 @@ input, select, textarea {
   margin-top: 6px; /* Add a top margin */
   margin-bottom: 16px; /* Bottom margin */
   resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
-  background-color: #2b2b2b;
+  background-color: var(--color-background-dark);
 }
 
 input::placeholder {
