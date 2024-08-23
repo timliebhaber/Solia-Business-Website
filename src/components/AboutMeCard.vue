@@ -3,6 +3,7 @@
 
 <template>
     <div id="über">
+    <h4>WARUM SOLIA</h4>
     <h2>Über mich</h2>
     <div class="card">
     <div class="cardImage">
@@ -37,7 +38,11 @@
 }
 
 h2 {
-  margin: 2rem 0;
+  margin-bottom: 2rem;
+}
+
+h4 {
+  color: rgb(207, 207, 207);
 }
 
 .card {
