@@ -200,8 +200,8 @@ document.addEventListener('DOMContentLoaded', () => {
     padding: 0 15rem;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%); /* Centers the div vertically */
-    bottom: 50%;
+    transform: translateY(-50%); 
+   
 }
 
 .logo {
@@ -211,8 +211,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   .card {
   z-index: 10;
-  max-width: 530px;
-  min-width: 530px;
+  max-width: 535px;
+  min-width: 535px;
   padding: 40px;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
