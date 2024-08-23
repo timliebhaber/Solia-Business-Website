@@ -18,7 +18,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 15rem;
+  padding: 2rem 15rem;
 }
 
 img {
