@@ -26,8 +26,24 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 
 <template>
-  <!-- Include Logo on the left -->
-  <div class="card">
+
+  <div id="heroSection">
+<!-- TODO: Navbar for sizes that overlap code -> Slide-out Menu (Hamburger) -->
+    <div class="navbar">
+        <img src="../assets/Logo White.png" alt="Logo" class="logo-small">
+        <nav class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#leistungen">Leistungen</a>
+            <a href="#über">Über mich</a>
+            <a href="#kontakt">Kontakt</a>
+        </nav>
+    </div>
+    <!-- Include Logo on the left -->
+  <div id="contentContainer">
+    <div class="logo">
+      <img src="../assets/Solia Solutions Color.png" alt="Logo"></img>
+    </div>
+    <div class="card">
   
     <svg 
        viewBox="0 0 100% 100%"
@@ -55,6 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <a href="https://github.com/timliebhaber" target="_blank"><i class="fa fa-github" style="font-size:36px"></i></a>
         <a href="https://www.linkedin.com/in/tim-liebhaber/" target="_blank"><i class="fa fa-linkedin" style="font-size:36px"></i></a>
   </div>
+</div>
 </div>
 <div class="gradient-bg">
   <svg 
@@ -93,17 +110,72 @@ document.addEventListener('DOMContentLoaded', () => {
     <div class="interactive"></div>
   </div>
 </div>
+</div>
 </template>
 
 
 <style scoped lang="scss">
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 
-#herosection{
+#heroSection{
   display: flex;
-    align-items: center; /* Vertically center items */
+  flex-direction: column;
+  height: 100vh;
     justify-content: space-between; /* Space between the left and right sides */
-    gap: 200px;
+}
+
+.navbar {
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    grid-area: 10px;
+    align-items: center;
+    padding-top: 4.5rem;
+    height: 8vh;
+    padding-left: 15rem;
+    padding-right: 15rem;
+    z-index: 100;
+}
+
+.logo-small {
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+}
+
+.nav-links a {
+    color: white;
+    padding: 10px 20px;
+    margin-left: 2rem;
+    text-decoration: none;
+    font-family: 'Haas', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    transition: background-color 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+.nav-links a:hover {
+    background-color: #ffffff23;
+    -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  box-shadow: 0 4px 90px rgba(0,0,0,0.1);
+  overflow: hidden;
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255, 255, 255, 0.473) 34%, rgba(255,255,255,1) 89%, rgba(255,255,255,0) 100%);
+    opacity: 0.3;
+    filter: blur(.5px);
+    mix-blend-mode: hard-light;
+  }
 }
 
 * {
@@ -118,45 +190,30 @@ document.addEventListener('DOMContentLoaded', () => {
   border:none;
 }
 
-.logo {
-  position: absolute;
-  z-index: 10;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  user-select: none;
-  max-width: 600px;
-  padding: 48px;
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  border-radius: 8px;
-  box-shadow: 0 4px 90px rgba(0,0,0,0.1);
-  overflow: hidden;
-  &:before {
-    content: "";
-    position: absolute;
-    z-index: 2;
-    top: 0;
-    left: 0;
+#contentContainer {
+    display: flex;
+    align-items: center;
     width: 100%;
-    height: 2px;
-    background: rgb(255,255,255);
-    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 34%, rgba(255,255,255,1) 89%, rgba(255,255,255,0) 100%);
-    opacity: 0.3;
-    filter: blur(.5px);
-    mix-blend-mode: hard-light;
-  }
+    height:100%;
+    background-color: transparent;
+    justify-content: space-between;
+    padding: 0 15rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); 
+   
+}
+
+.logo {
+  z-index: 10;
+  max-width: 600px;  
 }
 
   .card {
-  position: absolute;
   z-index: 10;
-  top: 50%;
-  left: 50%;
-  transform: translate(0%, -50%);
-  user-select: none;
-  max-width: 600px;
-  padding: 48px;
+  max-width: 535px;
+  min-width: 535px;
+  padding: 40px;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border-radius: 8px;
@@ -244,15 +301,13 @@ p {
 
 
 .gradient-bg {
-  margin-top: -8vh;
+  margin-top: -27.9rem;
   width: 100%;
   height: 100vh;
   position: relative;
   z-index: -200;
   overflow: hidden;
   background: linear-gradient(135deg, black,var(--color-grad2));
-  top: 0;
-  left: 0;
 
   .svgBlur {
     display: none;
@@ -369,7 +424,7 @@ p {
 
 .content i {
     font-size: 1.375rem;
-    margin-top: 15px;
+    margin-top: 1rem;
     color: #afafaf;
     transition: color 0.3s ease-in-out;
 }

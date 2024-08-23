@@ -3,17 +3,23 @@
 
 <template>
   <div id="kontakt">
-  <h2>Kontakt</h2>
+  <h4>KOSTENLOSES ERSTGESPRÄCH VEREINBAREN</h4>
+    <h2>Kontaktieren Sie mich</h2>
   <div id="adressandform">
   <div class="adress">
-<p>Tim Liebhaber</br>
-    Rest Adresse</br>
-  etc.</br>
-  Hier nochmal LinkedIn und Github Logos</p>
+<p>
+Ich freue mich, von Ihnen zu hören! <br></br> 
+Wenn Sie Fragen haben oder ein Angebot möchten,
+zögern Sie nicht, mich zu kontaktieren. <br></br>
+Sie erreichen mich, per Email oder über das Kontaktformular.<br></br><br></br>
+  T.Liebhaber<br></br>
+  Vöttinger Straße 34A<br></br>
+  85354 Freising<br></br>
+  <br></br><br></br> </p>
+  <a href="https://github.com/timliebhaber" target="_blank"><i class="fa fa-github" style="font-size:36px"></i></a>
+        <a href="https://www.linkedin.com/in/tim-liebhaber/" target="_blank"><i class="fa fa-linkedin" style="font-size:36px"></i></a>
 
   </div>
-  <div id = kontaktfeld>
-    <!-- TODO: Form an den rechten Rand der Box bekommen -->
   <div class="container">
   <form action="action_page.php">
 
@@ -24,7 +30,7 @@
     <input type="email" id="email" name="email" placeholder="Email Adresse">
 
     <label for="subject"></label>
-    <textarea id="subject" name="subject" placeholder="" style="height:200px"></textarea>
+    <textarea id="subject" name="subject" placeholder="Nachricht" style="height:200px"></textarea>
 
     <input type="submit" value="Senden">
 
@@ -32,7 +38,6 @@
   </div>
   </div>
 </div>
-  </div>
 </template>
 
 <style scoped>
@@ -40,13 +45,17 @@
 #adressandform {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   background-color: white;
+}
+
+.adress {
+  width: 50%;
 }
 
 .adress p {
   color: black;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  width: 100%;
 }
 
 #kontakt {
@@ -75,7 +84,7 @@ input, select, textarea {
   background-color: var(--color-background-dark);
 }
 
-input::placeholder {
+input::placeholder, textarea::placeholder {
   color: rgba(255, 255, 255, 0.863);
   font-family: 'Haas', sans-serif;
 }
@@ -102,7 +111,6 @@ input[type=submit]:hover {
 .container {
   border-radius: 5px;
   background-color: #f2f2f210;
-  padding: 20px;
   width: 40%;
   margin-bottom: 2rem;
 }
@@ -112,5 +120,20 @@ input[type=submit]:hover {
   justify-content: center; /* Horizontally centers the container */
   background-color: white;
   width: 100%;
+}
+
+.adress a{
+    font-size: 1.375rem;
+    margin-top: 1rem;
+    color: #888888;
+    transition: color 0.3s ease-in-out;
+}
+
+.adress a:hover {
+    color: #000000;
+}
+
+.fa-github {
+    margin-right: 15px;
 }
 </style>

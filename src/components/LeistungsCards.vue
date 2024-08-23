@@ -33,7 +33,11 @@ export default {
 
 <div id="leistungen">
     <!-- Über und unter Leistungen noch mehr Text -->
+<h4>INDIVIDUELLE LÖSUNGEN</h4>
 <h2>Leistungen</h2>
+<p id="beschreibung">In einer zunehmend digitalisierten Welt sind maßgeschneiderte Lösungen der Schlüssel zum Erfolg.
+    In den folgenden Bereichen biete ich Ihnen individuell abgestimmte Dienstleistungen, die Ihre Geschäftsprozesse optimieren, 
+    Ihre Daten schützen und Ihre Online-Präsenz stärken.</p>
 <div id="tiltcardcontainer">
     <!-- Tiltkarten bei kleinerem Bildschirm in Reihen, nur mit Logo, Titel und Leistungen aber gleichem style -->
     <a href="https://solia-solutions.de/KI" style="text-decoration: none; color: inherit;">
@@ -116,6 +120,13 @@ export default {
     display: block;
 }
 
+#beschreibung {
+    margin: 2rem 0;
+    color: black;
+    width: 50%;
+    font-size: 1.3rem;
+}
+
 ul.custom-list {
             list-style-type: none; /* Disable default bullets */
             padding: 0; /* Remove default padding */
@@ -131,32 +142,32 @@ ul.custom-list {
         }
 
 h2 {
-    margin: 2rem 0;
+    margin-bottom: 2rem;
     color: black;
 }
 
 h3 {
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-weight: bold;
 }
 
 #tiltcardcontainer {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     height: auto;
     gap: 50px;
     background-color: #e0e0e0;
-    padding: 30px 100px 30px 100px;
+    padding: 30px 30px;
     border: 1px solid #919191;
     border-radius: 10px;
     box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.7); /* Basic inner shadow */
 }
 
 .tiltMe {
-	width : 350px;
-	height: 400px;
+	width : 420px;
+	height: 500px;
     padding: 30px;
     background: rgba(0, 0, 0, .9);
     border-radius: 10px;
