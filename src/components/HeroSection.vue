@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <div class="navbar">
         <img src="../assets/Logo White.png" alt="Logo" class="logo-small">
         <nav class="nav-links">
-            <a href="#home">Home</a>
+            <a href="solia-solutions.de">Home</a>
             <a href="#leistungen">Leistungen</a>
             <a href="#über">Über mich</a>
             <a href="#kontakt">Kontakt</a>
@@ -138,8 +138,8 @@ document.addEventListener('DOMContentLoaded', () => {
 }
 
 .logo-small {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     margin-right: 20px;
 }
 
