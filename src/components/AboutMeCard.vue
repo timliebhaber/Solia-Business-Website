@@ -5,6 +5,7 @@
     <div id="über">
     <h4>WARUM SOLIA</h4>
     <h2>Über mich</h2>
+    <div class="content">
     <div class="card">
     <div class="cardImage">
       <img src="../assets/Logo Border.png" alt="Profilbild" style="width: 180px; height: 180px;"> 
@@ -19,7 +20,9 @@
   </p> 
     </div>
     </div>
-<!-- Rechts von der Karte sollen beim scrollen die Programmiersprachen, die ich kann durchschießen -->
+    <div class="scroll-line"></div>
+    </div>
+
     </div>
 
 </template>
@@ -35,6 +38,7 @@
   flex-direction: column;
   background-color: var(--color-background-dark);
   display: block;
+  position: relative;
 }
 
 h2 {
@@ -102,5 +106,12 @@ h4 {
   font-size: 1.2rem;
   color: rgba(0, 0, 0, 0.829)
 }
+
+.content {
+  display: block;  
+  position: relative;
+}
+
+
 
 </style>
