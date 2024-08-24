@@ -47,10 +47,9 @@ export default {
         data-tilt-speed="1000"
         data-tilt-perspective="500"
         data-tilt-max="5">
-        <img src="../assets/kunstliche-intelligenz.png" height="60px" />
+        <img src="../assets/kunstliche-intelligenz.png" height="80px" />
         <h3>Künstliche Intelligenz</h3>
-        <p>Künstliche Intelligenz wird immer wichtiger, um wettbewerbsfähig zu bleiben. 
-            <br> 
+        <p>Künstliche Intelligenz wird immer wichtiger, um wettbewerbsfähig zu bleiben und Prozessabläufe zu beschleunigen. <br></br><br></br> 
             <ul class="custom-list">
                 <li><font-awesome-icon icon="play" :style="{ fontSize: '14px' }" /> ‎ Unternehmensanalysen</li> 
                 <li><font-awesome-icon icon="play" :style="{ fontSize: '14px' }" /> ‎ Individuelle Beratungen</li>             
@@ -68,10 +67,9 @@ export default {
         data-tilt-speed="1000"
         data-tilt-perspective="500"
         data-tilt-max="5">
-        <img src="../assets/sicherheit.png" height="60px" />
+        <img src="../assets/sicherheit.png" height="80px" />
         <h3>IT-Sicherheit</h3>
-        <p>Eine starke IT-Sicherheit ist wichtig, um Ihr Unternehmen umfangreich zu schützen.
-            <br> 
+        <p>Eine starke IT-Sicherheit ist essenziell, um Ihre Informationen und Ihr Unternehmen zu schützen.<br></br><br></br>
             <ul class="custom-list">
                 <li><font-awesome-icon icon="play" :style="{ fontSize: '14px' }" /> ‎ Umfassende Systemchecks</li> 
                 <li><font-awesome-icon icon="play" :style="{ fontSize: '14px' }" /> ‎ Penetration Testing</li>             
@@ -88,10 +86,10 @@ export default {
         data-tilt-speed="1000"
         data-tilt-perspective="500"
         data-tilt-max="5">
-        <img src="../assets/web-design.png" height="60px" />
+        <img src="../assets/web-design.png" height="80px" />
         <h3>Web-Entwicklung</h3>
         <p>Der Internetauftritt ist oft der erste Eindruck, den Kunden von Ihrem Unternehmen bekommen.
-            <br>
+            <br><br>
             <ul class="custom-list">
                 <li><font-awesome-icon icon="play" :style="{ fontSize: '14px' }" /> ‎ Ansprechende Websites</li> 
                 <li><font-awesome-icon icon="play" :style="{ fontSize: '14px' }" /> ‎ Interne Firmenwebsite</li>             
@@ -130,11 +128,11 @@ export default {
 ul.custom-list {
             list-style-type: none; /* Disable default bullets */
             padding: 0; /* Remove default padding */
-            margin: 0; /* Remove default margin */
+            margin-top: 0px; /* Remove default margin */
         }
 
         ul.custom-list li {
-            margin: 10px 0;
+            margin: 1rem 0;
             padding-left: 0; /* Remove any padding */
             position: relative;
             display: flex;
@@ -148,7 +146,7 @@ h2 {
 
 h3 {
     color: white;
-    font-size: 1.7rem;
+    font-size: 1.9rem;
     font-weight: bold;
 }
 
@@ -187,7 +185,7 @@ h3 {
 
 .tiltMe p {
     color: rgb(201, 201, 201);
-    font-size: 1.05rem;
+    font-size: 1.2rem;
     font-weight: medium;
 }
 
