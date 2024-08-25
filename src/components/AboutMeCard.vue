@@ -20,7 +20,15 @@
   </p> 
     </div>
     </div>
-    <div class="scroll-line"></div>
+    <div class="iconContainer">
+      <img src="../assets/python.png">
+      <img src="../assets/javascript.png">
+      <img src="../assets/typescript.png">
+      <img src="../assets/java.png">
+      <img src="../assets/html.png">
+      <img src="../assets/css-3.png">
+
+    </div>
     </div>
 
     </div>
@@ -108,8 +116,23 @@ h4 {
 }
 
 .content {
-  display: block;  
+  display: flex;  
   position: relative;
+  justify-content: space-between;
+}
+
+.iconContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.iconContainer img {
+  width: 110px;
+  height: 110px;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 5px;
+  background: linear-gradient(135deg, rgba(252, 252, 252, 0.973), rgb(134, 134, 134));
 }
 
 
