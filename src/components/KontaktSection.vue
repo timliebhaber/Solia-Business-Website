@@ -13,7 +13,7 @@ Wenn Sie Fragen haben oder ein Angebot möchten,
 zögern Sie nicht mich zu kontaktieren. <br></br>
 Sie erreichen mich per Email oder über das Kontaktformular.<br></br><br></br>
 <a href="mailto:info@solia-solutions.de">info@solia-solutions.de</a><br></br><br></br>
-  T.Liebhaber<br></br>
+  Tim Liebhaber<br></br>
   Vöttinger Straße 34A<br></br>
   85354 Freising<br></br>
   <br></br><br></br> </p>
