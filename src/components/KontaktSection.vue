@@ -11,7 +11,7 @@
 Ich freue mich, von Ihnen zu hören! <br></br> 
 Wenn Sie Fragen haben oder ein Angebot möchten,
 zögern Sie nicht mich zu kontaktieren. <br></br>
-Sie erreichen mich per Email oder über das Kontaktformular.<br></br><br></br>
+Sie erreichen mich über das Kontaktformular oder per Email:<br></br><br></br>
 <a href="mailto:info@solia-solutions.de">info@solia-solutions.de</a><br></br><br></br>
   Tim Liebhaber<br></br>
   Vöttinger Straße 34A<br></br>
