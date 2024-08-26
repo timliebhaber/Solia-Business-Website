@@ -50,3 +50,7 @@ h4 {
   font-family: 'Haas', sans-serif;
   font-weight: 400;
 }
+
+a {
+  text-decoration: none;
+}

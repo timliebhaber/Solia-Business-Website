@@ -39,6 +39,7 @@ export default {
     In den folgenden Bereichen biete ich Ihnen individuell abgestimmte Dienstleistungen, die Ihre Geschäftsprozesse optimieren, 
     Ihre Daten schützen und Ihre Online-Präsenz stärken.</p>
 <div id="tiltcardcontainer">
+<!-- Kleine "Highlights" über Karten, so wie Beleuchtungen in einem Trophäenschrank -->
     <!-- Tiltkarten bei kleinerem Bildschirm in Reihen, nur mit Logo, Titel und Leistungen aber gleichem style -->
     <a href="https://solia-solutions.de/KI" style="text-decoration: none; color: inherit;">
     <div v-for="(item) in items" :key="item.id" ref="tiltRef" class="tiltMe" data-tilt data-tilt-glare="true"
