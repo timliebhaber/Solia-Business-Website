@@ -1,4 +1,19 @@
 <script setup lang="ts">
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    console.log(hiddenElements);
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    } else {
+      entry.target.classList.remove('visible');
+    }
+  });
+});
+
+const hiddenElements = document.querySelectorAll('.hidden');
+
+hiddenElements.forEach((el) => { observer.observe(el);});
 </script>
 
 <template>
@@ -84,13 +99,13 @@
         </div>
     </div>
     <div class="iconContainer">
-      <img src="../assets/python.png">
-      <img src="../assets/javascript.png">
-      <img src="../assets/typescript.png">
-      <img src="../assets/csharp.svg">
-      <img src="../assets/java.png">
-      <img src="../assets/html.png">
-      <img src="../assets/css-3.png">
+      <img class="hidden" src="../assets/python.png">
+      <img class="hidden" src="../assets/javascript.png">
+      <img class="hidden" src="../assets/typescript.png">
+      <img class="hidden" src="../assets/csharp.svg">
+      <img class="hidden" src="../assets/java.png">
+      <img class="hidden" src="../assets/html.png">
+      <img class="hidden" src="../assets/css-3.png">
     </div>
     </div>
  
@@ -197,15 +212,27 @@ h4 {
   flex:1;
 }
 
-.iconContainer img {
+.hidden {
+  z-index: 20;
   width: 120px;
   height: 120px;
   margin: 1rem;
   margin-bottom: 3rem;
   padding: 1rem;
   border-radius: 5px;
+  filter: blur(10px);
+  transform: translateX(100%);
   background: linear-gradient(135deg, rgba(252, 252, 252, 0.973), rgb(134, 134, 134));
+  opacity: 0;
+  transition: all 0.5s;
 }
+
+.visible {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
 
 /*----- TIMELINE -----*/
     .timeline {
