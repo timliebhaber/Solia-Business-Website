@@ -33,7 +33,7 @@ onMounted(() => {
     <div class="infoText">
     <h3>Tim Liebhaber</h3>
     <p>
-    Ich bin studierter Informatiker mit Schwerpunkt in künstlicher Intelligenz. <br/>Ich bin interessiert an Neuroinformatik, KI und Blockchain-Technologie, Web Entwicklung und Software Engineering.
+    Ich bin studierter Informatiker mit Schwerpunkt in künstlicher Intelligenz. <br/>Meine größten Interessen sind Neuroinformatik, KI- und System-Sicherheit, Web Entwicklung und Software Engineering.
     <br/><br/>
       <!-- Relevanten Lebenslauf dazuschreiben inkl aller relevanter Module -->
   </p> 
@@ -48,22 +48,22 @@ onMounted(() => {
                     </div>
                 <li class="timeline-item">
                     <div class="timeline-info">
-                        <h4>2021 - Heute</h4>
+                        <h4>2023 - Heute</h4>
                     </div>
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <h3 class="timeline-title">Selbstständiger Softwareentwickler</h3>
+                        <h3 class="timeline-title">IT - Projektmanager</h3>
                         <p>Nullam vel sem. Nullam vel sem. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Donec vitae sapien ut libero venenatis faucibus. ullam dictum felis
                             eu pede mollis pretium. Pellentesque ut neque.</p>
                     </div>
                 </li>
                 <li class="timeline-item">
                     <div class="timeline-info">
-                        <h4>2023 - Heute</h4>
+                        <h4>2021 - Heute</h4>
                     </div>
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <h3 class="timeline-title">IT - Projektmanager</h3>
+                        <h3 class="timeline-title">Selbstständiger Softwareentwickler</h3>
                         <p>Nullam vel sem. Nullam vel sem. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Donec vitae sapien ut libero venenatis faucibus. ullam dictum felis
                             eu pede mollis pretium. Pellentesque ut neque. </p>
                     </div>
@@ -177,7 +177,7 @@ h4 {
   justify-content: center;
   align-items: first baseline;
   text-align: left;
-  padding-right: 20%;
+  padding-right: 10%;
 }
 
 .card h3 {
@@ -221,7 +221,6 @@ h4 {
   margin-bottom: 3rem;
   padding: 1rem;
   border-radius: 5px;
-  filter: blur(10px);
   transform: translateX(80%);
   background: linear-gradient(135deg, rgba(252, 252, 252, 0.973), rgb(134, 134, 134));
   opacity: 0;
