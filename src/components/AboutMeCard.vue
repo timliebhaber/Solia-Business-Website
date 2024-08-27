@@ -1,19 +1,23 @@
 <script setup lang="ts">
+import { onMounted, ref } from 'vue';
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    console.log(hiddenElements);
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    } else {
-      entry.target.classList.remove('visible');
-    }
+const hiddenElements = ref<Element[]>([]);
+
+onMounted(() => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      console.log(entry);
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      } else {
+        entry.target.classList.remove('visible');
+      }
+    });
   });
+
+  hiddenElements.value = Array.from(document.querySelectorAll('.hidden'));
+  hiddenElements.value.forEach((el) => observer.observe(el));
 });
-
-const hiddenElements = document.querySelectorAll('.hidden');
-
-hiddenElements.forEach((el) => { observer.observe(el);});
 </script>
 
 <template>
@@ -100,7 +104,6 @@ hiddenElements.forEach((el) => { observer.observe(el);});
     </div>
     <div class="iconContainer">
       <img class="hidden" src="../assets/python.png">
-      <img class="hidden" src="../assets/javascript.png">
       <img class="hidden" src="../assets/typescript.png">
       <img class="hidden" src="../assets/csharp.svg">
       <img class="hidden" src="../assets/java.png">
