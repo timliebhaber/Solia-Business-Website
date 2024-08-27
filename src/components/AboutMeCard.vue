@@ -9,9 +9,7 @@ onMounted(() => {
       console.log(entry);
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
-      } else {
-        entry.target.classList.remove('visible');
-      }
+      } else {null}
     });
   });
 
@@ -217,17 +215,17 @@ h4 {
 
 .hidden {
   z-index: 20;
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  height: 140px;
   margin: 1rem;
   margin-bottom: 3rem;
   padding: 1rem;
   border-radius: 5px;
   filter: blur(10px);
-  transform: translateX(100%);
+  transform: translateX(80%);
   background: linear-gradient(135deg, rgba(252, 252, 252, 0.973), rgb(134, 134, 134));
   opacity: 0;
-  transition: all 0.5s;
+  transition: all 2s;
 }
 
 .visible {
