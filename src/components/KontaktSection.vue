@@ -8,15 +8,15 @@
   <div id="adressandform">
   <div class="adress">
 <p>
-Ich freue mich, von Ihnen zu hören! <br></br> 
+Ich freue mich, von Ihnen zu hören! <br>
 Wenn Sie Fragen haben oder ein Angebot möchten,
-zögern Sie nicht mich zu kontaktieren. <br></br>
-Sie erreichen mich über das Kontaktformular oder per Email:<br></br><br></br>
-<a href="mailto:info@solia-solutions.de">info@solia-solutions.de</a><br></br><br></br>
-  Tim Liebhaber<br></br>
-  Vöttinger Straße 34A<br></br>
-  85354 Freising<br></br>
-  <br></br><br></br> </p>
+zögern Sie nicht mich zu kontaktieren. <br>
+Sie erreichen mich über das Kontaktformular oder per Email:<br><br>
+<a href="mailto:info@solia-solutions.de">info@solia-solutions.de</a><br><br>
+  Tim Liebhaber<br>
+  Vöttinger Straße 34A<br>
+  85354 Freising<br>
+  <br><br> </p>
   <a href="https://github.com/timliebhaber" target="_blank"><i class="fa fa-github" style="font-size:36px"></i></a>
         <a href="https://www.linkedin.com/in/tim-liebhaber/" target="_blank"><i class="fa fa-linkedin" style="font-size:36px"></i></a>
 
