@@ -163,7 +163,7 @@ h4 {
 }
 
 .separator {
-  width: 2px; /* Thickness of the line */
+  width: 3px; /* Thickness of the line */
   height: 100%; /* Height of the line */
   display: flex;
   align-self: flex-start; /* Force this child to be aligned at the top */
