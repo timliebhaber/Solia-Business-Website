@@ -1,4 +1,21 @@
 <script setup lang="ts">
+import { onMounted, ref } from 'vue';
+
+const hiddenElements = ref<Element[]>([]);
+
+onMounted(() => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      console.log(entry);
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      } else {null}
+    });
+  });
+
+  hiddenElements.value = Array.from(document.querySelectorAll('.hidden'));
+  hiddenElements.value.forEach((el) => observer.observe(el));
+});
 </script>
 
 <template>
@@ -16,7 +33,7 @@
     <div class="infoText">
     <h3>Tim Liebhaber</h3>
     <p>
-    Ich bin studierter Informatiker mit Schwerpunkt in künstlicher Intelligenz. <br/>Ich bin interessiert an Neuroinformatik, KI und Blockchain-Technologie, Web Entwicklung und Software Engineering.
+    Ich bin studierter Informatiker mit Schwerpunkt in künstlicher Intelligenz. <br/>Meine größten Interessen sind Neuroinformatik, KI- und System-Sicherheit, Web Entwicklung und Software Engineering.
     <br/><br/>
       <!-- Relevanten Lebenslauf dazuschreiben inkl aller relevanter Module -->
   </p> 
@@ -31,22 +48,22 @@
                     </div>
                 <li class="timeline-item">
                     <div class="timeline-info">
-                        <h4>2021 - Heute</h4>
+                        <h4>2023 - Heute</h4>
                     </div>
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <h3 class="timeline-title">Selbstständiger Softwareentwickler</h3>
+                        <h3 class="timeline-title">IT - Projektmanager</h3>
                         <p>Nullam vel sem. Nullam vel sem. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Donec vitae sapien ut libero venenatis faucibus. ullam dictum felis
                             eu pede mollis pretium. Pellentesque ut neque.</p>
                     </div>
                 </li>
                 <li class="timeline-item">
                     <div class="timeline-info">
-                        <h4>2023 - Heute</h4>
+                        <h4>2021 - Heute</h4>
                     </div>
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <h3 class="timeline-title">IT - Projektmanager</h3>
+                        <h3 class="timeline-title">Selbstständiger Softwareentwickler</h3>
                         <p>Nullam vel sem. Nullam vel sem. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Donec vitae sapien ut libero venenatis faucibus. ullam dictum felis
                             eu pede mollis pretium. Pellentesque ut neque. </p>
                     </div>
@@ -84,13 +101,12 @@
         </div>
     </div>
     <div class="iconContainer">
-      <img src="../assets/python.png">
-      <img src="../assets/javascript.png">
-      <img src="../assets/typescript.png">
-      <img src="../assets/csharp.svg">
-      <img src="../assets/java.png">
-      <img src="../assets/html.png">
-      <img src="../assets/css-3.png">
+      <img class="hidden" src="../assets/python.png">
+      <img class="hidden" src="../assets/typescript.png">
+      <img class="hidden" src="../assets/csharp.svg">
+      <img class="hidden" src="../assets/java.png">
+      <img class="hidden" src="../assets/html.png">
+      <img class="hidden" src="../assets/css-3.png">
     </div>
     </div>
  
@@ -147,7 +163,7 @@ h4 {
 }
 
 .separator {
-  width: 2px; /* Thickness of the line */
+  width: 3px; /* Thickness of the line */
   height: 100%; /* Height of the line */
   display: flex;
   align-self: flex-start; /* Force this child to be aligned at the top */
@@ -161,7 +177,7 @@ h4 {
   justify-content: center;
   align-items: first baseline;
   text-align: left;
-  padding-right: 20%;
+  padding-right: 10%;
 }
 
 .card h3 {
@@ -197,15 +213,26 @@ h4 {
   flex:1;
 }
 
-.iconContainer img {
-  width: 120px;
-  height: 120px;
+.hidden {
+  z-index: 20;
+  width: 140px;
+  height: 140px;
   margin: 1rem;
   margin-bottom: 3rem;
   padding: 1rem;
   border-radius: 5px;
+  transform: translateX(80%);
   background: linear-gradient(135deg, rgba(252, 252, 252, 0.973), rgb(134, 134, 134));
+  opacity: 0;
+  transition: all 2s;
 }
+
+.visible {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
 
 /*----- TIMELINE -----*/
     .timeline {
