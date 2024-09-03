@@ -50,7 +50,7 @@ export default {
         data-tilt-max="5">
         <img src="../assets/kunstliche-intelligenz.png" height="80px" />
         <h3>Künstliche Intelligenz</h3>
-        <p>Künstliche Intelligenz wird immer wichtiger, um wettbewerbsfähig zu bleiben und Prozessabläufe zu beschleunigen. <br></br><br></br> 
+        <p>Künstliche Intelligenz wird immer wichtiger, um wettbewerbsfähig zu bleiben und Prozessabläufe zu beschleunigen. <br><br>
             <ul class="custom-list">
                 <li><font-awesome-icon icon="play" :style="{ fontSize: '14px' }" /> ‎ Unternehmensanalysen</li> 
                 <li><font-awesome-icon icon="play" :style="{ fontSize: '14px' }" /> ‎ Individuelle Beratungen</li>             
@@ -70,7 +70,7 @@ export default {
         data-tilt-max="5">
         <img src="../assets/sicherheit.png" height="80px" />
         <h3>IT-Sicherheit</h3>
-        <p>Eine starke IT-Sicherheit ist essenziell, um Ihre Informationen und Ihr Unternehmen zu schützen.<br></br><br></br>
+        <p>Eine starke IT-Sicherheit ist essenziell, um Ihre Informationen und Ihr Unternehmen zu schützen.<br><br>
             <ul class="custom-list">
                 <li><font-awesome-icon icon="play" :style="{ fontSize: '14px' }" /> ‎ Umfassende Systemchecks</li> 
                 <li><font-awesome-icon icon="play" :style="{ fontSize: '14px' }" /> ‎ Penetration Testing</li>             
