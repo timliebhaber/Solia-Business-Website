@@ -14,9 +14,9 @@ import Hero from './components/HeroSection.vue';
 
   <main>
     <Hero />
-    <Referenzen />
     <LeistungsCards/>
     <AboutMeCard />
+    <Referenzen />
     <Kontakt />
   </main>
 </template>
