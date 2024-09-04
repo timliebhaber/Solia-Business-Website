@@ -101,15 +101,32 @@ onMounted(() => {
         </div>
     </div>
     <div class="iconContainer">
-      <img class="hidden" src="../assets/python.png">
-      <img class="hidden" src="../assets/typescript.png">
-      <img class="hidden" src="../assets/csharp.svg">
-      <img class="hidden" src="../assets/java.png">
-      <img class="hidden" src="../assets/html.png">
-      <img class="hidden" src="../assets/css-3.png">
+      <div class="hidden">
+        <img src="../assets/python.png">
+        <h2>Python</h2>
+      </div>
+      <div class="hidden">
+      <img src="../assets/typescript.png">
+      <h2>Typescript</h2>
+      </div>
+      <div class="hidden">
+      <img src="../assets/csharp.svg">
+      <h2>C#</h2>
+      </div>
+      <div class="hidden">
+      <img src="../assets/java.png">
+      <h2>Java</h2>
+      </div>
+      <div class="hidden">
+      <img src="../assets/html.png">
+      <h2>HTML</h2>
+      </div>
+      <div class="hidden">
+      <img src="../assets/css-3.png">
+      <h2>(S)CSS</h2>
+      </div>
+      </div>
     </div>
-    </div>
- 
     </div>
 
 </template>
@@ -206,7 +223,7 @@ h4 {
 }
 
 .iconContainer {
-  margin-top: 3rem;
+  margin-top: 7rem;
   display: flex;
   flex-direction: column;
   align-items: end;
@@ -218,19 +235,44 @@ h4 {
   width: 140px;
   height: 140px;
   margin: 1rem;
-  margin-bottom: 3rem;
+  margin-bottom: 4.5rem;
   padding: 1rem;
   border-radius: 5px;
   transform: translateX(80%);
-  background: linear-gradient(135deg, rgba(252, 252, 252, 0.973), rgb(134, 134, 134));
   opacity: 0;
-  transition: all 2s;
+  transition: transform 2s, opacity 2s ease-in;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  h2 {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    opacity: 0;
+    transition: 500ms;
+  }
 }
+
+.hidden img{
+  z-index: 26;
+  width: 140px;
+  height: 140px;
+  padding: 1rem;
+  border-radius: 5px;
+  background: linear-gradient(135deg, rgba(252, 252, 252, 0.973), rgb(134, 134, 134));
+}
+
 
 .visible {
   opacity: 1;
   filter: blur(0);
   transform: translateX(0);
+}
+
+.visible:hover {
+  h2{
+    opacity: 1;
+  }
 }
 
 
