@@ -32,9 +32,9 @@ document.addEventListener('DOMContentLoaded', () => {
     <div class="navbar">
         <img src="../assets/Logo White.png" alt="Logo" class="logo-small">
         <nav class="nav-links">
-            <a href="solia-solutions.de">Home</a>
             <a href="#leistungen">Leistungen</a>
             <a href="#über">Über mich</a>
+            <a href="#refSection">Partner</a>
             <a href="#kontakt">Kontakt</a>
         </nav>
     </div>
