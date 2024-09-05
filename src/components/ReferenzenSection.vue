@@ -97,7 +97,8 @@
   justify-content: center;
   background-color: white;
   padding: 0 15rem;
-  padding-top: 5rem;
+  padding-top: 2rem;
+  padding-bottom: 5rem;
   display: block;
 }
 
