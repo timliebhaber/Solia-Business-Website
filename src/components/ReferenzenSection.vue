@@ -6,8 +6,11 @@
   <div id = "refSection">
     <h4>REFERENZEN & PROJEKTE</h4>
     <h2>Kooperationspartner - Alles zu Carousel machen </h2>
+
+
     <div id="referenzen">
-      
+      <div class="owl-slider">
+        <div id="carousel" class="owl-carousel">
       <div class = "refCard">
         <a href="https://dhrw-engineering.de" target="_blank"><img src="../assets/DHRW_ENG_WHITE.png" alt="DHRW Engineering GmbH" height = 60px></a>
         <p>Bei der DHRW Engineering GmbH habe ich die Sicherheitsstandards für 
@@ -66,9 +69,70 @@
       </div>
     </div>
   </div>
+    </div>
+  </div>
 </template>
 
 <style scoped>
+
+img {
+  height: 100%;
+  object-fit: cover;
+}
+.owl-nav button {
+  position: absolute;
+  top: 50%;
+  background-color: #000;
+  color: #fff;
+  margin: 0;
+  transition: all 0.3s ease-in-out;
+}
+.owl-nav button.owl-prev {
+  left: 0;
+}
+.owl-nav button.owl-next {
+  right: 0;
+}
+
+.owl-dots {
+  text-align: center;
+  padding-top: 15px;
+}
+.owl-dots button.owl-dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: inline-block;
+  background: #ccc;
+  margin: 0 3px;
+}
+.owl-dots button.owl-dot.active {
+  background-color: #000;
+}
+.owl-dots button.owl-dot:focus {
+  outline: none;
+}
+.owl-nav button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.38) !important;
+}
+span {
+    font-size: 70px;    
+    position: relative;
+    top: -5px;
+}
+.owl-nav button:focus {
+    outline: none;
+}
+.owl-item {
+  height: 300px !important; /* Adjust this value as needed */
+  display: flex;
+}
+.item {
+    width: 100%;
+}
 
 .refCard {
   display: flex;
