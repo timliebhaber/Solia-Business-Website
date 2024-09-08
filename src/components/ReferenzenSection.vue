@@ -7,7 +7,6 @@
     <h4>REFERENZEN & PROJEKTE</h4>
     <h2>Kooperationspartner - Alles zu Carousel machen </h2>
 
-
     <div id="referenzen">
       <div class="owl-slider">
         <div id="carousel" class="owl-carousel">
