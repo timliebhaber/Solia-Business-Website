@@ -24,7 +24,7 @@
           entwickelt und implementiert, das sowohl interne als auch externe 
           Kommunikation für die Mitarbeiter optimiert. Dieses System 
           verbessert den Austausch und die Zusammenarbeit innerhalb des 
-          Unternehmens und stärkt gleichzeitig die Kommunikation mit 
+          Unternehmens und stärkt die Kommunikation mit 
           externen Partnern.</p>
       </div>
 
@@ -89,6 +89,8 @@
   font-size: 1.2rem;
   margin-top: 2rem;
   margin-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   font-weight: 500;
   text-align: left;
   align-self: flex-start;
