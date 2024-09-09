@@ -4,6 +4,7 @@ import Kontakt from './components/KontaktSection.vue';
 import Referenzen from './components/ReferenzenSection.vue';
 import LeistungsCards from './components/LeistungsCards.vue';
 import Hero from './components/HeroSection.vue';
+import SliderTest from './components/SliderTest.vue';
 </script>
 
 
