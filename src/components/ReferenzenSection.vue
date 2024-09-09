@@ -7,14 +7,7 @@
     <h4>REFERENZEN & PROJEKTE</h4>
     <h2>Kooperationspartner</h2>
 
-<<<<<<< HEAD
-
     <div class="referenzen">
-=======
-    <div id="referenzen">
-      <div class="owl-slider">
-        <div id="carousel" class="owl-carousel">
->>>>>>> e33927174e10d7e8d4e91b382dcf22c5a0d5af23
       <div class = "refCard">
         <a href="https://dhrw-engineering.de" target="_blank"><img src="../assets/DHRW_ENG_WHITE.png" alt="DHRW Engineering GmbH" height = 60px></a>
         <p>Bei der DHRW Engineering GmbH habe ich die Sicherheitsstandards für 
