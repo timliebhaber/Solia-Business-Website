@@ -43,7 +43,7 @@ export default {
     <!-- Tiltkarten bei kleinerem Bildschirm in Reihen, nur mit Logo, Titel und Leistungen aber gleichem style -->
     <a href="https://solia-solutions.de/KI" style="text-decoration: none; color: inherit;">
     <div v-for="(item) in items" :key="item.id" ref="tiltRef" class="tiltMe" data-tilt data-tilt-glare="true"
-        data-tilt-max-glare="0.3"
+        data-tilt-max-glare="0.8"
         data-tilt-scale ="1.1"
         data-tilt-speed="1000"
         data-tilt-perspective="500"
@@ -63,7 +63,7 @@ export default {
 
     <a href="https://solia-solutions.de/IT-Sicherheit" style="text-decoration: none; color: inherit;">
     <div v-for="(item) in items" :key="item.id" ref="tiltRef" class="tiltMe" data-tilt data-tilt-glare="true"
-        data-tilt-max-glare="0.3"
+        data-tilt-max-glare="0.8"
         data-tilt-scale ="1.1"
         data-tilt-speed="1000"
         data-tilt-perspective="500"
@@ -82,7 +82,7 @@ export default {
 
     <a href="https://solia-solutions.de/Web-Entwicklung" style="text-decoration: none; color: inherit;">
     <div v-for="(item) in items" :key="item.id" ref="tiltRef" class="tiltMe" data-tilt data-tilt-glare="true"
-        data-tilt-max-glare="0.3"
+        data-tilt-max-glare="0.8"
         data-tilt-scale ="1.1"
         data-tilt-speed="1000"
         data-tilt-perspective="500"
@@ -114,14 +114,14 @@ export default {
     justify-content: center;
     align-items: center;
     height: auto;
-    background-color: white;
+    background-color: var(--color-background-dark);
     padding: 5rem 15rem;
     display: block;
 }
 
 #beschreibung {
     margin: 2rem 0;
-    color: black;
+    color: rgb(235, 235, 235);
     width: 50%;
     font-size: 1.3rem;
 }
@@ -142,13 +142,17 @@ ul.custom-list {
 
 h2 {
     margin-bottom: 2rem;
-    color: black;
+    color: white;
 }
 
 h3 {
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 1.9rem;
     font-weight: bold;
+}
+
+h4 {
+  color: rgb(207, 207, 207);
 }
 
 #tiltcardcontainer {
@@ -157,9 +161,9 @@ h3 {
     align-items: center;
     height: auto;
     gap: 50px;
-    background-color: #e0e0e0;
+    background-color: #1d1d1d;
     padding: 30px 30px;
-    border: 1px solid #919191;
+    border: 1px solid #353535;
     border-radius: 10px;
     box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.7); /* Basic inner shadow */
 }
@@ -168,7 +172,7 @@ h3 {
 	width : 420px;
 	height: 500px;
     padding: 30px;
-    background: rgba(0, 0, 0, .9);
+    background: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
     border: 1px solid rgba(255,255,255,.15);
     display: flex;
@@ -181,11 +185,11 @@ h3 {
 }
 
 .tiltMe img {
-    filter: invert(100%) grayscale(100%);
+    filter: grayscale(100%);
 }
 
 .tiltMe p {
-    color: rgb(201, 201, 201);
+    color: rgb(29, 29, 29);
     font-size: 1.2rem;
     font-weight: medium;
 }
