@@ -58,7 +58,7 @@ Sie erreichen mich über das Kontaktformular oder per Email:<br><br>
 .adress p {
   color: black;
   font-size: 1.2rem;
-  width: 100%;
+  width: 80%;
 }
 
 #kontakt {
@@ -144,5 +144,25 @@ input[type=submit]:hover {
 
 .fa-github {
     margin-right: 15px;
+}
+
+@media screen and (max-width: 850px) {
+  #kontakt {
+    padding: 5rem 2rem;
+  }
+  #adressandform {
+    flex-direction: column;
+  }
+  .adress {
+    width: 100%;
+  }
+
+  .fa-github, .fa-linkedin {
+    display: none;
+  }
+  .container {
+    width: 100%;
+  }
+  
 }
 </style>
