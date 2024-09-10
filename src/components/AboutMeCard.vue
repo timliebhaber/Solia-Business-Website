@@ -83,7 +83,7 @@ onMounted(() => {
                     <div class="timeline-content">
                         <h3 class="timeline-title">Bachelor of Science - Informatik</h3>
                         <p>Nullam vel sem. Neuronale Netze vel sem. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Donec vitae sapien ut libero venenatis faucibus. ullam dictum felis
-                            eu pede mollis pretium. test ut neque. </p>
+                            eu pede test pretium. test ut neque. </p>
                     </div>
                 </li>
                 <li class="timeline-item">
