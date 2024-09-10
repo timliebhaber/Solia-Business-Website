@@ -4,7 +4,7 @@ import Kontakt from './components/KontaktSection.vue';
 import Referenzen from './components/ReferenzenSection.vue';
 import LeistungsCards from './components/LeistungsCards.vue';
 import Hero from './components/HeroSection.vue';
-import SliderTest from './components/SliderTest.vue';
+import LeistungsCardsInvert from './components/LeistungsCardsInvert.vue';
 </script>
 
 
@@ -15,6 +15,7 @@ import SliderTest from './components/SliderTest.vue';
 
   <main>
     <Hero />
+    <LeistungsCardsInvert/>
     <LeistungsCards/>
     <Referenzen />
     <AboutMeCard />
