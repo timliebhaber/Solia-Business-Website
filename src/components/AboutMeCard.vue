@@ -65,7 +65,7 @@ onMounted(() => {
                     <div class="timeline-content">
                         <h3 class="timeline-title">Selbstständiger Softwareentwickler</h3>
                         <p>Nullam vel sem. Python vel sem. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Donec vitae sapien ut libero venenatis faucibus. ullam dictum felis
-                            eu pede mollis pretium. Pellentesque ut neque. </p>
+                            eu pede mollise pretium. Pellentesque ut neque. </p>
                     </div>
                 </li>
                 <li class="timeline-item period">
