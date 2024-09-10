@@ -139,7 +139,7 @@ input[type=submit]:hover {
 }
 
 .adress a:hover {
-    color: #000000;
+    color: var(--color-ci1);
 }
 
 .fa-github {
