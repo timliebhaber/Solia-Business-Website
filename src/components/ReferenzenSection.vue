@@ -79,19 +79,19 @@
   justify-content: top;
   background-color: var(--vt-c-background-dark);
   border-radius: 10px;
-  padding:1rem;
+  padding: 1.2rem;
   width: 450px;
-  height: 400px;
+  height: 450px;
 }
 
 .refCard p {
   color: white;
   font-size: 1.2rem;
+  font-weight: medium;
   margin-top: 2rem;
   margin-bottom: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;
-  font-weight: 500;
   text-align: left;
   align-self: flex-start;
 }
