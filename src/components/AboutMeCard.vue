@@ -53,8 +53,8 @@ onMounted(() => {
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <h3 class="timeline-title">IT - Projektmanager</h3>
-                        <p>DNS Settings. Team of 2 Nullam vel sem. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Donec vitae sapien ut libero venenatis faucibus. ullam dictum felis
-                            eu pede mollis pretium. Pellentesque ut neque.</p>
+                        <p>Als IT-Projektmanager leitete ich ein kleines Team und übernahm sowohl die Koordination als auch operative Aufgaben im Web Development. 
+                          Neben der Projektplanung und -steuerung entwickelte ich eine maßgeschneiderte Software zur Optimierung interner Prozesse.</p>
                     </div>
                 </li>
                 <li class="timeline-item">
@@ -64,8 +64,10 @@ onMounted(() => {
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <h3 class="timeline-title">Selbstständiger Softwareentwickler</h3>
-                        <p>Nullam vel sem. Python vel sem. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Donec vitae sapien ut libero venenatis faucibus. ullam dictum felis
-                            eu pede mollise pretium. Pellentesque ut neque. </p>
+                        <p>Als selbstständiger Softwareentwickler habe ich in der Vergangenheit für verschiedene Partner Systementwicklungsprojekte realisiert, 
+                          bei denen ich sowohl Frontend- als auch Backendaufgaben übernahm. Mein Fokus lag dabei auf der IT-Sicherheit und Benutzerfreundlichkeit 
+                          der entwickelten Software, um robuste und zugleich intuitive Lösungen zu schaffen. 
+                          Durch maßgeschneiderte Systeme sorgte ich dafür, dass die individuellen Anforderungen meiner Kunden bestmöglich erfüllt wurden. </p>
                     </div>
                 </li>
                 <li class="timeline-item period">
@@ -82,8 +84,11 @@ onMounted(() => {
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <h3 class="timeline-title">Bachelor of Science - Informatik</h3>
-                        <p>Nullam vel sem. Neuronale Netze vel sem. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Donec vitae sapien ut libero venenatis faucibus. ullam dictum felis
-                            eu pede test pretium. test t nequre. </p>
+                        <p>In meinem Bachelorstudium der Informatik lag der Schwerpunkt auf Neuroinformatik, Künstlicher Intelligenz und IT-Sicherheit. 
+                          Dabei habe ich fundierte Kenntnisse in den Bereichen maschinelles Lernen, neuronale Netze und sicherheitsrelevante IT-Systeme erworben. 
+                          Durch praxisorientierte Projekte und theoretische Ansätze konnte ich mein Verständnis für innovative Technologien vertiefen und deren 
+                          Anwendung in der realen Welt kennenlernen. 
+                          Diese Schwerpunkte haben mein technisches Wissen und mein Interesse an zukunftsweisenden Entwicklungen nachhaltig geprägt. </p>
                     </div>
                 </li>
                 <li class="timeline-item">
@@ -93,8 +98,11 @@ onMounted(() => {
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <h3 class="timeline-title">Praktikum Informatik</h3>
-                        <p>Nullam vel sem. Allgaier vel sem. Change for Testo, accumsan a, consectetuer eget, posuere ut, mauris. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Donec vitae sapien ut libero venenatis faucibus. ullam dictum felis
-                            eu pede mollis pretium. Pellentesque ut neque. </p>
+                        <p>
+                          Während meines Praktikums in der Informatikabteilung der Firma Allgaier erhielt ich einen umfassenden Einblick in die vielfältigen 
+                          Aufgaben eines Informatikers. Ich konnte erste praktische Erfahrungen in der Systemadministration sowie in der Softwareentwicklung 
+                          sammeln und habe dabei wertvolle Kenntnisse in der IT-Infrastruktur und im Support erworben. 
+                          Dieses Praktikum hat mein Verständnis für die IT-Welt deutlich erweitert und mein Interesse an der Informatik weiter gestärkt. </p>
                     </div>
                 </li>
             </ul>
