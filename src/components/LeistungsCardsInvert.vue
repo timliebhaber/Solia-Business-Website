@@ -43,10 +43,10 @@ export default {
     <!-- Tiltkarten bei kleinerem Bildschirm in Reihen, nur mit Logo, Titel und Leistungen aber gleichem style -->
     <a href="https://solia-solutions.de/KI" style="text-decoration: none; color: inherit;">
     <div v-for="(item) in items" :key="item.id" ref="tiltRef" class="tiltMe" data-tilt data-tilt-glare="true"
-        data-tilt-max-glare="0.8"
+        data-tilt-max-glare="0.6"
         data-tilt-scale ="1.1"
         data-tilt-speed="1000"
-        data-tilt-perspective="500"
+        data-tilt-perspective="700"
         data-tilt-max="5">
         <img src="../assets/kunstliche-intelligenz.png" height="80px" />
         <h3>Künstliche Intelligenz</h3>
@@ -63,10 +63,10 @@ export default {
 
     <a href="https://solia-solutions.de/IT-Sicherheit" style="text-decoration: none; color: inherit;">
     <div v-for="(item) in items" :key="item.id" ref="tiltRef" class="tiltMe" data-tilt data-tilt-glare="true"
-        data-tilt-max-glare="0.8"
+        data-tilt-max-glare="0.6"
         data-tilt-scale ="1.1"
         data-tilt-speed="1000"
-        data-tilt-perspective="500"
+        data-tilt-perspective="700"
         data-tilt-max="5">
         <img src="../assets/sicherheit.png" height="80px" />
         <h3>IT-Sicherheit</h3>
@@ -82,10 +82,10 @@ export default {
 
     <a href="https://solia-solutions.de/Web-Entwicklung" style="text-decoration: none; color: inherit;">
     <div v-for="(item) in items" :key="item.id" ref="tiltRef" class="tiltMe" data-tilt data-tilt-glare="true"
-        data-tilt-max-glare="0.8"
+        data-tilt-max-glare="0.6"
         data-tilt-scale ="1.1"
         data-tilt-speed="1000"
-        data-tilt-perspective="500"
+        data-tilt-perspective="700"
         data-tilt-max="5">
         <img src="../assets/web-design.png" height="80px" />
         <h3>Web-Entwicklung</h3>
@@ -161,11 +161,6 @@ h4 {
     align-items: center;
     height: auto;
     gap: 50px;
-    background-color: #1d1d1d;
-    padding: 30px 30px;
-    border: 1px solid #353535;
-    border-radius: 10px;
-    box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.7); /* Basic inner shadow */
 }
 
 .tiltMe {
