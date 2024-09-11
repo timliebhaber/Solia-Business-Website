@@ -2,7 +2,6 @@
 import AboutMeCard from './components/AboutMeCard.vue'
 import Kontakt from './components/KontaktSection.vue';
 import Referenzen from './components/ReferenzenSection.vue';
-import LeistungsCards from './components/LeistungsCards.vue';
 import Hero from './components/HeroSection.vue';
 import LeistungsCardsInvert from './components/LeistungsCardsInvert.vue';
 </script>
@@ -16,7 +15,6 @@ import LeistungsCardsInvert from './components/LeistungsCardsInvert.vue';
   <main>
     <Hero />
     <LeistungsCardsInvert/>
-    <LeistungsCards/>
     <Referenzen />
     <AboutMeCard />
     <Kontakt />
