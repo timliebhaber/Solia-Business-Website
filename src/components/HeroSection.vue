@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <!-- Include Logo on the left -->
   <div id="contentContainer">
     <div class="logo">
-      <img src="../assets/Solia Solutions Color.png" alt="Logo"></img>
+      <img src="../assets/Solia Solutions Color.png" alt="Logo">
     </div>
     <div class="card">
   
