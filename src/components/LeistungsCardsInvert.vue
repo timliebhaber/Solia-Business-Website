@@ -1,5 +1,3 @@
-<script setup lang="js"></script>
-
 <script>
 import VanillaTilt from 'vanilla-tilt';
 export default {
@@ -45,8 +43,8 @@ export default {
     <div v-for="(item) in items" :key="item.id" ref="tiltRef" class="tiltMe" data-tilt data-tilt-glare="true"
         data-tilt-max-glare="0.6"
         data-tilt-scale ="1.1"
-        data-tilt-speed="1000"
-        data-tilt-perspective="700"
+        data-tilt-speed="2000"
+        data-tilt-perspective="800"
         data-tilt-max="5">
         <img src="../assets/kunstliche-intelligenz.png" height="80px" />
         <h3>Künstliche Intelligenz</h3>
@@ -65,8 +63,8 @@ export default {
     <div v-for="(item) in items" :key="item.id" ref="tiltRef" class="tiltMe" data-tilt data-tilt-glare="true"
         data-tilt-max-glare="0.6"
         data-tilt-scale ="1.1"
-        data-tilt-speed="1000"
-        data-tilt-perspective="700"
+        data-tilt-speed="2000"
+        data-tilt-perspective="800"
         data-tilt-max="5">
         <img src="../assets/sicherheit.png" height="80px" />
         <h3>IT-Sicherheit</h3>
@@ -84,8 +82,8 @@ export default {
     <div v-for="(item) in items" :key="item.id" ref="tiltRef" class="tiltMe" data-tilt data-tilt-glare="true"
         data-tilt-max-glare="0.6"
         data-tilt-scale ="1.1"
-        data-tilt-speed="1000"
-        data-tilt-perspective="700"
+        data-tilt-speed="2000"
+        data-tilt-perspective="800"
         data-tilt-max="5">
         <img src="../assets/web-design.png" height="80px" />
         <h3>Web-Entwicklung</h3>
