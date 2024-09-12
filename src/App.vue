@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import AboutMeCard from './components/AboutMeCard.vue'
 import Kontakt from './components/KontaktSection.vue';
 import Referenzen from './components/ReferenzenSection.vue';
 import Hero from './components/HeroSection.vue';
 import LeistungsCardsInvert from './components/LeistungsCardsInvert.vue';
+import AboutMeCardTest from './components/AboutMeCardTest.vue';
 </script>
 
 
@@ -16,7 +16,7 @@ import LeistungsCardsInvert from './components/LeistungsCardsInvert.vue';
     <Hero />
     <LeistungsCardsInvert/>
     <Referenzen />
-    <AboutMeCard />
+    <AboutMeCardTest />
     <Kontakt />
   </main>
 </template>
