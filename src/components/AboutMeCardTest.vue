@@ -44,16 +44,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 <template>
     <div id="über">
-    
       
       <h4>WARUM SOLIA</h4>
     <h2>Über mich</h2>
     <div class="content">
-      <button id="toggle-button">v</button>
     <div id="container">
-   
-        <div id="expandable-div">
+        
           <div class="card">
+            <div id="expandable-div">
     <div class="cardTop">
     <div class="cardImage">
       <img src="../assets/Logo Border.png" alt="Profilbild" style="width: 180px; height: 180px;"> 
@@ -68,7 +66,10 @@ document.addEventListener('DOMContentLoaded', () => {
       <!-- Relevanten Lebenslauf dazuschreiben inkl aller relevanter Module -->
   </p> 
     </div>
+    <div id="button-box">
+    <button id="toggle-button">v</button>
   </div>
+    </div>
     </div>
           </div>
   
@@ -175,6 +176,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
 <style scoped lang="scss">
 
+#button-box {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#toggle-button {
+    background: none;
+    border: none;
+    font-size: 2rem;
+}
+
 #container {
             overflow: hidden;
             transition: max-height 0.5s ease-out;
@@ -182,7 +196,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 #expandable-div {
     position: relative;
-    background-color: #f0f0f0;
   z-index: 20;
   p {color: black;}
 
@@ -190,6 +203,8 @@ document.addEventListener('DOMContentLoaded', () => {
 }
 #hidden-div {
     background-color: #e0e0e0;
+    border-radius: 80px;
+    flex:3;
   z-index: -10;
   p {color: black;}
     padding: 20px;
@@ -219,6 +234,7 @@ h4 {
 .card {
   background: linear-gradient(135deg, rgb(255, 255, 255), rgb(212, 212, 212));
   border-radius: 80px;
+  z-index: 30;
   width: 100%;
   padding: 1rem;
   margin-top: 1rem;
