@@ -21,8 +21,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const button = document.getElementById('toggle-button');
     const container = document.getElementById('container');
     const hiddenDiv = document.getElementById('hidden-div');
+    const iconContainer = document.getElementById('iconContainer');
+    const card = document.getElementById('card');
 
-    if (!button || !container || !hiddenDiv) {
+    if (!button || !container || !hiddenDiv || !card || !iconContainer) {
         console.error('One or more required elements are missing from the DOM');
         return;
     }
@@ -33,10 +35,17 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!isExpanded) {
             container.style.maxHeight = `${container.scrollHeight}px`;
             hiddenDiv.style.transform = 'translateY(0)';
+            hiddenDiv.style.borderRadius = '0px 0px 80px 80px';
+            card.style.borderRadius = '80px 80px 0px 0px';
+            iconContainer.style.height = '100%';
         } else {
+            
             container.style.maxHeight = 'auto';
+            hiddenDiv.style.borderRadius = '80px';
+            card.style.borderRadius = '80px';
+            iconContainer.style.height = '0px';
             hiddenDiv.style.transform = 'translateY(-100%)';
-        }
+            }
         isExpanded = !isExpanded;
     });
 });
@@ -48,30 +57,29 @@ document.addEventListener('DOMContentLoaded', () => {
       <h4>WARUM SOLIA</h4>
     <h2>Über mich</h2>
     <div class="content">
-    <div id="container">
-        
-          <div class="card">
-            <div id="expandable-div">
-    <div class="cardTop">
-    <div class="cardImage">
-      <img src="../assets/Logo Border.png" alt="Profilbild" style="width: 180px; height: 180px;"> 
-    </div>
-    <div class="separator"></div>
-    <div class="cardText">
-    <div class="infoText">
-    <h3>Tim Liebhaber</h3>
-    <p>
-    Ich bin studierter Informatiker mit Schwerpunkt in künstlicher Intelligenz. <br/>Meine größten Interessen sind Neuroinformatik, KI- und System-Sicherheit, Web Entwicklung und Software Engineering.
-    <br/><br/>
-      <!-- Relevanten Lebenslauf dazuschreiben inkl aller relevanter Module -->
-  </p> 
-    </div>
+    <div id="container">  
+      <div id="card">
+        <div id="expandable-div">
+          <div class="cardTop">
+            <div class="cardImage">
+              <img src="../assets/Logo Border.png" alt="Profilbild" style="width: 180px; height: 180px;"> 
+            </div>
+            <div class="separator"></div>
+          <div class="cardText">
+        <div class="infoText">
+          <h3>Tim Liebhaber</h3>
+          <p>
+          Ich bin studierter Informatiker mit Schwerpunkt in künstlicher Intelligenz. <br/>Meine größten Interessen sind Neuroinformatik, KI- und System-Sicherheit, Web Entwicklung und Software Engineering.
+          <br/><br/>
+            <!-- Relevanten Lebenslauf dazuschreiben inkl aller relevanter Module -->
+          </p> 
+        </div>
     <div id="button-box">
     <button id="toggle-button">v</button>
   </div>
     </div>
     </div>
-          </div>
+    </div>
   
         </div>
         <div id="hidden-div">
@@ -143,7 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
         </div>
     </div>
-    <div class="iconContainer">
+    <div id="iconContainer">
       <div class="hidden">
         <img src="../assets/python.png">
         <h2>Python</h2>
@@ -193,6 +201,7 @@ document.addEventListener('DOMContentLoaded', () => {
             overflow: hidden;
             transition: max-height 0.5s ease-out;
             max-height: auto;
+            border-radius: 80px;
         }
 #expandable-div {
     position: relative;
@@ -205,16 +214,18 @@ document.addEventListener('DOMContentLoaded', () => {
     background-color: #e0e0e0;
     border-radius: 80px;
     flex:3;
-  z-index: -10;
+    position: relative;
+    z-index: 0;
   p {color: black;}
     padding: 20px;
     transform: translateY(-100%);
-    transition: transform 0.5s ease-out;
+    transition: transform 2s ease-in-out;
 }
 
 #über {
   padding: 5rem 15rem;
   // --card-height: 35vh;
+  height:auto;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -231,13 +242,13 @@ h4 {
   color: rgb(207, 207, 207);
 }
 
-.card {
+#card {
   background: linear-gradient(135deg, rgb(255, 255, 255), rgb(212, 212, 212));
   border-radius: 80px;
+  position: relative;
   z-index: 30;
   width: 100%;
   padding: 1rem;
-  margin-top: 1rem;
   display: flex;
   flex-direction: column;
   flex: 3;
@@ -302,7 +313,7 @@ h4 {
   justify-content: space-between;
 }
 
-.iconContainer {
+#iconContainer {
   margin-top: 7rem;
   display: flex;
   flex-direction: column;
