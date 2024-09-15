@@ -41,7 +41,38 @@ document.addEventListener('DOMContentLoaded', () => {
     <!-- Include Logo on the left -->
   <div id="contentContainer">
     <div class="logo">
-      <img src="../assets/Solia Solutions Color.png" alt="Logo">
+      
+      <div class="card">
+        <img src="../assets/Solia Solutions Color.png" height="100px" alt="Logo">
+  <svg 
+     viewBox="0 0 100% 100%"
+     xmlns='http://www.w3.org/2000/svg'
+     class="noise"
+     >
+  <filter id='noiseFilter'>
+    <feTurbulence 
+                  type='fractalNoise' 
+                  baseFrequency='0.85' 
+                  numOctaves='6' 
+                  stitchTiles='stitch' />
+  </filter>
+
+  <rect
+        width='100%'
+        height='100%'
+        preserveAspectRatio="xMidYMid meet"
+        filter='url(#noiseFilter)' />
+</svg>
+
+<div class="content">
+  <h1>Moderne Lösungen</h1>
+  <p>Von AI-Beratung, über System- und Netzwerksicherheit bis hin zur Webentwicklung finde ich die passende Lösung zu jedem Ihrer Probleme. Um mehr zu erfahren, scrollen Sie runter oder klicken Sie hier:</p>
+    <a class="button" href="#kontakt">Kontaktieren Sie mich!</a>  
+    <a href="https://github.com/timliebhaber" target="_blank"><i class="fa fa-github" style="font-size:36px"></i></a>
+    <a href="https://www.linkedin.com/in/tim-liebhaber/" target="_blank"><i class="fa fa-linkedin" style="font-size:36px"></i></a>
+      
+</div>
+</div>
     </div>
     <div class="card">
   
@@ -68,8 +99,10 @@ document.addEventListener('DOMContentLoaded', () => {
   <div class="content">
     <h1>Moderne Lösungen</h1>
     <p>Von AI-Beratung, über System- und Netzwerksicherheit bis hin zur Webentwicklung finde ich die passende Lösung zu jedem Ihrer Probleme. Um mehr zu erfahren, scrollen Sie runter oder klicken Sie hier:</p>
-    <a href="https://github.com/timliebhaber" target="_blank"><i class="fa fa-github" style="font-size:36px"></i></a>
-        <a href="https://www.linkedin.com/in/tim-liebhaber/" target="_blank"><i class="fa fa-linkedin" style="font-size:36px"></i></a>
+      <a class="button" href="#kontakt">Kontaktieren Sie mich!</a>  
+      <a href="https://github.com/timliebhaber" target="_blank"><i class="fa fa-github" style="font-size:36px"></i></a>
+      <a href="https://www.linkedin.com/in/tim-liebhaber/" target="_blank"><i class="fa fa-linkedin" style="font-size:36px"></i></a>
+        
   </div>
 </div>
 </div>
@@ -141,6 +174,41 @@ document.addEventListener('DOMContentLoaded', () => {
     width: 40px;
     height: 40px;
     margin-right: 20px;
+}
+
+.button {
+    color: black;
+    background-color: #ffa612;
+    padding: 10px 20px;
+    margin-right: 1rem;
+    text-decoration: none;
+    font-family: 'Haas', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    transition: background-color 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+.button:hover {
+  background-color: #ff8c00  ;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 90px rgba(0,0,0,0.1);
+  overflow: hidden;
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255, 255, 255, 0.473) 34%, rgba(255,255,255,1) 89%, rgba(255,255,255,0) 100%);
+    opacity: 0.3;
+    filter: blur(.5px);
+    mix-blend-mode: hard-light;
+  }
 }
 
 .nav-links a {
