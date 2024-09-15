@@ -374,7 +374,7 @@ li {
 
   .g1 {
     position: absolute;
-    background: radial-gradient(circle at center, rgba(#8A2387, 0.8) 0, rgba(#8A2387, 0) 50%) no-repeat;
+    background: radial-gradient(circle at center, rgba(#50238a, 0.8) 0, rgba(#50238a, 0) 50%) no-repeat;
     mix-blend-mode: var(--blending);
 
     width: var(--circle-size);
@@ -406,7 +406,7 @@ li {
 
   .g3 {
     position: absolute;
-    background: radial-gradient(circle at center, rgba(#e94b40, 0.8) 0, rgba(#E94057, 0) 50%) no-repeat;
+    background: radial-gradient(circle at center, rgba(#407be9, 0.8) 0, rgba(#407be9, 0) 50%) no-repeat;
     mix-blend-mode: var(--blending);
 
     width: var(--circle-size);
@@ -422,7 +422,7 @@ li {
 
   .g4 {
     position: absolute;
-    background: radial-gradient(circle at center, rgba(#fa8a44, 0.8) 0, rgba(#f27121, 0) 50%) no-repeat;
+    background: radial-gradient(circle at center, rgba(#5940e9, 0.8) 0, rgba(#5940e9, 0) 50%) no-repeat;
     mix-blend-mode: var(--blending);
 
     width: var(--circle-size);
@@ -438,7 +438,7 @@ li {
 
   .g5 {
     position: absolute;
-    background: radial-gradient(circle at center, rgba(#f27121, 0.8) 0, rgba(#f27121, 0) 50%) no-repeat;
+    background: radial-gradient(circle at center, rgba(#540ea5, 0.8) 0, rgba(#540ea5, 0) 50%) no-repeat;
     mix-blend-mode: var(--blending);
 
     width: calc(var(--circle-size) * 2);
