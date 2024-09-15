@@ -43,8 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <div class="logo">
       
       <div class="card">
-        <img src="../assets/Solia Solutions Color.png" height="100px" alt="Logo">
-  <svg 
+         <svg 
      viewBox="0 0 100% 100%"
      xmlns='http://www.w3.org/2000/svg'
      class="noise"
@@ -65,46 +64,21 @@ document.addEventListener('DOMContentLoaded', () => {
 </svg>
 
 <div class="content">
-  <h1>Moderne Lösungen</h1>
-  <p>Von AI-Beratung, über System- und Netzwerksicherheit bis hin zur Webentwicklung finde ich die passende Lösung zu jedem Ihrer Probleme. Um mehr zu erfahren, scrollen Sie runter oder klicken Sie hier:</p>
+  <h1>Gemeinsam moderne Lösungen finden</h1>
+  <ul class="hero-list">
+                <li><font-awesome-icon icon="play" :style="{ fontSize: '14px' }" /> ‎ Künstliche Intelligenz für Ihre individuellen Ansprüche!</li> 
+                <li><font-awesome-icon icon="play" :style="{ fontSize: '14px' }" /> ‎ Verbessern Sie die Sicherheit ihrer IT-Systeme!</li>             
+                <li><font-awesome-icon icon="play" :style="{ fontSize: '14px' }" /> ‎ Maßgeschneiderte Web- und Softwarelösungen!</li> 
+            </ul>
+  <div class="contentRow">
     <a class="button" href="#kontakt">Kontaktieren Sie mich!</a>  
-    <a href="https://github.com/timliebhaber" target="_blank"><i class="fa fa-github" style="font-size:36px"></i></a>
-    <a href="https://www.linkedin.com/in/tim-liebhaber/" target="_blank"><i class="fa fa-linkedin" style="font-size:36px"></i></a>
-      
+    <a href="https://github.com/timliebhaber" target="_blank"><i class="fa fa-github" style="font-size:45px"></i></a>
+    <a href="https://www.linkedin.com/in/tim-liebhaber/" target="_blank"><i class="fa fa-linkedin" style="font-size:45px"></i></a>
+  </div>
 </div>
 </div>
     </div>
-    <div class="card">
-  
-    <svg 
-       viewBox="0 0 100% 100%"
-       xmlns='http://www.w3.org/2000/svg'
-       class="noise"
-       >
-    <filter id='noiseFilter'>
-      <feTurbulence 
-                    type='fractalNoise' 
-                    baseFrequency='0.85' 
-                    numOctaves='6' 
-                    stitchTiles='stitch' />
-    </filter>
-
-    <rect
-          width='100%'
-          height='100%'
-          preserveAspectRatio="xMidYMid meet"
-          filter='url(#noiseFilter)' />
-  </svg>
-  
-  <div class="content">
-    <h1>Moderne Lösungen</h1>
-    <p>Von AI-Beratung, über System- und Netzwerksicherheit bis hin zur Webentwicklung finde ich die passende Lösung zu jedem Ihrer Probleme. Um mehr zu erfahren, scrollen Sie runter oder klicken Sie hier:</p>
-      <a class="button" href="#kontakt">Kontaktieren Sie mich!</a>  
-      <a href="https://github.com/timliebhaber" target="_blank"><i class="fa fa-github" style="font-size:36px"></i></a>
-      <a href="https://www.linkedin.com/in/tim-liebhaber/" target="_blank"><i class="fa fa-linkedin" style="font-size:36px"></i></a>
-        
-  </div>
-</div>
+    
 </div>
 <div class="gradient-bg">
   <svg 
@@ -177,15 +151,17 @@ document.addEventListener('DOMContentLoaded', () => {
 }
 
 .button {
-    color: black;
+    color: white;
     background-color: #ffa612;
     padding: 10px 20px;
-    margin-right: 1rem;
+    margin-right: 9rem;
     text-decoration: none;
     font-family: 'Haas', sans-serif;
     font-weight: bold;
-    font-size: 18px;
-    transition: background-color 0.3s ease-in-out;
+    font-size: 20px;
+    box-shadow: 0px 4px 3px rgba(255, 123, 0, 0.8);
+    text-shadow: 0px 2px 2px rgba(0,0,0,.3);
+    transition: background-color 0.2s ease-in-out,transform 0.2s, box-shadow 0.2s;
     border-radius: 5px;
 }
 
@@ -193,8 +169,9 @@ document.addEventListener('DOMContentLoaded', () => {
   background-color: #ff8c00  ;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
-  box-shadow: 0 4px 90px rgba(0,0,0,0.1);
+  box-shadow: 0px 0px 0px rgba(0,0,0,0);
   overflow: hidden;
+  transform: translateY(4px); 
   &:before {
     content: "";
     position: absolute;
@@ -202,6 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
     top: 0;
     left: 0;
     width: 100%;
+  
     height: 2px;
     background: rgb(255,255,255);
     background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255, 255, 255, 0.473) 34%, rgba(255,255,255,1) 89%, rgba(255,255,255,0) 100%);
@@ -267,25 +245,20 @@ document.addEventListener('DOMContentLoaded', () => {
     justify-content: space-between;
     padding: 0 15rem;
     position: absolute;
-    top: 50%;
+    top: 55%;
     transform: translateY(-50%); 
    
 }
 
-.logo {
-  z-index: 10;
-  max-width: 600px;  
-}
-
   .card {
   z-index: 10;
-  max-width: 535px;
+  max-width: 635px;
   min-width: 535px;
   padding: 40px;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border-radius: 8px;
-  box-shadow: 0 4px 90px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 50px rgba(0,0,0,.3);
   overflow: hidden;
   &:before {
     content: "";
@@ -316,20 +289,22 @@ document.addEventListener('DOMContentLoaded', () => {
   .content {
     position: relative;
     z-index: 2;
-    text-shadow: -3px 0px 2px rgba(0,0,0,0.1);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
   }
 }
 
 h1 {
-  font-size: 3rem;
-  margin-bottom: 16px;
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
 }
 
-p {
-  font-size: 1.2rem;
+li {
+  font-size: 1.4rem;
   line-height: 1.6;
+  margin-bottom: 2rem;
+  
 }
-
 
 @keyframes moveInCircle {
   0% {
@@ -389,7 +364,7 @@ p {
     left: 0;
     z-index: 1;
     mix-blend-mode: soft-light;
-    opacity: 0.3;
+    opacity: 0.1;
   }
   .gradients-container {
     filter: url(#goo) blur(40px) ;
@@ -399,7 +374,7 @@ p {
 
   .g1 {
     position: absolute;
-    background: radial-gradient(circle at center, rgba(var(--color1), 0.8) 0, rgba(var(--color1), 0) 50%) no-repeat;
+    background: radial-gradient(circle at center, rgba(#8A2387, 0.8) 0, rgba(#8A2387, 0) 50%) no-repeat;
     mix-blend-mode: var(--blending);
 
     width: var(--circle-size);
@@ -415,7 +390,7 @@ p {
 
   .g2 {
     position: absolute;
-    background: radial-gradient(circle at center, rgba(var(--color2), 0.8) 0, rgba(var(--color2), 0) 50%) no-repeat;
+    background: radial-gradient(circle at center, rgba(#8a2370, 0.8) 0, rgba(#8A2387, 0) 50%) no-repeat;
     mix-blend-mode: var(--blending);
 
     width: var(--circle-size);
@@ -431,7 +406,7 @@ p {
 
   .g3 {
     position: absolute;
-    background: radial-gradient(circle at center, rgba(var(--color3), 0.8) 0, rgba(var(--color3), 0) 50%) no-repeat;
+    background: radial-gradient(circle at center, rgba(#e94b40, 0.8) 0, rgba(#E94057, 0) 50%) no-repeat;
     mix-blend-mode: var(--blending);
 
     width: var(--circle-size);
@@ -447,7 +422,7 @@ p {
 
   .g4 {
     position: absolute;
-    background: radial-gradient(circle at center, rgba(var(--color4), 0.8) 0, rgba(var(--color4), 0) 50%) no-repeat;
+    background: radial-gradient(circle at center, rgba(#fa8a44, 0.8) 0, rgba(#f27121, 0) 50%) no-repeat;
     mix-blend-mode: var(--blending);
 
     width: var(--circle-size);
@@ -463,7 +438,7 @@ p {
 
   .g5 {
     position: absolute;
-    background: radial-gradient(circle at center, rgba(var(--color5), 0.8) 0, rgba(var(--color5), 0) 50%) no-repeat;
+    background: radial-gradient(circle at center, rgba(#f27121, 0.8) 0, rgba(#f27121, 0) 50%) no-repeat;
     mix-blend-mode: var(--blending);
 
     width: calc(var(--circle-size) * 2);
@@ -479,30 +454,42 @@ p {
 
   .interactive {
     position: absolute;
-    background: radial-gradient(circle at center, rgba(var(--color-interactive), 0.8) 0, rgba(var(--color-interactive), 0) 50%) no-repeat;
+    background: radial-gradient(circle at center, rgba(#8A2387, 0.8) 0, rgba(#8A2387, 0) 50%) no-repeat;
     mix-blend-mode: var(--blending);
 
     width: 100%;
     height: 100%;
     top: -50%;
     left: -50%;
-    opacity: 0.7;
+    opacity: 0.8;
   }
 }
 
 .content i {
     font-size: 1.375rem;
-    margin-top: 1rem;
-    color: #afafaf;
+    color: #ffffff;
     transition: color 0.3s ease-in-out;
 }
 
+.contentRow {
+    display: flex;
+    align-items: center;
+    
+}
+
 .content i:hover {
-    color: #ffffff;
+    color: #b8b8b8;
 }
 
 .fa-github {
-    margin-right: 15px;
+    margin-right: 1rem;
+}
+
+.hero-list {
+    list-style-type: none; /* Disable default bullets */
+    line-height: 3rem;
+    margin-top: 5rem;
+    margin-bottom: 6rem;
 }
 
 </style>
