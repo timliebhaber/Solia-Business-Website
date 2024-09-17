@@ -310,6 +310,7 @@ h4 {
 .content {
   display: flex;  
   position: relative;
+  height: auto;
   justify-content: space-between;
 }
 
