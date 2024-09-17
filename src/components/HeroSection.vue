@@ -66,8 +66,8 @@ document.addEventListener('DOMContentLoaded', () => {
 <div class="content">
   <h1>Gemeinsam moderne Lösungen finden</h1>
   <ul class="hero-list">
-                <li><font-awesome-icon icon="play" :style="{ fontSize: '14px' }" /> ‎ Künstliche Intelligenz für Ihre individuellen Ansprüche!</li> 
-                <li><font-awesome-icon icon="play" :style="{ fontSize: '14px' }" /> ‎ Verbessern Sie die Sicherheit ihrer IT-Systeme!</li>             
+                <li><font-awesome-icon icon="play" :style="{ fontSize: '14px' }" /> ‎ Künstliche Intelligenz für individuelle Ansprüche!</li> 
+                <li><font-awesome-icon icon="play" :style="{ fontSize: '14px' }" /> ‎ Verbessern Sie Ihre IT-Sicherheit!</li>             
                 <li><font-awesome-icon icon="play" :style="{ fontSize: '14px' }" /> ‎ Maßgeschneiderte Web- und Softwarelösungen!</li> 
             </ul>
   <div class="contentRow">
@@ -300,7 +300,7 @@ h1 {
 }
 
 li {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   line-height: 1.6;
   margin-bottom: 2rem;
   
