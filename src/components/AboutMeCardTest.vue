@@ -150,8 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </ul>
         </div>
         </div>
-    </div>
-    <div id="iconContainer">
+        <div id="iconContainer">
       <div class="hidden">
         <img src="../assets/python.png">
         <h2>Python</h2>
@@ -177,6 +176,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <h2>(S)CSS</h2>
       </div>
       </div>
+    </div>
     </div>
     </div>
 
@@ -316,8 +316,9 @@ h4 {
 #iconContainer {
   margin-top: 7rem;
   display: flex;
-  flex-direction: column;
-  align-items: end;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   flex:1;
 }
 
