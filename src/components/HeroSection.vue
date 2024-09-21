@@ -64,10 +64,12 @@ document.addEventListener('DOMContentLoaded', () => {
 </svg>
 
 <div class="content">
-  <h1>Gemeinsam  <span style="font-weight: bold;"> moderne Lösungen</span>  finden</h1>
-  <p>Entwicklung maßgeschneiderter Web- und Softwarelösungen für <br> Ihre individuellen Ansprüche</p>
+  <div class="center-content">
+      <h1>Gemeinsam <span style="font-weight: bold;"> moderne Lösungen</span> finden</h1>
+      <p>Entwicklung maßgeschneiderter Web- und Softwarelösungen für <br> Ihre individuellen Ansprüche</p>
+      <a class="button" href="#kontakt">Kontaktieren Sie mich!</a>  
+    </div>
   <div class="contentRow">
-    <a class="button" href="#kontakt">Kontaktieren Sie mich!</a>  
     <a href="https://github.com/timliebhaber" target="_blank"><i class="fa fa-github" style="font-size:45px"></i></a>
     <a href="https://www.linkedin.com/in/tim-liebhaber/" target="_blank"><i class="fa fa-linkedin" style="font-size:45px"></i></a>
   </div>
@@ -157,11 +159,20 @@ p {
     z-index: 100;
 }
 
+.center-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center; // Center the <h1> and <p> horizontally
+  justify-content: center; // Center them vertically
+  flex-grow: 1; // Allow this container to take up all available space
+}
+
 .logo { 
   width: 100%;
 }
 
 .card {
+  position: relative; // Ensure .card is positioned relative to allow absolute positioning
   z-index: 10;
   width: 100%;
   min-height: 85vh;
@@ -173,8 +184,8 @@ p {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; // Center content vertically
+  align-items: center; // Center content horizontally
   &:before {
     content: "";
     position: absolute;
@@ -190,27 +201,24 @@ p {
     mix-blend-mode: hard-light;
   }
 
-
   .noise {
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    z-index: 1;
+    z-index: -1;
     opacity: 0.1;
   }
 
   .content {
-    position: flex;
-    align-items: center;
-    z-index: 2;
-    text-align: left;;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-  }
+    height: 100%;
+    display: flex;
+    flex-direction: column; // Make sure items stack vertically
+    align-items: flex-start; // Align items to the left (if needed)
+    justify-content: flex-start; // Align items to the top
+} 
 }
-
-
 
 .logo-small {
     width: 40px;
@@ -222,7 +230,7 @@ p {
     color: white;
     background-color: #ffa612;
     padding: 10px 20px;
-    margin-right: 9rem;
+    margin-top: 1rem;
     text-decoration: none;
     font-family: 'Haas', sans-serif;
     font-weight: bold;
@@ -384,7 +392,7 @@ li {
     left: 0;
     z-index: 1;
     mix-blend-mode: soft-light;
-    opacity: 0.1;
+    opacity: 0.6;
   }
   .gradients-container {
     filter: url(#goo) blur(40px) ;
@@ -405,7 +413,7 @@ li {
     transform-origin: center center;
     animation: moveVertical 30s ease infinite;
 
-    opacity: 1;
+    opacity: 0.6;
   }
 
   .g2 {
@@ -421,12 +429,12 @@ li {
     transform-origin: calc(50% - 400px);
     animation: moveInCircle 20s reverse infinite;
 
-    opacity: 1;
+    opacity: 0.6;
   }
 
   .g3 {
     position: absolute;
-    background: radial-gradient(circle at center, rgba(#407be9, 0.8) 0, rgba(#407be9, 0) 50%) no-repeat;
+    background: radial-gradient(circle at center, rgba(#404be9, 0.8) 0, rgba(#404be9, 0) 50%) no-repeat;
     mix-blend-mode: var(--blending);
 
     width: var(--circle-size);
@@ -437,7 +445,7 @@ li {
     transform-origin: calc(50% + 400px);
     animation: moveInCircle 40s linear infinite;
 
-    opacity: 1;
+    opacity: 0.6;
   }
 
   .g4 {
@@ -453,7 +461,7 @@ li {
     transform-origin: calc(50% - 200px);
     animation: moveHorizontal 40s ease infinite;
 
-    opacity: 0.7;
+    opacity: 0.6;
   }
 
   .g5 {
@@ -469,12 +477,12 @@ li {
     transform-origin: calc(50% - 800px) calc(50% + 200px);
     animation: moveInCircle 20s ease infinite;
 
-    opacity: 1;
+    opacity: 0.6;
   }
 
   .interactive {
     position: absolute;
-    background: radial-gradient(circle at center, rgba(#8A2387, 0.8) 0, rgba(#8A2387, 0) 50%) no-repeat;
+    background: radial-gradient(circle at center, rgba(#c06418, 0.7) 0, rgba(#c06418, 0) 50%) no-repeat;
     mix-blend-mode: var(--blending);
 
     width: 100%;
@@ -492,9 +500,13 @@ li {
 }
 
 .contentRow {
-    display: flex;
-    align-items: center;
-    
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute; // Use absolute positioning to place it at the bottom
+  bottom: 20px; // Adjust this value as needed for spacing from the bottom
+  left: 50%; // Center horizontally
+  transform: translateX(-50%); // Correct the position after left: 50%
 }
 
 .content i:hover {
