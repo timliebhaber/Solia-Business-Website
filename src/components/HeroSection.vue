@@ -64,12 +64,8 @@ document.addEventListener('DOMContentLoaded', () => {
 </svg>
 
 <div class="content">
-  <h1>Gemeinsam moderne Lösungen finden</h1>
-  <ul class="hero-list">
-                <li><font-awesome-icon icon="play" :style="{ fontSize: '14px' }" /> ‎ Künstliche Intelligenz für individuelle Ansprüche!</li> 
-                <li><font-awesome-icon icon="play" :style="{ fontSize: '14px' }" /> ‎ Verbessern Sie Ihre IT-Sicherheit!</li>             
-                <li><font-awesome-icon icon="play" :style="{ fontSize: '14px' }" /> ‎ Maßgeschneiderte Web- und Softwarelösungen!</li> 
-            </ul>
+  <h1>Gemeinsam  <span style="font-weight: bold;"> moderne Lösungen</span>  finden</h1>
+  <p>Entwicklung maßgeschneiderter Web- und Softwarelösungen für <br> Ihre individuellen Ansprüche</p>
   <div class="contentRow">
     <a class="button" href="#kontakt">Kontaktieren Sie mich!</a>  
     <a href="https://github.com/timliebhaber" target="_blank"><i class="fa fa-github" style="font-size:45px"></i></a>
@@ -131,6 +127,23 @@ document.addEventListener('DOMContentLoaded', () => {
     justify-content: space-between; /* Space between the left and right sides */
 }
 
+h1 {
+    font-size: 4.5rem;
+    font-weight: 200;
+    color: white;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1.4rem;
+    font-weight: 200;
+    color: white;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
 .navbar {
     background-color: transparent;
     display: flex;
@@ -143,6 +156,61 @@ document.addEventListener('DOMContentLoaded', () => {
     padding-right: 15rem;
     z-index: 100;
 }
+
+.logo { 
+  width: 100%;
+}
+
+.card {
+  z-index: 10;
+  width: 100%;
+  min-height: 85vh;
+  padding: 40px;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  box-shadow: 0 4px 50px rgba(0,0,0,.3);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 34%, rgba(255,255,255,1) 89%, rgba(255,255,255,0) 100%);
+    opacity: 0.3;
+    filter: blur(.5px);
+    mix-blend-mode: hard-light;
+  }
+
+
+  .noise {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    opacity: 0.1;
+  }
+
+  .content {
+    position: flex;
+    align-items: center;
+    z-index: 2;
+    text-align: left;;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+  }
+}
+
+
 
 .logo-small {
     width: 40px;
@@ -240,63 +308,15 @@ document.addEventListener('DOMContentLoaded', () => {
     display: flex;
     align-items: center;
     width: 100%;
-    height:100%;
+    height: 100%;
     background-color: transparent;
-    justify-content: space-between;
-    padding: 0 15rem;
+    justify-content: center;
+    padding-left: 15rem;
+    padding-right: 15rem;
     position: absolute;
     top: 55%;
     transform: translateY(-50%); 
    
-}
-
-  .card {
-  z-index: 10;
-  max-width: 635px;
-  min-width: 535px;
-  padding: 40px;
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  border-radius: 8px;
-  box-shadow: 0 4px 50px rgba(0,0,0,.3);
-  overflow: hidden;
-  &:before {
-    content: "";
-    position: absolute;
-    z-index: 2;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: rgb(255,255,255);
-    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 34%, rgba(255,255,255,1) 89%, rgba(255,255,255,0) 100%);
-    opacity: 0.3;
-    filter: blur(.5px);
-    mix-blend-mode: hard-light;
-  }
-
-
-  .noise {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 1;
-    opacity: 0.1;
-  }
-
-  .content {
-    position: relative;
-    z-index: 2;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-  }
-}
-
-h1 {
-  font-size: 3.5rem;
-  margin-bottom: 1rem;
-  text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
 }
 
 li {
