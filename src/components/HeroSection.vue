@@ -328,8 +328,6 @@ p {
     height: 100%;
     background-color: transparent;
     justify-content: center;
-    padding-left: 15rem;
-    padding-right: 15rem;
     position: absolute;
     top: 55%;
     transform: translateY(-50%); 
