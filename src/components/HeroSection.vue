@@ -184,7 +184,7 @@ p {
 }
 
 .second-content {
-  margin-top: 2rem;
+  margin-top: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center; // Center the <h1> and <p> horizontally
@@ -258,9 +258,9 @@ p {
     text-decoration: none;
     font-family: 'Haas', sans-serif;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 21px;
     box-shadow: 0px 4px 3px rgba(255, 123, 0, 0.8);
-    text-shadow: 0px 2px 2px rgba(0,0,0,.3);
+    text-shadow: 0px 2px 5px rgba(0,0,0,.8);
     transition: background-color 0.2s ease-in-out,transform 0.2s, box-shadow 0.2s;
     border-radius: 5px;
 }
@@ -473,7 +473,7 @@ li {
 
   .g5 {
     position: absolute;
-    background: radial-gradient(circle at center, rgba(#540ea5, 0.8) 0, rgba(#540ea5, 0) 50%) no-repeat;
+    background: radial-gradient(circle at center, rgba(#c06418, 0.8) 0, rgba(#c06418, 0) 50%) no-repeat;
     mix-blend-mode: var(--blending);
 
     width: calc(var(--circle-size) * 2);
@@ -484,12 +484,12 @@ li {
     transform-origin: calc(50% - 800px) calc(50% + 200px);
     animation: moveInCircle 20s ease infinite;
 
-    opacity: 0.7;
+    opacity: 0.6;
   }
 
   .interactive {
     position: absolute;
-    background: radial-gradient(circle at center, rgba(#c06418, 0.7) 0, rgba(#c06418, 0) 50%) no-repeat;
+    background: radial-gradient(circle at center, rgba(#540ea5, 0.7) 0, rgba(#540ea5, 0) 50%) no-repeat;
     mix-blend-mode: var(--blending);
 
     width: 100%;
@@ -535,7 +535,7 @@ nav a[href="#kontakt"] {
     /* Your styles here */
     color: white;
     background-color: #ffa612;
-    padding: 10px 20px;
+    padding: 8px 20px;
     margin-top: 1rem;
     text-decoration: none;
     font-family: 'Haas', sans-serif;
