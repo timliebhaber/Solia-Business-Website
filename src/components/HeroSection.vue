@@ -1,4 +1,10 @@
 <script setup lang="ts">
+
+import TypeWriter from './TypeWriter.vue'
+
+// Definiere die Wörter, die im Typewriter angezeigt werden sollen
+const words = ["Künstliche Intelligenz", "IT-Sicherheit", "Web-Entwicklung", "Software-Entwicklung"]
+
 document.addEventListener('DOMContentLoaded', () => {
     const interBubble = document.querySelector('.interactive') as HTMLElement | null;
     let curX = 0;
@@ -53,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
                   type='fractalNoise' 
                   baseFrequency='0.85' 
                   numOctaves='6' 
-                  stitchTiles='stitch' />
+                  stitchTiles='stitch'/>
   </filter>
 
   <rect
@@ -65,10 +71,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
 <div class="content">
   <div class="center-content">
-      <h1>Gemeinsam <span style="font-weight: bold;"> moderne Lösungen</span> finden</h1>
-      <p>Entwicklung maßgeschneiderter Web- und Softwarelösungen für <br> Ihre individuellen Ansprüche</p>
+      <h1><span style="font-weight: bold;">Gemeinsam moderne Lösungen finden</span>  <br> <TypeWriter
+      :words="words"
+      :typingSpeed="100"
+      :deletingSpeed="40"
+      :waitTime="1000"/>
+    </h1>
+  <div class="second-content">
+      <p>Entwicklung individueller IT-Lösungen für Ihren Betrieb <br> maßgeschneidert, modern und effizient</p>
       <a class="button" href="#kontakt">Kontaktieren Sie mich!</a>  
     </div>
+  </div>
   <div class="contentRow">
     <a href="https://github.com/timliebhaber" target="_blank"><i class="fa fa-github" style="font-size:45px"></i></a>
     <a href="https://www.linkedin.com/in/tim-liebhaber/" target="_blank"><i class="fa fa-linkedin" style="font-size:45px"></i></a>
@@ -130,11 +143,12 @@ document.addEventListener('DOMContentLoaded', () => {
 }
 
 h1 {
-    font-size: 4.5rem;
+    font-size: 4.7rem;
     font-weight: 200;
+    text-align: center;
     color: white;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    margin-bottom: 1rem;
+    margin-bottom: 0rem;
 }
 
 p {
@@ -143,6 +157,7 @@ p {
     color: white;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     text-align: center;
+    margin-top: 2rem;
     margin-bottom: 2rem;
 }
 
@@ -164,7 +179,16 @@ p {
   flex-direction: column;
   align-items: center; // Center the <h1> and <p> horizontally
   justify-content: center; // Center them vertically
+  transform: translateY(2rem); ;
   flex-grow: 1; // Allow this container to take up all available space
+}
+
+.second-content {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; // Center the <h1> and <p> horizontally
+  justify-content: flex-end; // Center them vertically
 }
 
 .logo { 
@@ -248,21 +272,6 @@ p {
   box-shadow: 0px 0px 0px rgba(0,0,0,0);
   overflow: hidden;
   transform: translateY(4px); 
-  &:before {
-    content: "";
-    position: absolute;
-    z-index: 2;
-    top: 0;
-    left: 0;
-    width: 100%;
-  
-    height: 2px;
-    background: rgb(255,255,255);
-    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255, 255, 255, 0.473) 34%, rgba(255,255,255,1) 89%, rgba(255,255,255,0) 100%);
-    opacity: 0.3;
-    filter: blur(.5px);
-    mix-blend-mode: hard-light;
-  }
 }
 
 .nav-links a {
@@ -522,6 +531,30 @@ li {
     line-height: 3rem;
     margin-top: 5rem;
     margin-bottom: 6rem;
+}
+
+nav a[href="#kontakt"] {
+    /* Your styles here */
+    color: white;
+    background-color: #ffa612;
+    padding: 10px 20px;
+    margin-top: 1rem;
+    text-decoration: none;
+    font-family: 'Haas', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    text-shadow: 0px 2px 2px rgba(0,0,0,.3);
+    transition: background-color 0.2s ease-in-out,transform 0.2s, box-shadow 0.2s;
+    border-radius: 5px;
+}
+
+nav a[href="#kontakt"]:hover {
+  background-color: #ff8c00  ;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-shadow: 0px 0px 0px rgba(0,0,0,0);
+  border-radius: 5px;
+  overflow: hidden;
 }
 
 </style>
