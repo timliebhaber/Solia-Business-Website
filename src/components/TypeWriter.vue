@@ -79,6 +79,7 @@
     font-family: 'Haas', sans-serif, monospace;
     font-weight:200;
     border-right: 2px #ffffff9f solid;
+    position: relative;
   }
   
   .cursor {
