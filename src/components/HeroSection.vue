@@ -434,7 +434,7 @@ li {
 
   .g3 {
     position: absolute;
-    background: radial-gradient(circle at center, rgba(#404be9, 0.8) 0, rgba(#404be9, 0) 50%) no-repeat;
+    background: radial-gradient(circle at center, rgba(#6d40e9, 0.8) 0, rgba(#6d40e9, 0) 50%) no-repeat;
     mix-blend-mode: var(--blending);
 
     width: var(--circle-size);
@@ -445,12 +445,12 @@ li {
     transform-origin: calc(50% + 400px);
     animation: moveInCircle 40s linear infinite;
 
-    opacity: 0.6;
+    opacity: 0.7 ;
   }
 
   .g4 {
     position: absolute;
-    background: radial-gradient(circle at center, rgba(#5940e9, 0.8) 0, rgba(#5940e9, 0) 50%) no-repeat;
+    background: radial-gradient(circle at center, rgba(#e97640, 0.8) 0, rgba(#e97640, 0) 50%) no-repeat;
     mix-blend-mode: var(--blending);
 
     width: var(--circle-size);
@@ -477,7 +477,7 @@ li {
     transform-origin: calc(50% - 800px) calc(50% + 200px);
     animation: moveInCircle 20s ease infinite;
 
-    opacity: 0.6;
+    opacity: 0.7;
   }
 
   .interactive {
