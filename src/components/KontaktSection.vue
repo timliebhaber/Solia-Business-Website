@@ -92,25 +92,30 @@ input::placeholder, textarea::placeholder {
   font-family: 'Haas', sans-serif;
 }
 
-/* Style the submit button with a specific background color etc */
-input[type=submit] {
-  width: 30%;
-  min-width: 100px; 
-  background: linear-gradient(to bottom, #4d4d4d, #222222);
-  color: rgb(255, 255, 255);
-  font-weight: bold;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  
+input[type=submit]  {
+    color: white;
+    background-color: #ffa612;
+    padding: 10px 20px;
+    width: 30%;
+    min-width: 100px; 
+    margin-top: 1rem;
+    text-decoration: none;
+    font-family: 'Haas', sans-serif;
+    font-weight: bold;
+    font-size: 21px;
+    box-shadow: 0px 4px 3px rgba(255, 123, 0, 0.8);
+    text-shadow: 0px 2px 5px rgba(0,0,0,.8);
+    transition: background-color 0.2s ease-in-out,transform 0.2s, box-shadow 0.2s;
+    border-radius: 5px;
 }
 
-/* When moving the mouse over the submit button, add a darker green color */
 input[type=submit]:hover {
-  background: linear-gradient(to bottom, #303030, #2e2e2e);
-  box-shadow: 0 0 10px rgba(5,0,0,0.5);
-  
+  background-color: #ff8c00  ;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-shadow: 0px 0px 0px rgba(0,0,0,0);
+  overflow: hidden;
+  transform: translateY(4px); 
 }
 
 /* Add a background color and some padding around the form */
