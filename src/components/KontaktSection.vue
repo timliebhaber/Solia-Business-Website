@@ -33,7 +33,7 @@ Sie erreichen mich über das Kontaktformular oder per Email:<br><br>
     <label for="subject"></label>
     <textarea id="subject" name="subject" placeholder="Nachricht" style="height:200px"></textarea>
 
-    <input type="submit" value="Senden">
+    <input type="submit" value="Absenden">
 
   </form>
   </div>
