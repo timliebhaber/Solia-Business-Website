@@ -238,6 +238,12 @@ h2 {
   margin-bottom: 2rem;
 }
 
+h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.829);
+}
+
 h4 {
   color: rgb(207, 207, 207);
 }
@@ -288,11 +294,7 @@ h4 {
   padding-right: 10%;
 }
 
-.card h3 {
-  font-size: 2rem;
-  font-weight: bold;
-  color: rgba(0, 0, 0, 0.829);
-}
+
 
 .cardImage img {
   height: 10px;
