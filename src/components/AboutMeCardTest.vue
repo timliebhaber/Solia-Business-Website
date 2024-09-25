@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
           </p> 
         </div>
     <div id="button-box">
-    <button id="toggle-button">v</button>
+    <button id="toggle-button">Lebenslauf anzeigen</button>
   </div>
     </div>
     </div>
@@ -187,14 +187,30 @@ document.addEventListener('DOMContentLoaded', () => {
 #button-box {
     display: flex;
     width: 100%;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding-top: 0.5rem;
 }
 
 #toggle-button {
     background: none;
-    border: none;
-    font-size: 2rem;
+    padding: 2px 10px;
+    color: rgb(22, 22, 22);
+    border: 1px solid rgba(116, 116, 116, 0.356);
+    border-radius: 10px;
+    font-size: 1.5rem;
+    transition: all 0.3s;
+}
+
+#toggle-button:hover {
+    background: none;
+    padding: 2px 10px;
+    transform: scale(1.05);
+    color: rgb(0, 0, 0);
+    border: 1px solid rgba(116, 116, 116, 0.13);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    font-size: 1.5rem;
 }
 
 #container {
