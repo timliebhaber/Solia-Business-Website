@@ -16,39 +16,6 @@ onMounted(() => {
   hiddenElements.value = Array.from(document.querySelectorAll('.hidden'));
   hiddenElements.value.forEach((el) => observer.observe(el));
 });
-
-document.addEventListener('DOMContentLoaded', () => {
-    const button = document.getElementById('toggle-button');
-    const container = document.getElementById('container');
-    const hiddenDiv = document.getElementById('hidden-div');
-    const iconContainer = document.getElementById('iconContainer');
-    const card = document.getElementById('card');
-
-    if (!button || !container || !hiddenDiv || !card || !iconContainer) {
-        console.error('One or more required elements are missing from the DOM');
-        return;
-    }
-
-    let isExpanded = false;
-
-    button.addEventListener('click', () => {
-        if (!isExpanded) {
-            container.style.maxHeight = `${container.scrollHeight}px`;
-            hiddenDiv.style.transform = 'translateY(0)';
-            hiddenDiv.style.borderRadius = '0px 0px 80px 80px';
-            card.style.borderRadius = '80px 80px 0px 0px';
-            iconContainer.style.height = '100%';
-        } else {
-            
-            container.style.maxHeight = 'auto';
-            hiddenDiv.style.borderRadius = '80px';
-            card.style.borderRadius = '80px';
-            iconContainer.style.height = '0px';
-            hiddenDiv.style.transform = 'translateY(-100%)';
-            }
-        isExpanded = !isExpanded;
-    });
-});
 </script>
 
 <template>
@@ -81,74 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
     </div>
     </div>
   
-        </div>
-        <div id="hidden-div">
-          <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
-            <ul class="timeline">
-              <div class="timeline-content">
-                        <h2 class="timeline-title">Erfahrungen</h2>
-                    </div>
-                <li class="timeline-item">
-                    <div class="timeline-info">
-                        <h4>2023 - Heute</h4>
-                    </div>
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">IT - Projektmanager</h3>
-                        <p>Als IT-Projektmanager leitete ich ein kleines Team und übernahm sowohl die Koordination als auch operative Aufgaben im Web Development. 
-                          Neben der Projektplanung und -steuerung entwickelte ich eine maßgeschneiderte Software zur Optimierung interner Prozesse.</p>
-                    </div>
-                </li>
-                <li class="timeline-item">
-                    <div class="timeline-info">
-                        <h4>2021 - Heute</h4>
-                    </div>
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">Selbstständiger Softwareentwickler</h3>
-                        <p>Als selbstständiger Softwareentwickler habe ich in der Vergangenheit für verschiedene Partner Systementwicklungsprojekte realisiert, 
-                          bei denen ich sowohl Frontend- als auch Backendaufgaben übernahm. Mein Fokus lag dabei auf der IT-Sicherheit und Benutzerfreundlichkeit 
-                          der entwickelten Software, um robuste und zugleich intuitive Lösungen zu schaffen. 
-                          Durch maßgeschneiderte Systeme sorgte ich dafür, dass die individuellen Anforderungen meiner Kunden bestmöglich erfüllt wurden. </p>
-                    </div>
-                </li>
-                <li class="timeline-item period">
-                    <div class="timeline-info"></div>
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h2 class="timeline-title">Bildung</h2>
-                    </div>
-                </li>
-                <li class="timeline-item">
-                    <div class="timeline-info">
-                        <h4>2019 - 2024</h4>
-                    </div>
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">Bachelor of Science - Informatik</h3>
-                        <p>In meinem Bachelorstudium der Informatik lag der Schwerpunkt auf Neuroinformatik, Künstlicher Intelligenz und IT-Sicherheit. 
-                          Dabei habe ich fundierte Kenntnisse in den Bereichen maschinelles Lernen, neuronale Netze und sicherheitsrelevante IT-Systeme erworben. 
-                          Durch praxisorientierte Projekte und theoretische Ansätze konnte ich mein Verständnis für innovative Technologien vertiefen und deren 
-                          Anwendung in der realen Welt kennenlernen. 
-                          Diese Schwerpunkte haben mein technisches Wissen und mein Interesse an zukunftsweisenden Entwicklungen nachhaltig geprägt. </p>
-                    </div>
-                </li>
-                <li class="timeline-item">
-                    <div class="timeline-info">
-                        <h4>2015</h4>
-                    </div>
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">Praktikum Informatik</h3>
-                        <p>
-                          Während meines Praktikums in der Informatikabteilung der Firma Allgaier erhielt ich einen umfassenden Einblick in die vielfältigen 
-                          Aufgaben eines Informatikers. Ich konnte erste praktische Erfahrungen in der Systemadministration sowie in der Softwareentwicklung 
-                          sammeln und habe dabei wertvolle Kenntnisse in der IT-Infrastruktur und im Support erworben. 
-                          Dieses Praktikum hat mein Verständnis für die IT-Welt deutlich erweitert und mein Interesse an der Informatik weiter gestärkt. </p>
-                    </div>
-                </li>
-            </ul>
-        </div>
         </div>
         <div id="iconContainer">
       <div class="hidden">
