@@ -62,6 +62,7 @@ Sie erreichen mich über das Kontaktformular oder per Email:<br><br>
 }
 
 #kontakt {
+  height: 100vh;
   align-items: center;
   background-color: white;
   padding: 5rem 15rem;
