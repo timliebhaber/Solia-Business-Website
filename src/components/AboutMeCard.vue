@@ -36,7 +36,7 @@ onMounted(() => {
         <div class="infoText">
           <h3>Tim Liebhaber</h3>
           <p>
-          Ich bin studierter Informatiker mit meinem Schwerpunkt in künstlicher Intelligenz. <br/>Meine größten Interessen sind Neuroinformatik, KI- und System-Sicherheit, Web Entwicklung und Software Engineering.
+          Ich bin studierter Informatiker mit  Schwerpunkt in der künstlichen Intelligenz. <br/>Meine größten Interessen sind Neuroinformatik, KI- und System-Sicherheit, Web Entwicklung und Software Engineering.
           <br/><br/>
             <!-- Relevanten Lebenslauf dazuschreiben inkl aller relevanter Module -->
           </p> 
