@@ -41,9 +41,6 @@ onMounted(() => {
             <!-- Relevanten Lebenslauf dazuschreiben inkl aller relevanter Module -->
           </p> 
         </div>
-    <div id="button-box">
-    <button id="toggle-button">Lebenslauf anzeigen</button>
-  </div>
     </div>
     </div>
     </div>
