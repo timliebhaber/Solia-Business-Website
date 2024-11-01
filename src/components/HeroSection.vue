@@ -181,8 +181,8 @@ p {
     justify-content: space-between;
     grid-area: 10px;
     align-items: center;
-    padding-top: 4.5rem;
-    height: 8vh;
+    padding-top: 2rem;
+    height: 7vh;
     padding-left: 15rem;
     padding-right: 15rem;
     z-index: 100;
@@ -213,7 +213,7 @@ p {
   position: relative; // Ensure .card is positioned relative to allow absolute positioning
   z-index: 10;
   width: 100%;
-  min-height: 85vh;
+  min-height: 90vh;
   padding: 40px;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);

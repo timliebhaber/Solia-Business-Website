@@ -49,7 +49,7 @@
             zu verbessern.</p>
       </div>
       <div class = "refCard">
-        <a ><img src="../assets/FutureFoods.png" alt="Future Foods" height = 60px></a>
+        <a href="https://future-foods.org" target="_blank"><img src="../assets/FutureFoods.png" alt="Future Foods" height = 60px></a>
         <p>
           Bei Future Foods habe ich die Rolle als IT-Lead übernommen. In 
           dieser Funktion habe ich eine maßgeschneiderte Netzwerkstruktur 
