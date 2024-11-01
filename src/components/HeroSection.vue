@@ -27,6 +27,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     move();
+
+    // Toggle Menu
+const hamburger = document.getElementById("hamburger") as HTMLElement | null;
+const navLinks = document.getElementById("navLinks") as HTMLElement | null;
+
+if (hamburger && navLinks) {
+    hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+    });
+}
+
 });
 
 </script>
@@ -42,6 +53,9 @@ document.addEventListener('DOMContentLoaded', () => {
             <a href="#refSection">Partner</a>
             <a href="#über">Über mich</a>
             <a href="#kontakt">Kontakt</a>
+            <div class="hamburger" id="hamburger">
+            &#9776;
+        </div>
         </nav>
     </div>
     <!-- Include Logo on the left -->
@@ -553,6 +567,40 @@ nav a[href="#kontakt"]:hover {
   box-shadow: 0px 0px 0px rgba(0,0,0,0);
   border-radius: 5px;
   overflow: hidden;
+}
+
+
+/* Hamburger Icon */
+.hamburger {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 1000px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #333;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links li {
+        margin: 1rem 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
 }
 
 </style>
