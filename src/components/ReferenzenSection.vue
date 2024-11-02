@@ -136,6 +136,20 @@ a {
   transition: border-color 1s;
 }
 
+@media (max-width: 1000px) {
+  #refSection {
+    padding: 0 5rem;
+  }
+
+  .refCard {
+    width: 100%;
+    height: auto;
+  }
+
+  .refCard p {
+    font-size: 1rem;
+  }
+}
 
 
 
