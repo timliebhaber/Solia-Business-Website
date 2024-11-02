@@ -51,7 +51,7 @@ export default {
         <p>Künstliche Intelligenz wird immer wichtiger, um wettbewerbsfähig zu bleiben und Prozessabläufe zu beschleunigen. <br><br>
             <ul class="custom-list">
                 <li><font-awesome-icon icon="play" :style="{ fontSize: '14px' }" /> ‎ Unternehmensanalysen</li> 
-                <li><font-awesome-icon icon="play" :style="{ fontSize: '14px' }" /> ‎ Individuelle Beratungen</li>             
+                <li><font-awesome-icon icon="play" :style="{ fontSize: '14px' }" /> ‎ Chatsbots für Ihre Anwendung</li>             
                 <li><font-awesome-icon icon="play" :style="{ fontSize: '14px' }" /> ‎ Maßgeschneiderte KI-Lösungen</li> 
             </ul>
             </p>
