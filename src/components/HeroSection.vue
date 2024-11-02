@@ -2,6 +2,17 @@
 
 import TypeWriter from './TypeWriter.vue'
 
+// Toggle Menu
+const hamburger = document.getElementById("hamburger") as HTMLElement | null;
+const navLinks = document.getElementById("navLinks") as HTMLElement | null;
+
+if (hamburger && navLinks) {
+    hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+    });
+}
+
+
 // Definiere die Wörter, die im Typewriter angezeigt werden sollen
 const words = ["Künstliche Intelligenz", "IT-Sicherheit", "Web-Entwicklung", "Software-Entwicklung"]
 
@@ -27,16 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     move();
-
-    // Toggle Menu
-const hamburger = document.getElementById("hamburger") as HTMLElement | null;
-const navLinks = document.getElementById("navLinks") as HTMLElement | null;
-
-if (hamburger && navLinks) {
-    hamburger.addEventListener("click", () => {
-        navLinks.classList.toggle("active");
-    });
-}
 
 });
 
@@ -183,6 +184,7 @@ p {
     align-items: center;
     padding-top: 2rem;
     height: 7vh;
+    min-width: 1200px;
     padding-left: 15rem;
     padding-right: 15rem;
     z-index: 100;
