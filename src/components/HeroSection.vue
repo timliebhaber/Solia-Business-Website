@@ -184,10 +184,18 @@ p {
     align-items: center;
     padding-top: 2rem;
     height: 7vh;
-    min-width: 1200px;
     padding-left: 15rem;
     padding-right: 15rem;
     z-index: 100;
+
+    @media (max-width: 1000px) {
+  
+  .navbar {
+    padding-left: 5rem;
+    padding-right: 5rem;
+    width: 99vw;
+  }
+}
 }
 
 .center-content {
@@ -581,7 +589,14 @@ nav a[href="#kontakt"]:hover {
 
 /* Responsive Styles */
 @media (max-width: 1000px) {
-    .nav-links {
+  
+
+  #contentContainer {
+    padding: 0 2rem;
+    width: 99vw;
+  }
+  
+  .nav-links {
         display: none;
         flex-direction: column;
         position: absolute;
@@ -603,6 +618,8 @@ nav a[href="#kontakt"]:hover {
     .nav-links.active {
         display: flex;
     }
+
+
 }
 
 </style>
