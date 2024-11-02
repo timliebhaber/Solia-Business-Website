@@ -187,4 +187,24 @@ h4 {
     font-weight: medium;
 }
 
+@media (max-width: 1000px) {
+    #tiltcardcontainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links li {
+        margin: 1rem 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+
 </style>
