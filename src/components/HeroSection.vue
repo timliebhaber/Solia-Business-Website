@@ -14,7 +14,7 @@ if (hamburger && navLinks) {
 
 
 // Definiere die Wörter, die im Typewriter angezeigt werden sollen
-const words = ["Künstliche Intelligenz", "IT-Sicherheit", "Web-Entwicklung", "Software-Entwicklung"]
+const words = ["Private GPTs", "IT-Sicherheit", "Web-Entwicklung"]
 
 document.addEventListener('DOMContentLoaded', () => {
     const interBubble = document.querySelector('.interactive') as HTMLElement | null;
@@ -90,11 +90,11 @@ document.addEventListener('DOMContentLoaded', () => {
       :words="words"
       :typingSpeed="100"
       :deletingSpeed="40"
-      :waitTime="1000"/>
+      :waitTime="1500"/>
     </h1>
   <div class="second-content">
       <p>Entwicklung individueller IT-Lösungen für Ihren Betrieb <br> maßgeschneidert, modern und effizient</p>
-      <a class="button" href="#kontakt">Kontaktieren Sie mich!</a>  
+      <!-- <a class="button" href="#kontakt">Kontaktieren Sie mich!</a>   -->
     </div>
   </div>
   <div class="contentRow">
@@ -199,7 +199,7 @@ p {
 }
 
 .second-content {
-  margin-top: 1rem;
+  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center; // Center the <h1> and <p> horizontally
@@ -579,7 +579,7 @@ nav a[href="#kontakt"]:hover {
 }
 
 /* Responsive Styles */
-@media (max-width: 1000px) {
+@media (max-width: 1150px) {
   
   .navbar {
     padding-left: 5rem;
