@@ -187,23 +187,44 @@ h4 {
     font-weight: medium;
 }
 
-@media (max-width: 1000px) {
-    #tiltcardcontainer {
-        flex-direction: column;
-        align-items: center;
-    }
+@media (max-width: 1650px) {
+    #leistungen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    background-color: var(--color-background-dark);
+    padding: 5rem 2rem;
+    display: block;
+}
 
-    .nav-links li {
-        margin: 1rem 0;
-    }
 
-    .hamburger {
-        display: block;
-    }
+#tiltcardcontainer {
+    display: flex;
+    align-items: center;
+    height: auto;
+    gap: 10px;
+}
 
-    .nav-links.active {
-        display: flex;
-    }
+.tiltMe {
+	width : 100%;
+	height: 300px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tiltMe p {
+    display: none;
+}
+
+
+
 }
 
 
