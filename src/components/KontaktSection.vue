@@ -152,6 +152,20 @@ input[type=submit]:hover {
     margin-right: 15px;
 }
 
+@media (max-width: 1150px) {
+
+#kontakt {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: auto;
+padding: 5rem 2rem;
+display: block;
+}
+}
+
+
 @media screen and (max-width: 850px) {
   #kontakt {
     padding: 5rem 2rem;

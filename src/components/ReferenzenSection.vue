@@ -136,19 +136,29 @@ a {
   transition: border-color 1s;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1150px) {
+  
   #refSection {
-    padding: 0 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding: 5rem 2rem;
+    display: block;
   }
 
   .refCard {
     width: 100%;
     height: auto;
+    margin: 1rem;
   }
 
   .refCard p {
-    font-size: 1rem;
+    display: none;
   }
+
+
 }
 
 

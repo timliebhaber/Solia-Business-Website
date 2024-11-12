@@ -411,5 +411,18 @@ h4 {
         }
     }
 
+    @media (max-width: 1150px) {
+
+    #über {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding: 5rem 2rem;
+    display: block;
+  }
+}
+
 
 </style>
