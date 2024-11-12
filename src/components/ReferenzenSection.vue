@@ -80,6 +80,7 @@
   background-color: var(--vt-c-background-dark);
   border-radius: 10px;
   padding: 1.2rem;
+  margin: 1rem;
   width: 450px;
   height: 450px;
 }

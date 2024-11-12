@@ -187,7 +187,7 @@ h4 {
     font-weight: medium;
 }
 
-@media (max-width: 1650px) {
+@media (max-width: 1150px) {
     #leistungen {
     display: flex;
     flex-direction: column;
@@ -198,7 +198,10 @@ h4 {
     padding: 5rem 2rem;
     display: block;
 }
+}
 
+
+@media (max-width: 1650px) {
 
 #tiltcardcontainer {
     display: flex;
