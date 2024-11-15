@@ -207,7 +207,7 @@ p {
 }
 
 .logo { 
-  width: 100%;
+  width: 99%;
 }
 
 .card {
