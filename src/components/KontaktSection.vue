@@ -1,45 +1,101 @@
-<script setup lang="ts">
+<script lang="ts">
+import axios from "axios";
+import { defineComponent, reactive } from "vue";
+
+export default defineComponent({
+  name: "ContactForm",
+  setup() {
+    // Define the form data with types
+    const form = reactive<{
+      name: string;
+      email: string;
+      message: string;
+    }>({
+      name: "",
+      email: "",
+      message: "",
+    });
+
+    // Method to send email
+    const sendEmail = async (): Promise<void> => {
+      try {
+        const response = await axios.post<{ message: string }>("http://localhost:5000/send-email", form);
+        alert(response.data.message);
+      } catch (error) {
+        console.error(error);
+        alert("Fehler beim Senden der Nachricht.");
+      }
+    };
+
+    return {
+      form,
+      sendEmail,
+    };
+  },
+});
+
 </script>
 
 <template>
   <div id="kontakt">
-  <h4>KOSTENLOSES ERSTGESPRÄCH VEREINBAREN</h4>
+    <h4>KOSTENLOSES ERSTGESPRÄCH VEREINBAREN</h4>
     <h2>Kontaktieren Sie mich</h2>
-  <div id="adressandform">
-  <div class="adress">
-<p>
-Ich freue mich, von Ihnen zu hören! <br>
-Wenn Sie Fragen haben oder ein Angebot möchten,
-zögern Sie nicht mich zu kontaktieren. <br>
-Sie erreichen mich über das Kontaktformular oder per Email:<br><br>
-<a href="mailto:info@solia-solutions.de">info@solia-solutions.de</a><br><br>
-  Tim Liebhaber<br>
-  Vöttinger Straße 34A<br>
-  85354 Freising<br>
-  <br><br> </p>
-  <a href="https://github.com/timliebhaber" target="_blank"><i class="fa fa-github" style="font-size:36px"></i></a>
+    <div id="adressandform">
+      <div class="adress">
+        <p>
+          Ich freue mich, von Ihnen zu hören! <br />
+          Wenn Sie Fragen haben oder ein Angebot möchten, zögern Sie nicht mich zu kontaktieren. <br />
+          Sie erreichen mich über das Kontaktformular oder per Email:<br /><br />
+          <a href="mailto:info@solia-solutions.de">info@solia-solutions.de</a><br /><br />
+          Tim Liebhaber<br />
+          Vöttinger Straße 34A<br />
+          85354 Freising<br />
+          <br /><br />
+        </p>
+        <a href="https://github.com/timliebhaber" target="_blank"><i class="fa fa-github" style="font-size:36px"></i></a>
         <a href="https://www.linkedin.com/in/tim-liebhaber/" target="_blank"><i class="fa fa-linkedin" style="font-size:36px"></i></a>
+      </div>
+      <div class="container">
+        <!-- Bind submit to sendEmail -->
+        <form @submit.prevent="sendEmail">
+          <!-- Bind inputs to reactive form object -->
+          <label for="name"></label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Name"
+            v-model="form.name"
+            required
+          />
 
+          <label for="email"></label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email Adresse"
+            v-model="form.email"
+            required
+          />
+
+          <label for="subject"></label>
+          <textarea
+            id="subject"
+            name="subject"
+            placeholder="Nachricht"
+            style="height:200px"
+            v-model="form.message"
+            required
+          ></textarea>
+
+          <input type="submit" value="Absenden" />
+        </form>
+      </div>
+    </div>
   </div>
-  <div class="container">
-  <form action="action_page.php">
-
-    <label for="name"></label>
-    <input type="text" id="name" name="name" placeholder="Name">
-
-    <label for="email"></label>
-    <input type="email" id="email" name="email" placeholder="Email Adresse">
-
-    <label for="subject"></label>
-    <textarea id="subject" name="subject" placeholder="Nachricht" style="height:200px"></textarea>
-
-    <input type="submit" value="Absenden">
-
-  </form>
-  </div>
-  </div>
-</div>
 </template>
+
 
 <style scoped>
 
