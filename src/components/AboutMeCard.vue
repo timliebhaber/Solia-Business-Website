@@ -411,7 +411,36 @@ h4 {
         }
     }
 
-    @media (max-width: 1150px) {
+@media (max-width: 767px){
+.infoText h3{
+  display: none;
+}
+
+.cardTop {
+  display: flex; /* Aktiviert Flexbox */
+  justify-content: center; /* Horizontales Zentrieren */
+  align-items: center; /* Vertikales Zentrieren */
+  text-align: center;
+  height: 100%; /* Stellt sicher, dass die Höhe des Containers berücksichtigt wird */
+}
+
+.cardImage {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+}
+
+.cardImage img {
+    margin: 0; /* Entfernt eventuell vorhandene automatische Margins */
+    align-self: center; /* Zentriert das Bild im Flex-Container */
+  }
+
+}
+
+
+@media(max-width: 1180px) {
 
     #über {
     display: flex;
@@ -419,10 +448,43 @@ h4 {
     justify-content: center;
     align-items: center;
     height: auto;
-    padding: 5rem 2rem;
+    padding: 2rem 2rem;
     display: block;
   }
+
 }
+
+@media (max-width: 1600px) {
+  .visible{
+    display: none;
+  }
+
+  .cardTop {
+  display: flex; /* Aktiviert Flexbox */
+  justify-content: center; /* Horizontales Zentrieren */
+  align-items: center; /* Vertikales Zentrieren */
+  text-align: center;
+  height: 100%; /* Stellt sicher, dass die Höhe des Containers berücksichtigt wird */
+}
+
+
+.cardImage {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+}
+
+.cardImage img {
+    margin: 0; /* Entfernt eventuell vorhandene automatische Margins */
+    align-self: center; /* Zentriert das Bild im Flex-Container */
+  }
+
+}
+
+
+
 
 
 </style>

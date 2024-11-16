@@ -98,7 +98,7 @@ input[type=submit]  {
     background-color: #ffa612;
     padding: 10px 20px;
     width: 30%;
-    min-width: 100px; 
+    min-width: 150px;
     margin-top: 1rem;
     text-decoration: none;
     font-family: 'Haas', sans-serif;
@@ -152,7 +152,7 @@ input[type=submit]:hover {
     margin-right: 15px;
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 1180px) {
 
 #kontakt {
 display: flex;
@@ -160,15 +160,15 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 height: auto;
-padding: 5rem 2rem;
+padding: 2rem 2rem;
 display: block;
 }
 }
 
 
-@media screen and (max-width: 850px) {
+@media (max-width: 850px) {
   #kontakt {
-    padding: 5rem 2rem;
+    padding: 2rem 2rem;
   }
   #adressandform {
     flex-direction: column;

@@ -243,7 +243,7 @@ justify-content: start;
 align-items: start;
 height: auto;
 background-color: var(--color-background-dark);
-padding: 5rem 2rem;
+padding: 2rem 2rem;
 }
 
 #tiltcardcontainer {

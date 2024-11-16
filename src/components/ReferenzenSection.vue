@@ -53,7 +53,7 @@
         <p>
           Bei Future Foods habe ich die Rolle als IT-Lead übernommen. In 
           dieser Funktion habe ich eine maßgeschneiderte Netzwerkstruktur 
-          entworfen und bin verantwortlich für die Durchführung sämtlicher 
+          entworfen und bin verantwortlich für die Durchführung wichtiger 
           EDV-Arbeiten, um einen reibungslosen und effizienten IT-Betrieb 
           sicherzustellen.</p>
       </div>
@@ -80,8 +80,7 @@
   background-color: var(--vt-c-background-dark);
   border-radius: 10px;
   padding: 1.2rem;
-  margin: 1rem;
-  width: 450px;
+  width: 95%;
   height: 450px;
 }
 
@@ -111,15 +110,6 @@ h2 {
   color: black;
 }
 
-
-.referenzen {
-  margin-top: 5rem;
-  background-color: white;  
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 img {
   filter: brightness(0) invert(1);
   justify-self: center;
@@ -137,29 +127,77 @@ a {
   transition: border-color 1s;
 }
 
-@media (max-width: 1150px) {
-  
+.referenzen {
+  margin-top: 2rem;
+  background-color: white;  
+  display: flex;
+  justify-content: start;
+  gap: 2rem; /* Fügt Abstände zwischen Cards hinzu */
+  align-items: center;
+}
+
+@media (max-width: 767px){
   #refSection {
+    padding: 2rem 2rem;
+  }
+
+  #refSection h2 {
+    font-size: 2.5rem;
+  }
+
+  .referenzen {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: auto;
-    padding: 5rem 2rem;
-    display: block;
+    width: 100%;
+    justify-content: center; /* Zentriert die Cards in kleineren Viewports */
   }
 
   .refCard {
-    width: 100%;
+    width: 100%; /* Verhindert, dass die Cards zu breit werden */
     height: auto;
-    margin: 1rem;
+    padding: 2px;
   }
 
-  .refCard p {
+  .refCard p{
     display: none;
   }
 
+}
 
+@media (min-width: 768px) and (max-width: 1180px) {
+  #refSection {
+    padding: 2rem 2rem;
+  }
+  
+  .referenzen {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center; /* Zentriert die Cards in kleineren Viewports */
+    gap: 1rem; /* Definiert Abstände für kleinere Bildschirme */
+  }
+
+  .refCard {
+    width: 100%; /* Verhindert, dass die Cards zu breit werden */
+    height: auto;
+    margin: 1rem 0; /* Fügt vertikale Abstände hinzu */
+  }
+}
+
+@media (min-width: 1181px) and (max-width: 1650px) {
+  .referenzen {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center; /* Zentriert die Cards in kleineren Viewports */
+    gap: 1rem; /* Definiert Abstände für kleinere Bildschirme */
+  }
+
+  .refCard {
+    width: 100%; /* Verhindert, dass die Cards zu breit werden */
+    height: auto;
+    margin: 1rem 0; /* Fügt vertikale Abstände hinzu */
+  }
 }
 
 
