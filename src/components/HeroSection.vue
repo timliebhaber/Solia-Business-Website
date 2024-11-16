@@ -578,6 +578,13 @@ nav a[href="#kontakt"]:hover {
     cursor: pointer;
 }
 
+
+@media (max-width: 767px) {
+.second-content p {
+  display: none;
+}
+}
+
 /* Responsive Styles */
 @media (max-width: 1150px) {
   
@@ -585,6 +592,10 @@ nav a[href="#kontakt"]:hover {
     padding-left: 5rem;
     padding-right: 5rem;
     width: 99vw;
+  }
+
+  .center-content h1{
+    font-size: 3.5rem;
   }
 
   #contentContainer {

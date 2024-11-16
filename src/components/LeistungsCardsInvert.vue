@@ -155,7 +155,7 @@ h4 {
 
 #tiltcardcontainer {
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
     align-items: center;
     height: auto;
     gap: 50px;
@@ -187,45 +187,132 @@ h4 {
     font-weight: medium;
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 767px) {
+
     #leistungen {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: auto;
-    background-color: var(--color-background-dark);
-    padding: 5rem 2rem;
-    display: block;
-}
+display: flex;
+flex-direction: column;
+justify-content: start;
+align-items: start;
+height: auto;
+background-color: var(--color-background-dark);
+padding: 5rem 2rem;
 }
 
-
-@media (max-width: 1650px) {
+#leistungen p{
+    display: none;
+}
 
 #tiltcardcontainer {
     display: flex;
-    align-items: center;
-    height: auto;
-    gap: 10px;
+    flex-direction: column;
+    justify-content: start;
+    align-items: stretch; /* Sorgt dafür, dass die Boxen die gesamte Breite ausfüllen */
+    width: 100%; /* Container füllt die gesamte Breite aus */
+    gap: 20px;
+    box-sizing: border-box;
 }
 
 .tiltMe {
-	width : 100%;
-	height: 300px;
-    padding: 30px;
+    width : 100%;
+    height: 300px;
     background: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
     border: 1px solid rgba(255,255,255,.15);
     display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
 }
 
-.tiltMe p {
+.tiltMe P {
+    font-size: 1rem;
+}
+
+.tiltMe p ul{
     display: none;
 }
 
+}
+
+@media (min-width: 768px) and (max-width: 1180px) {
+#leistungen {
+display: flex;
+flex-direction: column;
+justify-content: start;
+align-items: start;
+height: auto;
+background-color: var(--color-background-dark);
+padding: 5rem 2rem;
+}
+
+#tiltcardcontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: stretch; /* Sorgt dafür, dass die Boxen die gesamte Breite ausfüllen */
+    width: 100%; /* Container füllt die gesamte Breite aus */
+    gap: 20px;
+    box-sizing: border-box;
+}
+
+.tiltMe {
+    width: 95%; /* Box füllt 100% der Containerbreite */
+    height: 300px; /* Beibehaltung der Höhe */
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box; /* Padding und Border in der Breite enthalten */
+    overflow: hidden; /* Inhalt, der zu groß ist, wird abgeschnitten */
+}
+
+.tiltMe p {
+    font-size: 1rem;
+    word-wrap: break-word; /* Lange Wörter umbrechen */
+    text-align: center; /* Optional: Text zentrieren */
+}
+
+.tiltMe p ul {
+    display: none;}
+
+}
+
+@media (min-width: 1181px) and (max-width: 1650px) {
+
+    #tiltcardcontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: stretch; /* Sorgt dafür, dass die Boxen die gesamte Breite ausfüllen */
+    width: 100%; /* Container füllt die gesamte Breite aus */
+    gap: 20px;
+    box-sizing: border-box;
+}
+
+.tiltMe {
+    width: 95%; /* Box füllt 100% der Containerbreite */
+    height: 300px; /* Beibehaltung der Höhe */
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box; /* Padding und Border in der Breite enthalten */
+    overflow: hidden; /* Inhalt, der zu groß ist, wird abgeschnitten */
+}
+
+.tiltMe p {
+    font-size: 1rem;
+    word-wrap: break-word; /* Lange Wörter umbrechen */
+    text-align: center; /* Optional: Text zentrieren */
+}
+
+.tiltMe p ul {
+    display: none;}
 
 
 }
