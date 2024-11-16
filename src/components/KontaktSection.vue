@@ -1,6 +1,6 @@
 <script lang="ts">
 import axios from "axios";
-import { defineComponent, reactive } from "vue";
+import { defineComponent, reactive, ref } from "vue";
 
 export default defineComponent({
   name: "ContactForm",
@@ -16,11 +16,18 @@ export default defineComponent({
       message: "",
     });
 
+    // Success state
+    const success = ref(false);
+
     // Method to send email
     const sendEmail = async (): Promise<void> => {
       try {
-        const response = await axios.post<{ message: string }>("http://localhost:5000/send-email", form);
+        const response = await axios.post<{ message: string }>(
+          "http://localhost:5000/send-email",
+          form
+        );
         alert(response.data.message);
+        success.value = true; // Set success to true
       } catch (error) {
         console.error(error);
         alert("Fehler beim Senden der Nachricht.");
@@ -29,12 +36,13 @@ export default defineComponent({
 
     return {
       form,
+      success,
       sendEmail,
     };
   },
 });
-
 </script>
+
 
 <template>
   <div id="kontakt">
@@ -44,7 +52,8 @@ export default defineComponent({
       <div class="adress">
         <p>
           Ich freue mich, von Ihnen zu hören! <br />
-          Wenn Sie Fragen haben oder ein Angebot möchten, zögern Sie nicht mich zu kontaktieren. <br />
+          Wenn Sie Fragen haben oder ein Angebot möchten, zögern Sie nicht mich zu
+          kontaktieren. <br />
           Sie erreichen mich über das Kontaktformular oder per Email:<br /><br />
           <a href="mailto:info@solia-solutions.de">info@solia-solutions.de</a><br /><br />
           Tim Liebhaber<br />
@@ -52,13 +61,15 @@ export default defineComponent({
           85354 Freising<br />
           <br /><br />
         </p>
-        <a href="https://github.com/timliebhaber" target="_blank"><i class="fa fa-github" style="font-size:36px"></i></a>
-        <a href="https://www.linkedin.com/in/tim-liebhaber/" target="_blank"><i class="fa fa-linkedin" style="font-size:36px"></i></a>
+        <a href="https://github.com/timliebhaber" target="_blank">
+          <i class="fa fa-github" style="font-size:36px"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/tim-liebhaber/" target="_blank">
+          <i class="fa fa-linkedin" style="font-size:36px"></i>
+        </a>
       </div>
       <div class="container">
-        <!-- Bind submit to sendEmail -->
         <form @submit.prevent="sendEmail">
-          <!-- Bind inputs to reactive form object -->
           <label for="name"></label>
           <input
             type="text"
@@ -89,7 +100,13 @@ export default defineComponent({
             required
           ></textarea>
 
-          <input type="submit" value="Absenden" />
+          <div class="form-footer">
+            <input type="submit" value="Absenden" />
+            <!-- Success message displayed next to the button -->
+            <span v-if="success" class="success-message">
+              Vielen Dank! Ich melde mich schnellstmöglich bei Ihnen zurück!
+            </span>
+          </div>
         </form>
       </div>
     </div>
@@ -97,7 +114,17 @@ export default defineComponent({
 </template>
 
 
+
 <style scoped>
+
+.success-message {
+  text-align: center;
+  font-size: 1rem;
+  color: rgb(0, 26, 0);
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
 
 #adressandform {
   display: flex;

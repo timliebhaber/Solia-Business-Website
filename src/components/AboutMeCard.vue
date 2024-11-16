@@ -439,18 +439,16 @@ h4 {
 
 }
 
-
 @media(max-width: 1180px) {
-
-    #über {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: auto;
-    padding: 2rem 2rem;
-    display: block;
-  }
+  #über {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  padding: 2rem 2rem;
+  display: block;
+}
 
 }
 
