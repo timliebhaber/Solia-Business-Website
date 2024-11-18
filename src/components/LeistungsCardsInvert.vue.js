@@ -41,7 +41,7 @@ function __VLS_template() {
     __VLS_elementAsFunction(__VLS_intrinsicElements.h2, __VLS_intrinsicElements.h2)({});
     __VLS_elementAsFunction(__VLS_intrinsicElements.p, __VLS_intrinsicElements.p)({ id: ("beschreibung"), });
     __VLS_elementAsFunction(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({ id: ("tiltcardcontainer"), });
-    __VLS_elementAsFunction(__VLS_intrinsicElements.a, __VLS_intrinsicElements.a)({ href: ("https://solia-solutions.de/KI"), ...{ style: ({}) }, });
+    __VLS_elementAsFunction(__VLS_intrinsicElements.a, __VLS_intrinsicElements.a)({ ...{ style: ({}) }, });
     for (const [item] of __VLS_getVForSourceType((__VLS_ctx.items))) {
         __VLS_elementAsFunction(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({ key: ((item.id)), ref: ("tiltRef"), ...{ class: ("tiltMe") }, "data-tilt": (true), "data-tilt-glare": ("true"), "data-tilt-max-glare": ("0.6"), "data-tilt-scale": ("1.1"), "data-tilt-speed": ("2000"), "data-tilt-perspective": ("800"), "data-tilt-max": ("5"), });
         // @ts-ignore
@@ -97,7 +97,7 @@ function __VLS_template() {
         ({}({ icon: ("play"), ...{ style: (({ fontSize: '14px' })) }, }));
         const __VLS_17 = __VLS_nonNullable(__VLS_pickFunctionalComponentCtx(__VLS_12, __VLS_14));
     }
-    __VLS_elementAsFunction(__VLS_intrinsicElements.a, __VLS_intrinsicElements.a)({ href: ("https://solia-solutions.de/IT-Sicherheit"), ...{ style: ({}) }, });
+    __VLS_elementAsFunction(__VLS_intrinsicElements.a, __VLS_intrinsicElements.a)({ ...{ style: ({}) }, });
     for (const [item] of __VLS_getVForSourceType((__VLS_ctx.items))) {
         __VLS_elementAsFunction(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({ key: ((item.id)), ref: ("tiltRef"), ...{ class: ("tiltMe") }, "data-tilt": (true), "data-tilt-glare": ("true"), "data-tilt-max-glare": ("0.6"), "data-tilt-scale": ("1.1"), "data-tilt-speed": ("2000"), "data-tilt-perspective": ("800"), "data-tilt-max": ("5"), });
         // @ts-ignore
@@ -153,7 +153,7 @@ function __VLS_template() {
         ({}({ icon: ("play"), ...{ style: (({ fontSize: '14px' })) }, }));
         const __VLS_35 = __VLS_nonNullable(__VLS_pickFunctionalComponentCtx(__VLS_30, __VLS_32));
     }
-    __VLS_elementAsFunction(__VLS_intrinsicElements.a, __VLS_intrinsicElements.a)({ href: ("https://solia-solutions.de/Web-Entwicklung"), ...{ style: ({}) }, });
+    __VLS_elementAsFunction(__VLS_intrinsicElements.a, __VLS_intrinsicElements.a)({ ...{ style: ({}) }, });
     for (const [item] of __VLS_getVForSourceType((__VLS_ctx.items))) {
         __VLS_elementAsFunction(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({ key: ((item.id)), ref: ("tiltRef"), ...{ class: ("tiltMe") }, "data-tilt": (true), "data-tilt-glare": ("true"), "data-tilt-max-glare": ("0.6"), "data-tilt-scale": ("1.1"), "data-tilt-speed": ("2000"), "data-tilt-perspective": ("800"), "data-tilt-max": ("5"), });
         // @ts-ignore

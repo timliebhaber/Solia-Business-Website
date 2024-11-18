@@ -199,7 +199,4 @@ a {
     margin: 1rem 0; /* Fügt vertikale Abstände hinzu */
   }
 }
-
-
-
 </style>

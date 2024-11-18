@@ -235,19 +235,6 @@ input[type=submit]:hover {
     margin-right: 15px;
 }
 
-@media (max-width: 1180px) {
-
-#kontakt {
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-height: auto;
-padding: 2rem 2rem;
-display: block;
-}
-}
-
 
 @media (max-width: 850px) {
   #kontakt {
@@ -259,13 +246,24 @@ display: block;
   .adress {
     width: 100%;
   }
-
   .fa-github, .fa-linkedin {
     display: none;
   }
   .container {
     width: 100%;
-  }
-  
+  } 
 }
+
+@media (max-width: 1180px) {
+#kontakt {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: auto;
+padding: 2rem 2rem;
+display: block;
+}
+}
+
 </style>

@@ -39,7 +39,7 @@ export default {
 <div id="tiltcardcontainer">
 <!-- Kleine "Highlights" über Karten, so wie Beleuchtungen in einem Trophäenschrank -->
     <!-- Tiltkarten bei kleinerem Bildschirm in Reihen, nur mit Logo, Titel und Leistungen aber gleichem style -->
-    <a href="https://solia-solutions.de/KI" style="text-decoration: none; color: inherit;">
+    <a style="text-decoration: none; color: inherit;">
     <div v-for="(item) in items" :key="item.id" ref="tiltRef" class="tiltMe" data-tilt data-tilt-glare="true"
         data-tilt-max-glare="0.6"
         data-tilt-scale ="1.1"
@@ -59,7 +59,7 @@ export default {
     </div>
     </a>
 
-    <a href="https://solia-solutions.de/IT-Sicherheit" style="text-decoration: none; color: inherit;">
+    <a style="text-decoration: none; color: inherit;">
     <div v-for="(item) in items" :key="item.id" ref="tiltRef" class="tiltMe" data-tilt data-tilt-glare="true"
         data-tilt-max-glare="0.6"
         data-tilt-scale ="1.1"
@@ -78,7 +78,7 @@ export default {
     </div>
     </a>
 
-    <a href="https://solia-solutions.de/Web-Entwicklung" style="text-decoration: none; color: inherit;">
+    <a style="text-decoration: none; color: inherit;">
     <div v-for="(item) in items" :key="item.id" ref="tiltRef" class="tiltMe" data-tilt data-tilt-glare="true"
         data-tilt-max-glare="0.6"
         data-tilt-scale ="1.1"
