@@ -1,6 +1,6 @@
 {
   "name": "website",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -17,6 +17,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "@fortawesome/vue-fontawesome": "^3.0.8",
     "jquery": "^3.7.1",
+    "swiper": "^11.1.15",
     "universal-tilt.js": "^2.0.6",
     "vanilla-tilt": "^1.8.1",
     "vue": "^3.4.29"
@@ -26,6 +27,7 @@
     "@tsconfig/node20": "^20.1.4",
     "@types/jquery": "^3.5.30",
     "@types/node": "^20.14.5",
+    "@types/swiper": "^5.4.3",
     "@vitejs/plugin-vue": "^5.0.5",
     "@vitejs/plugin-vue-jsx": "^4.0.0",
     "@vue/eslint-config-prettier": "^9.0.0",
