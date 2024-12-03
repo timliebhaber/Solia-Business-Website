@@ -1,47 +1,130 @@
-<script setup lang="ts">
+<script lang="ts">
+import axios from "axios";
+import { defineComponent, reactive, ref } from "vue";
+
+export default defineComponent({
+  name: "ContactForm",
+  setup() {
+    // Define the form data with types
+    const form = reactive<{
+      name: string;
+      email: string;
+      message: string;
+    }>({
+      name: "",
+      email: "",
+      message: "",
+    });
+
+    // Success state
+    const success = ref(false);
+
+    // Method to send email
+    const sendEmail = async (): Promise<void> => {
+      try {
+        const response = await axios.post<{ message: string }>(
+          "http://localhost:5000/send-email",
+          form
+        );
+        alert(response.data.message);
+        success.value = true; // Set success to true
+      } catch (error) {
+        console.error(error);
+        alert("Fehler beim Senden der Nachricht.");
+      }
+    };
+
+    return {
+      form,
+      success,
+      sendEmail,
+    };
+  },
+});
 </script>
+
 
 <template>
   <div id="kontakt">
-  <h4>KOSTENLOSES ERSTGESPRÄCH VEREINBAREN</h4>
+    <h4>KOSTENLOSES ERSTGESPRÄCH VEREINBAREN</h4>
     <h2>Kontaktieren Sie mich</h2>
-  <div id="adressandform">
-  <div class="adress">
-<p>
-Ich freue mich, von Ihnen zu hören! <br>
-Wenn Sie Fragen haben oder ein Angebot möchten,
-zögern Sie nicht mich zu kontaktieren. <br>
-Sie erreichen mich über das Kontaktformular oder per Email:<br><br>
-<a href="mailto:info@solia-solutions.de">info@solia-solutions.de</a><br><br>
-  Tim Liebhaber<br>
-  Vöttinger Straße 34A<br>
-  85354 Freising<br>
-  <br><br> </p>
-  <a href="https://github.com/timliebhaber" target="_blank"><i class="fa fa-github" style="font-size:36px"></i></a>
-        <a href="https://www.linkedin.com/in/tim-liebhaber/" target="_blank"><i class="fa fa-linkedin" style="font-size:36px"></i></a>
+    <div id="adressandform">
+      <div class="adress">
+        <p>
+          Ich freue mich, von Ihnen zu hören! <br />
+          Wenn Sie Fragen haben oder ein Angebot möchten, zögern Sie nicht mich zu
+          kontaktieren. <br />
+          Sie erreichen mich über das Kontaktformular oder per Email:<br /><br />
+          <a href="mailto:info@solia-solutions.de">info@solia-solutions.de</a><br /><br />
+          Tim Liebhaber<br />
+          Vöttinger Straße 34A<br />
+          85354 Freising<br />
+          <br /><br />
+        </p>
+        <a href="https://github.com/timliebhaber" target="_blank">
+          <i class="fa fa-github" style="font-size:36px"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/tim-liebhaber/" target="_blank">
+          <i class="fa fa-linkedin" style="font-size:36px"></i>
+        </a>
+      </div>
+      <div class="container">
+        <form @submit.prevent="sendEmail">
+          <label for="name"></label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Name"
+            v-model="form.name"
+            required
+          />
 
+          <label for="email"></label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email Adresse"
+            v-model="form.email"
+            required
+          />
+
+          <label for="subject"></label>
+          <textarea
+            id="subject"
+            name="subject"
+            placeholder="Nachricht"
+            style="height:200px"
+            v-model="form.message"
+            required
+          ></textarea>
+
+          <div class="form-footer">
+            <input type="submit" value="Absenden" />
+            <!-- Success message displayed next to the button -->
+            <span v-if="success" class="success-message">
+              Vielen Dank! Ich melde mich schnellstmöglich bei Ihnen zurück!
+            </span>
+          </div>
+        </form>
+      </div>
+    </div>
   </div>
-  <div class="container">
-  <form action="action_page.php">
-
-    <label for="name"></label>
-    <input type="text" id="name" name="name" placeholder="Name">
-
-    <label for="email"></label>
-    <input type="email" id="email" name="email" placeholder="Email Adresse">
-
-    <label for="subject"></label>
-    <textarea id="subject" name="subject" placeholder="Nachricht" style="height:200px"></textarea>
-
-    <input type="submit" value="Absenden">
-
-  </form>
-  </div>
-  </div>
-</div>
 </template>
 
+
+
 <style scoped>
+
+.success-message {
+  text-align: center;
+  font-size: 1rem;
+  color: rgb(0, 26, 0);
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
 
 #adressandform {
   display: flex;
@@ -98,7 +181,7 @@ input[type=submit]  {
     background-color: #ffa612;
     padding: 10px 20px;
     width: 30%;
-    min-width: 100px; 
+    min-width: 150px;
     margin-top: 1rem;
     text-decoration: none;
     font-family: 'Haas', sans-serif;
@@ -152,23 +235,10 @@ input[type=submit]:hover {
     margin-right: 15px;
 }
 
-@media (max-width: 1150px) {
 
-#kontakt {
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-height: auto;
-padding: 5rem 2rem;
-display: block;
-}
-}
-
-
-@media screen and (max-width: 850px) {
+@media (max-width: 850px) {
   #kontakt {
-    padding: 5rem 2rem;
+    padding: 2rem 2rem;
   }
   #adressandform {
     flex-direction: column;
@@ -176,13 +246,24 @@ display: block;
   .adress {
     width: 100%;
   }
-
   .fa-github, .fa-linkedin {
     display: none;
   }
   .container {
     width: 100%;
-  }
-  
+  } 
 }
+
+@media (max-width: 1180px) {
+#kontakt {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: auto;
+padding: 2rem 2rem;
+display: block;
+}
+}
+
 </style>
