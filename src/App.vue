@@ -17,7 +17,7 @@ import ReferenzenSectionSlider from './components/ReferenzenSectionSlider.vue';
     <LeistungsCardsInvert/>
     <ReferenzenSectionSlider />
     <AboutMeCard />
-    <!-- <Kontakt /> -->
+    <Kontakt />
   </main>
 </template>
 

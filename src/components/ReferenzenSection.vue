@@ -9,7 +9,7 @@
 
     <div class="referenzen">
       <div class = "refCard">
-        <a href="https://dhrw-engineering.de" target="_blank"><img src="../assets/DHRW_ENG_WHITE.png" alt="DHRW Engineering GmbH" height = 60px></a>
+        <a href="https://dhrw-engineering.de" target="_blank"><img src="@/assets/DHRW_ENG_WHITE.png"></a>
         <p>Bei der DHRW Engineering GmbH habe ich die Sicherheitsstandards für 
           Mitarbeiterzugänge und Datenzugriffe verbessert, um den Schutz 
           sensibler Informationen zu gewährleisten. Zusätzlich habe ich 
