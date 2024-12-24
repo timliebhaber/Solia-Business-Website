@@ -1,8 +1,8 @@
 import Kontakt from './components/KontaktSection.vue';
-import Referenzen from './components/ReferenzenSection.vue';
 import Hero from './components/HeroSection.vue';
 import LeistungsCardsInvert from './components/LeistungsCardsInvert.vue';
 import AboutMeCard from './components/AboutMeCard.vue';
+import ReferenzenSectionSlider from './components/ReferenzenSectionSlider.vue';
 const { defineProps, defineSlots, defineEmits, defineExpose, defineModel, defineOptions, withDefaults, } = await import('vue');
 const __VLS_fnComponent = (await import('vue')).defineComponent({});
 ;
@@ -35,12 +35,12 @@ function __VLS_template() {
     ({}({}));
     const __VLS_9 = __VLS_nonNullable(__VLS_pickFunctionalComponentCtx(LeistungsCardsInvert, __VLS_6));
     // @ts-ignore
-    [Referenzen,];
+    [ReferenzenSectionSlider,];
     // @ts-ignore
-    const __VLS_10 = __VLS_asFunctionalComponent(Referenzen, new Referenzen({}));
+    const __VLS_10 = __VLS_asFunctionalComponent(ReferenzenSectionSlider, new ReferenzenSectionSlider({}));
     const __VLS_11 = __VLS_10({}, ...__VLS_functionalComponentArgsRest(__VLS_10));
     ({}({}));
-    const __VLS_14 = __VLS_nonNullable(__VLS_pickFunctionalComponentCtx(Referenzen, __VLS_11));
+    const __VLS_14 = __VLS_nonNullable(__VLS_pickFunctionalComponentCtx(ReferenzenSectionSlider, __VLS_11));
     // @ts-ignore
     [AboutMeCard,];
     // @ts-ignore
@@ -66,10 +66,10 @@ function __VLS_template() {
         setup() {
             return {
                 Kontakt: Kontakt,
-                Referenzen: Referenzen,
                 Hero: Hero,
                 LeistungsCardsInvert: LeistungsCardsInvert,
                 AboutMeCard: AboutMeCard,
+                ReferenzenSectionSlider: ReferenzenSectionSlider,
             };
         },
     });

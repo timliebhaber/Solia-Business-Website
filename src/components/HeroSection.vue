@@ -583,6 +583,10 @@ nav a[href="#kontakt"]:hover {
 .second-content p {
   display: none;
 }
+
+.center-content h1 span{
+  font-size: 2rem;
+}
 }
 
 /* Responsive Styles */

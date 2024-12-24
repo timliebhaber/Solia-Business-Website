@@ -416,6 +416,7 @@ h4 {
   display: none;
 }
 
+
 .cardTop {
   display: flex; /* Aktiviert Flexbox */
   justify-content: center; /* Horizontales Zentrieren */
@@ -425,15 +426,13 @@ h4 {
 }
 
 .cardImage {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-self: center;
-  align-items: center;
+  height: 0;
+  width: 0;
 }
 
 .cardImage img {
-    margin: 0; /* Entfernt eventuell vorhandene automatische Margins */
+  display: none;  
+  margin: 0; /* Entfernt eventuell vorhandene automatische Margins */
     align-self: center; /* Zentriert das Bild im Flex-Container */
   }
 
