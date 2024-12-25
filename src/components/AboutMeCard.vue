@@ -116,23 +116,25 @@ onMounted(() => {
             border-radius: 80px;
         }
 #expandable-div {
-    position: relative;
+  position: relative;
   z-index: 20;
-  p {color: black;}
-
-    padding: 20px;
+  padding: 20px;
 }
+
+#expandable-div p {color: black;}
+
 #hidden-div {
     background-color: #e0e0e0;
     border-radius: 80px;
     flex:3;
     position: relative;
     z-index: 0;
-  p {color: black;}
     padding: 20px;
     transform: translateY(-100%);
     transition: transform 2s ease-in-out;
 }
+
+#hidden-div p {color: black;}
 
 #über {
   padding: 5rem 15rem;
