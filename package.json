@@ -17,6 +17,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "@fortawesome/vue-fontawesome": "^3.0.8",
     "axios": "^1.7.8",
+    "dotenv": "^16.4.7",
     "jquery": "^3.7.1",
     "swiper": "^11.1.15",
     "universal-tilt.js": "^2.0.6",

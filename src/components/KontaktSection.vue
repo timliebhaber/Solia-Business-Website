@@ -2,6 +2,8 @@
 import axios from "axios";
 import { defineComponent, reactive, ref } from "vue";
 
+const mailServer = import.meta.env.VITE_MAILSERVER_ENDPOINT;
+
 export default defineComponent({
   name: "ContactForm",
   setup() {
@@ -23,7 +25,7 @@ export default defineComponent({
     const sendEmail = async (): Promise<void> => {
       try {
         const response = await axios.post<{ message: string }>(
-          "http://localhost:5000/send-email",
+          mailServer,
           form
         );
         alert(response.data.message);
