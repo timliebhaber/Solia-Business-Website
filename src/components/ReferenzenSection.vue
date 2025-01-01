@@ -61,9 +61,9 @@
         <a href="https://dhrw-akademie.de" target="_blank"><img src="../assets/Logo_Akad_Normal.png" alt="DHRW Akademie GmbH" height = 60px></a>
         <p>In Kooperation mit der DHRW Akademie GmbH habe ich ein Netzwerkkonzept 
           entwickelt, das die Netzwerkinfrastruktur nachhaltig sichert.
-          Durch die Implementierung von intrusion detection und automatisierter 
-          Reaktionen auf Angriffe werden zukünftige Attacken
-          schon behoben, bevor sie stattgefunden haben.</p>
+          Mit der Erstellung einer Firmenwebsite implementierte ich intrusion 
+          detection und automatisierte Reaktionen auf Angriffe. So werden zukünftige 
+          Attacken schon behoben, bevor sie stattgefunden haben.</p>
       </div>
     </div>
   </div>
