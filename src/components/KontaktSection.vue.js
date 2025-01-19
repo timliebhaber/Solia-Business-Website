@@ -8,7 +8,7 @@ export default defineComponent({
         const form = reactive({
             name: "",
             email: "",
-            message: "",
+            nachricht: "",
         });
         // Success state
         const success = ref(false);
@@ -78,12 +78,16 @@ function __VLS_template() {
     (__VLS_ctx.form.email);
     // @ts-ignore
     [form,];
-    __VLS_elementAsFunction(__VLS_intrinsicElements.label, __VLS_intrinsicElements.label)({ for: ("subject"), });
-    __VLS_elementAsFunction(__VLS_intrinsicElements.textarea, __VLS_intrinsicElements.textarea)({ id: ("subject"), name: ("subject"), placeholder: ("Nachricht"), ...{ style: ({}) }, value: ((__VLS_ctx.form.message)), required: (true), });
+    __VLS_elementAsFunction(__VLS_intrinsicElements.label, __VLS_intrinsicElements.label)({ for: ("nachricht"), });
+    __VLS_elementAsFunction(__VLS_intrinsicElements.textarea, __VLS_intrinsicElements.textarea)({ id: ("nachricht"), name: ("nachricht"), placeholder: ("Nachricht"), ...{ style: ({}) }, value: ((__VLS_ctx.form.nachricht)), required: (true), });
     // @ts-ignore
     [form,];
     __VLS_elementAsFunction(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({ ...{ class: ("form-footer") }, });
-    __VLS_elementAsFunction(__VLS_intrinsicElements.input)({ type: ("submit"), value: ("Absenden"), });
+    if (!__VLS_ctx.success) {
+        __VLS_elementAsFunction(__VLS_intrinsicElements.input)({ type: ("submit"), value: ("Absenden"), });
+        // @ts-ignore
+        [success,];
+    }
     if (__VLS_ctx.success) {
         __VLS_elementAsFunction(__VLS_intrinsicElements.span, __VLS_intrinsicElements.span)({ ...{ class: ("success-message") }, });
         // @ts-ignore

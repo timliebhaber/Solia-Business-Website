@@ -1,51 +1,3 @@
-<script lang="ts">
-import axios from "axios";
-import { defineComponent, reactive, ref } from "vue";
-
-const mailServer = import.meta.env.VITE_MAILSERVER_ENDPOINT;
-
-export default defineComponent({
-  name: "ContactForm",
-  setup() {
-    // Define the form data with types
-    const form = reactive<{
-      name: string;
-      email: string;
-      message: string;
-    }>({
-      name: "",
-      email: "",
-      message: "",
-    });
-
-    // Success state
-    const success = ref(false);
-
-    // Method to send email
-    const sendEmail = async (): Promise<void> => {
-      try {
-        const response = await axios.post<{ message: string }>(
-          mailServer,
-          form
-        );
-        alert(response.data.message);
-        success.value = true; // Set success to true
-      } catch (error) {
-        console.error(error);
-        alert("Fehler beim Senden der Nachricht.");
-      }
-    };
-
-    return {
-      form,
-      success,
-      sendEmail,
-    };
-  },
-});
-</script>
-
-
 <template>
   <div id="kontakt">
     <h4>KOSTENLOSES ERSTGESPRÄCH VEREINBAREN</h4>
@@ -92,18 +44,19 @@ export default defineComponent({
             required
           />
 
-          <label for="subject"></label>
+          <label for="nachricht"></label>
           <textarea
-            id="subject"
-            name="subject"
+            id="nachricht"
+            name="nachricht"
             placeholder="Nachricht"
             style="height:200px"
-            v-model="form.message"
+            v-model="form.nachricht"
             required
           ></textarea>
 
           <div class="form-footer">
-            <input type="submit" value="Absenden" />
+            <!-- Button wird nur angezeigt, wenn success false ist -->
+            <input v-if="!success" type="submit" value="Absenden" />
             <!-- Success message displayed next to the button -->
             <span v-if="success" class="success-message">
               Vielen Dank! Ich melde mich schnellstmöglich bei Ihnen zurück!
@@ -115,10 +68,54 @@ export default defineComponent({
   </div>
 </template>
 
+<script lang="ts">
+import axios from "axios";
+import { defineComponent, reactive, ref } from "vue";
 
+const mailServer = import.meta.env.VITE_MAILSERVER_ENDPOINT;
+
+export default defineComponent({
+  name: "ContactForm",
+  setup() {
+    // Define the form data with types
+    const form = reactive<{
+      name: string;
+      email: string;
+      nachricht: string;
+    }>({
+      name: "",
+      email: "",
+      nachricht: "",
+    });
+
+    // Success state
+    const success = ref(false);
+
+    // Method to send email
+    const sendEmail = async (): Promise<void> => {
+      try {
+        const response = await axios.post<{ message: string }>(
+          mailServer,
+          form
+        );
+        alert(response.data.message);
+        success.value = true; // Set success to true
+      } catch (error) {
+        console.error(error);
+        alert("Fehler beim Senden der Nachricht.");
+      }
+    };
+
+    return {
+      form,
+      success,
+      sendEmail,
+    };
+  },
+});
+</script>
 
 <style scoped>
-
 .success-message {
   text-align: center;
   font-size: 1rem;
@@ -126,7 +123,6 @@ export default defineComponent({
   margin-left: 1rem;
   margin-top: 1rem;
 }
-
 
 #adressandform {
   display: flex;
@@ -158,7 +154,9 @@ h2 {
   color: black;
 }
 
-input, select, textarea {
+input,
+select,
+textarea {
   width: 100%; /* Full width */
   color: rgb(255, 255, 255);
   font-family: 'Haas', sans-serif;
@@ -173,33 +171,34 @@ input, select, textarea {
   background-color: var(--color-background-dark);
 }
 
-input::placeholder, textarea::placeholder {
+input::placeholder,
+textarea::placeholder {
   color: rgba(255, 255, 255, 0.863);
   font-family: 'Haas', sans-serif;
 }
 
-input[type=submit]  {
-    color: white;
-    background-color: #ffa612;
-    padding: 10px 20px;
-    width: 30%;
-    min-width: 150px;
-    margin-top: 1rem;
-    text-decoration: none;
-    font-family: 'Haas', sans-serif;
-    font-weight: bold;
-    font-size: 21px;
-    box-shadow: 0px 4px 3px rgba(255, 123, 0, 0.8);
-    text-shadow: 0px 2px 5px rgba(0,0,0,.8);
-    transition: background-color 0.2s ease-in-out,transform 0.2s, box-shadow 0.2s;
-    border-radius: 5px;
+input[type=submit] {
+  color: white;
+  background-color: #ffa612;
+  padding: 10px 20px;
+  width: 30%;
+  min-width: 150px;
+  margin-top: 1rem;
+  text-decoration: none;
+  font-family: 'Haas', sans-serif;
+  font-weight: bold;
+  font-size: 21px;
+  box-shadow: 0px 4px 3px rgba(255, 123, 0, 0.8);
+  text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.8);
+  transition: background-color 0.2s ease-in-out, transform 0.2s, box-shadow 0.2s;
+  border-radius: 5px;
 }
 
 input[type=submit]:hover {
-  background-color: #ff8c00  ;
+  background-color: #ff8c00;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
-  box-shadow: 0px 0px 0px rgba(0,0,0,0);
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
   overflow: hidden;
   transform: translateY(4px); 
 }
@@ -222,21 +221,20 @@ input[type=submit]:hover {
   width: 100%;
 }
 
-.adress a{
-    font-size: 1.375rem;
-    margin-top: 1rem;
-    color: #6b6b6b;
-    transition: color 0.3s ease-in-out;
+.adress a {
+  font-size: 1.375rem;
+  margin-top: 1rem;
+  color: #6b6b6b;
+  transition: color 0.3s ease-in-out;
 }
 
 .adress a:hover {
-    color: var(--color-ci1);
+  color: var(--color-ci1);
 }
 
 .fa-github {
-    margin-right: 15px;
+  margin-right: 15px;
 }
-
 
 @media (max-width: 850px) {
   #kontakt {
@@ -248,7 +246,8 @@ input[type=submit]:hover {
   .adress {
     width: 100%;
   }
-  .fa-github, .fa-linkedin {
+  .fa-github,
+  .fa-linkedin {
     display: none;
   }
   .container {
@@ -257,15 +256,14 @@ input[type=submit]:hover {
 }
 
 @media (max-width: 1180px) {
-#kontakt {
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-height: auto;
-padding: 2rem 2rem;
-display: block;
+  #kontakt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding: 2rem 2rem;
+    display: block;
+  }
 }
-}
-
 </style>
